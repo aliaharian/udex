@@ -1,0 +1,77 @@
+@import '../../bootstrap.min.css';
+@import '../../normalize.css';
+@import "../../_sass/mixins";
+@import "../../_sass/fonts";
+@import "../../../fonts/font-icon/css/fontello.css";
+
+$Base_Color: #ED7B00;
+
+/*
+* General Styles
+*/
+a {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+* {
+  outline: none !important;
+}
+
+input,
+textarea,
+button,
+select {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include optimize_font();
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.light-mode {
+  color: #ffffff;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  a {
+    color: #ffffff;
+    outline: none;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

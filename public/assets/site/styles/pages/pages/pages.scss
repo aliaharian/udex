@@ -1,0 +1,542 @@
+@import "../../_sass/mixins";
+
+$Base_Color: #ED7B00;
+
+/* FAQ */
+.faq-section {
+    .faq-list {
+        .accordion-item {
+            border: 1px solid #cfcfcf;
+            margin-bottom: 24px;
+            transition: .3s;
+
+            &:hover {
+                border-color: #000000;
+            }
+
+            .accordion-header {
+                font-size: 18px;
+                font-weight: 500;
+                padding: 28px 70px;
+                cursor: pointer;
+                position: relative;
+
+                &:before {
+                    content: '\e820';
+                    font-family: "fontello";
+                    position: absolute;
+                    right: 70px;
+                    transform: rotate(0);
+                    transition: .3s;
+                }
+
+                &.collapsed {
+                    &:before {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .content-item {
+                position: relative;
+                top: -5px;
+
+                .content-inner {
+                    font-size: 18px;
+                    font-weight: 300;
+                    padding: 0 70px 30px;
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+
+                        li {
+                            margin-bottom: 15px;
+
+                            &:before {
+                                content: '';
+                                @include inline_middle();
+                                width: 5px;
+                                height: 5px;
+                                background-color: #000000;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Section Content */
+.section-content {
+    .heading-block {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
+    .text-block {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .image-block {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .show-more {
+        a {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            height: 55px;
+            line-height: 55px;
+            background-color: $Base_Color;
+            display: inline-block;
+            padding: 0 70px;
+            transition: .4s;
+
+            &:hover {
+                background: #cd6b00;
+            }
+        }
+    }
+
+    .child-items {
+        margin-top: 75px;
+
+        .item-inner {
+            .heading {
+                font-size: 25px;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+
+            .text {
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+/* The process involved */
+.process-involved {
+    margin: 80px 0 110px;
+
+    .heading-block {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 45px;
+    }
+
+    .process-involved-list {
+        .item-inner {
+            font-size: 18px;
+            font-weight: 300;
+            padding: 25px;
+            border: 1px solid #cfcfcf;
+            transition: .3s;
+            height: 100%;
+
+            &:hover {
+                border-color: $Base_Color;
+            }
+
+            .step-num {
+                display: block;
+                margin-bottom: 35px;
+            }
+
+            .icon-item {
+                margin-bottom: 25px;
+                height: 95px;
+                line-height: 95px;
+            }
+
+            .title-item {
+                font-size: 25px;
+                font-weight: 500;
+                padding: 0 25px;
+                margin-bottom: 6px;
+            }
+
+            .desc-item {
+                margin-bottom: 35px;
+                min-height: 130px;
+            }
+
+            .read-more {
+                a {
+                    font-weight: 500;
+                    color: $Base_Color;
+                    transition: .5s;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Explore our other services */
+.explore-services {
+    margin: 100px 0;
+
+    .heading-block {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 45px;
+    }
+
+    .icon-section {
+        margin-bottom: 40px;
+    }
+
+    .text-section {
+        margin-bottom: 25px;
+
+        .heading {
+            font-weight: 500;
+        }
+    }
+
+    .read-more {
+        a {
+            background-color: $Base_Color;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            height: 55px;
+            line-height: 55px;
+            padding: 0 60px;
+            display: inline-block;
+            transition: .3s;
+
+            &:hover {
+                background: #d56f00;
+            }
+        }
+    }
+}
+
+/* Why building regulations? */
+.why-building-regulations {
+    margin: 145px 0;
+    padding: 0 100px;
+
+    .image-section {
+        margin: 95px 0 35px;
+    }
+}
+
+/* Heading Block */
+.heading-block {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.excerpt-block {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 0 200px;
+}
+
+/* Service List Horizontal */
+.service-list-horizontal {
+    .list-items {
+        .item {
+            border: 1px solid #cfcfcf;
+            padding: 30px 70px 30px 45px;
+            margin-bottom: 65px;
+            position: relative;
+
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                content: '\e80e';
+                position: absolute;
+                font-size: 24px;
+                font-family: "fontello";
+                right: calc(50% - 7px);
+                top: 100%;
+                margin-top: 20px;
+            }
+
+            .name {
+                font-size: 25px;
+                font-weight: 500;
+                width: 220px;
+            }
+
+            .icon {
+                margin-bottom: 25px;
+            }
+
+            .step {
+                font-size: 16px;
+                margin-bottom: 35px;
+                display: inline-block;
+            }
+
+            .excerpt {
+                padding-left: 20px;
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .read-more {
+                padding-left: 20px;
+                margin-top: 25px;
+
+                a {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 55px;
+                    height: 55px;
+                    background-color: $Base_Color;
+                    padding: 0 70px;
+                    color: #ffffff;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+/* You choose how much support you require */
+.you-choose-how-much-support-you-require {
+    padding: 0 90px;
+    margin-bottom: 110px;
+
+    .text-block {
+        margin-bottom: 80px;
+    }
+
+    .items {
+        .icon {
+            margin-bottom: 35px;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .excerpt {
+            font-size: 18px;
+        }
+    }
+}
+
+/* 3 Service Col */
+.col-3-service {
+    .items {
+        .icon {
+            margin-bottom: 35px;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .excerpt {
+            font-size: 18px;
+        }
+    }
+}
+
+/* The Connect process */
+.the-connect-process {
+    .process-involved-list {
+        .item-inner {
+            position: relative;
+
+            .desc-item {
+                //min-height: auto;
+            }
+
+            .read-more {
+                background: #f5f5f5;
+                opacity: 0;
+                transition: .3s;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 12px;
+
+                a {
+                    background-color: $Base_Color;
+                    display: inline-block;
+                    width: 100%;
+                    color: #fff3cd;
+                    padding: 14px;
+                }
+            }
+
+            &:hover {
+                .read-more {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* Black Section Links */
+.black-section-links {
+    background-color: #000000;
+    padding: 65px 0;
+
+    .desc {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .link-list {
+        margin: 45px 0 25px;
+
+        .item-inner {
+            display: inline-block;
+            width: 100%;
+            padding: 23px 10px 16px;
+            border: 1px solid #cfcfcf;
+            transition: .3s;
+
+            &:hover {
+                background: $Base_Color;
+                border-color: $Base_Color;
+            }
+
+            .icon {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .name {
+                display: inline-block;
+                width: 100%;
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/* Quote Form Block */
+.quote-form {
+    margin-bottom: 105px;
+
+    .quote-form-block {
+        margin-top: 70px;
+
+        .form-block {
+            padding: 0;
+            border: none;
+
+            .bold-label {
+                font-size: 18px !important;
+                font-weight: 500 !important;
+            }
+
+            .excerpt {
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+
+            textarea {
+                height: calc(100% - 90px);
+                border: 1px solid #cfcfcf;
+                background: transparent;
+                resize: none;
+                padding: 17px;
+                width: 100%;
+            }
+        }
+
+        .login-link {
+            margin-top: 20px;
+
+            a {
+                color: $Base_Color;
+                font-size: 22px;
+                font-weight: 500;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* Selecting the right contractor */
+.selecting-the-right-contractor {
+    .faq-section .faq-list .accordion-item {
+        background: transparent;
+    }
+}
+
+/* Only the very best */
+.only-the-very-best {
+    margin: 150px 0 100px;
+}
+
+.review-section {
+    overflow: hidden;
+
+    .heading-block {
+        margin-bottom: 55px;
+    }
+
+    .swiper-slide {
+        width: auto;
+
+        .item-inner {
+            border: 1px solid #d0d0d0;
+            padding: 30px 40px;
+            width: 570px;
+            display: inline-block;
+
+            .heading-item {
+                margin-bottom: 20px;
+
+                .title-item {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                .excerpt-item {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+
+            .text-content {
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+}

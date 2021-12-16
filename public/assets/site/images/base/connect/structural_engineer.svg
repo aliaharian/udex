@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38"><script>(
+            function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}
+          )();</script><path d="M37.084 15.403c.573.762.711 1.649.774 2.534.041.568.151 1.136.111 1.704-.05.716.017 1.521-.38 2.12-.435.658-1.258.957-1.93 1.371-.323.2-.797.173-1.042.463-.58.685-1.08 1.479-1.329 2.34-.283.982 1.147 1.76.98 2.658-.235 1.276-1.056 2.37-1.595 3.552-.01.022-.033.036-.049.054-.025.028-.043.065-.077.083-1.18.637-2.28 1.477-3.56 1.878-.351.11-1.275-.572-1.709-.665-1.093-.234-1.738-.288-2.751.348-.335.21-.548.573-.791.886-.056.071-.066.168-.095.253-.005.013-.09.303-.095.316-.059.163-.124.324-.184.486-.014.038-.016.081-.037.115-.298.47-.46 1.078-.918 1.392-.602.412-1.367.546-2.087.664-.708.116-1.437.092-2.151.032-1.996-.168-2.069-.153-3.163-1.74-.142-.206-.168-.472-.256-.707a35.05 35.05 0 0 0-.314-.811.354.354 0 0 0-.044-.076 10.919 10.919 0 0 0-.303-.398c-.029-.035-.064-.064-.095-.095l-.064-.064c-.02-.02-.04-.045-.063-.063-.024-.019-.053-.031-.079-.047-.026-.016-.052-.033-.079-.048l-.174-.095c-.058-.031-.116-.062-.174-.095-.055-.03-.06-.044-.126-.063a32.087 32.087 0 0 0-.696-.19c-.068-.018-.137-.031-.206-.047-.068-.016-.137-.034-.206-.047-.036-.008-.073-.011-.11-.016-.037-.006-.074-.019-.11-.016-.191.013-.382.03-.57.063-.145.026-.164.05-.253.095l-.159.079-.158.08-.316.157c-.64.32-1.235.652-2.056.506-1.074-.19-2.763-1.676-3.416-2.435-.446-.519-1.01-1.036-1.139-1.708-.143-.746.227-1.502.38-2.246.02-.093.09-.168.133-.253.084-.168.198-.325.246-.506.067-.246.115-.505.095-.76-.043-.567-.085-1-.31-1.452-.012-.023-.026-.043-.038-.066l-.063-.126c-.02-.042-.038-.086-.063-.127l-.285-.41c-.013-.02-.016-.046-.031-.064-.039-.046-.085-.084-.127-.126-.063-.064-.117-.138-.19-.19-.046-.034-.104-.044-.158-.064a62.403 62.403 0 0 0-.762-.27c-.737-.258-1.574-.459-2.053-1.185-.397-.602-.467-1.373-.57-2.087-.098-.689-.02-1.392-.03-2.088v-.008c.146-.672.084-1.429.442-2.016.336-.551.986-.836 1.518-1.202.149-.102.337-.128.506-.19.095-.033.19-.061.285-.095.07-.024.137-.052.206-.079.068-.026.138-.05.205-.079.027-.012.052-.028.078-.043.027-.016.051-.038.08-.052.01-.004.022.005.032 0 .013-.006.02-.022.032-.031.062-.054.131-.1.19-.159.11-.11.21-.232.316-.347.02-.022.046-.039.063-.064.006-.008-.005-.022 0-.031.022-.045.053-.085.079-.127.026-.042.07-.077.079-.126.145-.788.368-1.572.38-2.373.003-.263-.223-.478-.335-.717-.43-.92-.802-1.43-.393-2.667.228-.69 2.05-2.626 2.625-3.037.58-.413 1.19-.913 1.898-.98 1.057-.1 1.747.446 2.562.854.072.036.147.067.222.095.01.004.02 0 .031 0 .116 0 .232.006.348 0 .075-.004.148-.024.222-.032.02-.002.044.009.063 0 .805-.35 1.615-.69 2.404-1.075.08-.04.136-.118.19-.19.09-.12.15-.365.19-.49.147-.466.511-1.636.6-1.693.04-.025 2.617-1.264 3.89-1.201.729.035 1.5-.129 2.183.126.625.233 1.145.736 1.55 1.265.346.45.422 1.055.633 1.582l.095.221c.035.048.084.085.126.127.095.095.187.193.285.284.05.046.104.086.158.127.03.023.063.042.095.063.103.068.462.287.57.348.02.011.374.197.474.222 1.031.247 1.23.461 2.087.19.958-.304 1.102-.902 2.5-.665 1.222.207 2.437 1.781 3.162 2.562.056.06.114.119.157.188.326.522.864.974.95 1.583.106.744-.223 1.488-.41 2.214-.047.18-.191.316-.286.475l-.063.11c-.06.105-.09.146-.126.27l-.032.221c0 .003.01-.009.01-.005 0 .054-.009.109-.01.163-.002.106 0 .211 0 .316 0 .074-.007.148 0 .222.004.043.023.083.034.125.01.043.017.086.03.128.06.211.117.424.189.632.022.063.135.263.174.333l.08.142c.034.064.04.097.094.158.049.056.102.11.158.158l.158.095c.005.003.011.001.016.003.01.002.019.005.028.009.01.003.02.009.031.012.002 0-.006-.005-.004-.004a.406.406 0 0 1 .056.012c.238.072.474.147.711.221.238.074.492.107.712.222.517.267 1.137.452 1.487.917zm-2.993-1.38a.309.309 0 0 0-.028-.01c-.033-.01-.045-.017.016-.002l.039.02a1.048 1.048 0 0 1-.027-.008zm1.886 6.599c.156-.624-.02-1.286-.032-1.93-.003-.151.004-.304-.012-.455-.047-.461.018-.959-.178-1.38-.24-.518-.931-.626-1.39-.762-.243-.072-.592-.004-.729-.218-.966-1.51-1.906-3.074-2.467-4.776-.141-.428.313-.845.474-1.265.007-.018.025-.032.03-.051.111-.414.441-.835.318-1.246-.16-.536-2.056-2.348-2.403-2.689-.02-.02-.048-.03-.073-.045-.05-.028-.094-.067-.15-.081-.179-.048-.567.134-.631.158-.54.205-1.036.636-1.614.633-1.139-.008-2.287-.26-3.353-.665-.67-.254-1.253-.737-1.74-1.265-.369-.4-.521-.958-.76-1.448-.324-.669-.202-1.093-1.2-1.272-.685-.123-1.393.003-2.088.032-.704.029-.709.04-1.154.142-.069.016-.14.025-.206.047-.014.005-.024.02-.032.032-.01.017-.015.038-.024.056-.002.003-.006.004-.007.007-.01.02-.016.041-.026.06-.012.023-.026.045-.037.067l-.064.126a12.51 12.51 0 0 0-.133.443c-.021.073-.03.15-.057.222-.485 1.267-.538 1.824-1.929 2.53-.871.442-1.814.8-2.783.917-.65.079-1.293-.201-1.93-.348-.12-.027-.21-.128-.326-.17-.382-.138-.759-.423-1.16-.367-.25.034-.87.632-1.14.917-.455.483-.928.95-1.36 1.455-.03.036-.362.45-.347.664.026.388.262.76.418 1.087.33.691.89 1.587.657 2.36-.422 1.401-1.166 2.724-2.087 3.86-.207.255-2.198.703-2.5 1.265-.085.16-.114 1.198-.094 1.645.049 1.107-.18 1.606.316 2.372.047.072.357.213.38.221.165.063 1.177.365 1.265.412 1.526.813 1.788 1.11 2.499 2.941.546 1.408.143 2.118-.222 3.543-.008.034-.04.059-.05.092-.127.41-.38.808-.36 1.236.01.249.281.411.442.601.064.076.535.546.696.696.473.444.941.894 1.423 1.329.036.032.084.049.127.07.083.042.165.087.253.12.02.007.042 0 .063 0h.063c.032 0 .064.003.095 0 .064-.008.128-.017.19-.032.044-.011.084-.032.126-.048l.127-.047c.031-.011.064-.018.095-.032.185-.082.284-.154.474-.253.21-.108.406-.253.633-.316 1.877-.521 2.489-.465 4.523.633 1.201.648 1.192 1.685 1.74 2.751.148.29.276.652.57.791.399.19.88.082 1.322.106.139.008.278-.004.417-.01.622-.03 1.25-.006 1.866-.096.187-.027.34-.165.506-.253.013-.007.022-.02.032-.031 0-.002.062-.094.063-.095.054-.095.112-.187.158-.285.038-.082.065-.168.095-.253.065-.184.131-.4.19-.585.031-.1.043-.21.095-.3.266-.476.406-1.082.854-1.392.946-.657 2.046-1.11 3.163-1.392.96-.243 1.707.158 2.514.49.27.11.517.353.807.332 1.137-.083 1.868-1.237 2.53-1.93.2-.252.443-.477.601-.758.08-.14.088-.314.095-.475.004-.076-.039-.148-.063-.221-.08-.239-.334-.684-.38-.791-.202-.47-.506-.916-.569-1.423-.077-.62-.107-1.302.158-1.867.498-1.06 1.362-1.904 2.056-2.846.013-.018.04-.016.06-.026.023-.012.043-.027.067-.038.051-.023.105-.041.158-.063.464-.19 1.913-.598 2.056-1.17z" fill="#ff6400"/><g><path d="M10.89 17.112c.887-3.29 3.765-5.662 7.118-6.073 3.32-.411 6.832 1.36 8.382 4.397a8.261 8.261 0 0 1 .727 4.839 7.396 7.396 0 0 1-.284 1.202c-.016.047-.04.095-.064.142-.023.048-.047.095-.063.143-.032.126-.095.284-.095.253-.047.079-.087.158-.126.237-.04.079-.08.158-.127.237a7.474 7.474 0 0 1-1.486 1.961 8.667 8.667 0 0 1-9.268 1.835h-.032c-.016 0-.024-.008-.031-.016-.008-.008-.016-.016-.032-.016a.112.112 0 0 1-.048-.016.111.111 0 0 0-.047-.016h-.032c-3.479-1.518-5.503-5.377-4.491-9.11zm14.013 3.985c0-.063.095-.41.032-.126.19-.601.285-1.234.348-1.866a6.236 6.236 0 0 0-1.044-3.48c-1.455-2.214-4.46-3.163-6.927-2.499-2.467.665-4.523 2.879-4.745 5.41a5.45 5.45 0 0 0 .791 3.573 6.094 6.094 0 0 0 2.878 2.468c2.784 1.107 6.01.284 7.876-2.088.032-.063.158-.253.253-.38l.285-.474.19-.38c.066-.131.066-.131.052-.107-.018.034-.063.115.011-.05z" fill="#ff6400"/></g></svg>
