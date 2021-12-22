@@ -98,6 +98,12 @@
                             <div class="blank-text">
                                 “We have reached a new era in Architecture.<br> Here at UDEX, designs get evolved through our unique algorithmic process; resulting in generating solutions that are adaptable to their environment and needs.”
                             </div>
+                            <div class="footerLinks">
+                                <ul>
+                                    <li><a href="{{url('terms-of-use')}}">Terms Of Use</a></li>
+                                    <li><a href="{{url('privacy-policy')}}">Privacy Policy</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

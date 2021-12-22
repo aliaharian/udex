@@ -18,7 +18,6 @@ Route::post('paypal', 'Profile\PaymentController@payWithpaypal')->name('pay');
 
 /* Home */
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/ttst', function(){return 'works!';})->name('home');
 
 /* Design Route */
 Route::get('/design-quote', 'Design\DesignController@create')->name('design.create');
@@ -46,6 +45,9 @@ Route::get('find-a-structural-engineer-for-your-project', 'OtherPages\OtherPages
 Route::get('find-a-cctv-drainage-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_cctv_drainage_surveyor_for_your_project');
 Route::get('find-a-party-wall-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_party_wall_surveyor_for_your_project');
 Route::get('find-an-approved-inspector-for-your-project', 'OtherPages\OtherPagesController@find_an_approved_inspector_for_your_project');
+Route::get('terms-of-use', 'OtherPages\OtherPagesController@termsOfUse')->name('terms-of-use');
+Route::get('privacy-policy', 'OtherPages\OtherPagesController@privacyPolicy')->name('privacy-policy');
+Route::get('become-udex-tradesperson', 'OtherPages\OtherPagesController@becomeUdexTradesperson')->name('become-udex-tradesperson');
 
 /* Only User Logged In */
 Route::group(['middleware' => ['auth']], function () {

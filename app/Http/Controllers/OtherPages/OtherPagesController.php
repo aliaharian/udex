@@ -215,4 +215,22 @@ class OtherPagesController extends Controller {
     public function find_an_approved_inspector_for_your_project() {
         return view('site.pages.other-pages.find-an-approved-inspector-for-your-project');
     }
+    /* terms of use page*/
+    public function termsOfUse()
+    {
+        return view('site.pages.other-pages.terms-of-use');
+
+    }
+    /* privacy pollicy page*/
+    public function privacyPolicy()
+    {
+        return view('site.pages.other-pages.privacy-policy');
+
+    }
+
+    public function becomeUdexTradesperson()
+    {
+        return view('site.pages.other-pages.become-udex-tradesperson');
+
+    }
 }
