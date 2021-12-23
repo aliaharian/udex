@@ -4,8 +4,11 @@ namespace App\Http\Controllers\OtherPages;
 
 use App\Http\Controllers\Controller;
 use App\Model\Pages;
+use App\Service;
+use App\Tradeperson;
 use App\User;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -230,7 +233,43 @@ class OtherPagesController extends Controller {
 
     public function becomeUdexTradesperson()
     {
-        return view('site.pages.other-pages.become-udex-tradesperson');
+        $services = Service::all();
+        return view('site.pages.other-pages.become-udex-tradesperson',compact('services'));
 
+    }
+    public function becomeUdexTradespersonStore(Request $request)
+    {
+        if (!auth()->check()) {
+            $request->validate([
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'email' => 'required|email|unique:users',
+                'phone' => 'required|unique:users',
+                'company_name' => 'required',
+                'company_website' => 'required',
+            ], [], [
+                'first_name' => 'First Name',
+                'last_name' => 'Last Name',
+                'company_name' => 'company name',
+                'phone' => 'Phone',
+                'email' => 'Email',
+                'company_website' => 'company website',
+            ]);
+            $tradePerson = new Tradeperson;
+            $tradePerson->name = $request->first_name;
+            $tradePerson->last_name = $request->last_name;
+            $tradePerson->email = $request->email;
+            $tradePerson->phone = $request->phone;
+            $tradePerson->company_name = $request->company_name;
+            $tradePerson->company_website = $request->company_website;
+            $tradePerson->service_id = $request->service;
+            $tradePerson->save();
+//            $user_id = $tradePerson->id;
+//
+//            Auth::loginUsingId($user_id);
+            return redirect('become-udex-tradesperson');
+        } else {
+            return redirect()->back();
+        }
     }
 }

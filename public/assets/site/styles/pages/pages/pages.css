@@ -354,7 +354,7 @@
   border: none;
 }
 .quote-form .quote-form-block .form-block .bold-label {
-  font-size: 18px !important;
+  font-size: 18px;
   font-weight: 500 !important;
 }
 .quote-form .quote-form-block .form-block .excerpt {
@@ -494,7 +494,6 @@
   font-size: 30px;
   font-weight: 800;
   line-height: 35px;
-  margin-bottom: 7px;
   max-width: 560px;
   text-align: center;
   margin-bottom: 51px;
@@ -502,6 +501,142 @@
 
 .m-b-70 {
   margin-bottom: 70px !important;
+}
+
+.benefit-of-working-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+.benefit-of-working-container > .heading-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+.benefit-of-working-container > img {
+  max-width: 818px;
+}
+.benefit-of-working-container > .heading-title-2 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 60px;
+  line-height: 44px;
+}
+.benefit-of-working-container > .benefits-text {
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.become-tradeperson-three-items {
+  margin-bottom: 114px;
+}
+.become-tradeperson-three-items > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.become-tradeperson-three-items > div > h4 {
+  max-width: 180px;
+  text-align: center;
+}
+.become-tradeperson-three-items > div > p {
+  text-align: center;
+  max-width: 260px;
+}
+
+.custom-select-field > label {
+  margin-bottom: 32px;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: transparent;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 12px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid #CFCFCF;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.select-items div {
+  border: none;
+  border-left: 1px solid #CFCFCF;
+  border-right: 1px solid #CFCFCF;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #ED7B00;
+}
+
+.tradeperson-form-p > p {
+  max-width: 781px;
+  margin: 32px auto 0;
 }
 
 /*# sourceMappingURL=pages.css.map */

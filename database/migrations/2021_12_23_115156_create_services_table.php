@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWhatsNewsTable extends Migration
+class CreateServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateWhatsNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('whats_news', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('uid');
-            $table->string('title');
-            $table->text('content_text');
-            $table->bigInteger('thumbnail')->nullable();
-            $table->string('status');
+            $table->string('name');
+            $table->json('meta')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateWhatsNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('whats_news');
+        Schema::dropIfExists('services');
     }
 }

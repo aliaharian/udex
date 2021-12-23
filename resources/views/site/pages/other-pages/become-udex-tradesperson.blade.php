@@ -125,10 +125,15 @@
                 <div class="col-7">
                     <div class="heading-title">How do I apply?</div>
                     <div class="heading-desc p-0 mt-2">
-                        If you’re interested in joining our Connect service, the first step is to express interest through this page. Once your request has been received, our team will be in touch to start the vetting process.
+                        If you’re interested in joining our Connect service, the first step is to express interest
+                        through this page. Once your request has been received, our team will be in touch to start the
+                        vetting process.
                     </div>
                     <div class="heading-desc p-0 mt-2">
-                    We vet all our recommended tradespeople, in order to protect our customers from bad practices. If you’ve worked with our team in the past, do let us know. Otherwise, our team will go through your portfolio to get a sense of what work you’re suited to, and may even reach out to previous clients.
+                        We vet all our recommended tradespeople, in order to protect our customers from bad practices.
+                        If you’ve worked with our team in the past, do let us know. Otherwise, our team will go through
+                        your portfolio to get a sense of what work you’re suited to, and may even reach out to previous
+                        clients.
                     </div>
                     <div class="show-more"><a href="#quick-register">Register your interest</a></div>
                     <div class="callUsContainer">
@@ -149,72 +154,59 @@
             </div>
         </section>
 
-        {{-- Download Box --}}
-        @include('site.pages.other-pages.sections.download-box')
+        <section class="benefit-of-working-container">
+            <div class="heading-title">Benefits of working with us</div>
+            <div class="heading-title">Connect with our Dashboard</div>
+            <img class="w-100"
+                 src="{{ asset('public/assets/site/images/base/becomeUdexTradeperson') }}/introducePanel.png"
+                 alt="Benefits of working with us">
+            <div class="heading-title-2">Connect with our Dashboard</div>
+            <p class="benefits-text">
+                All of our tradespeople get to enjoy our Dashboard and have their own profile on display. Through this
+                platform, you and your team can provide quotes, manage important documents, and communicate with our
+                team from any phone, desktop, or tablet device.
+            </p>
+        </section>
 
-        {{-- Quick Register --}}
-        @include('site.pages.other-pages.sections.quick-register')
-    </div>
-
-    @include('site.pages.other-pages.sections.black-section-links')
-
-    <div class="container">
-        {{-- Only the very best --}}
-        <section class="section-content only-the-very-best">
-            <div class="row align-items-center">
-                <div class="col">
-                    <div class="heading-block">Only the very best</div>
-                    <div class="text-block">
-                        <p>Who you trust to build your project is one of the most important decisions you’ll make.
-                            That’s why we want to make sure you’re making your selection from the best tradespeople on
-                            the market.<br>Our team has been in the business for nearly 20 years, meaning we know how to
-                            spot the best from the rest. We vet all our recommended professionals, as well as showing
-                            you how to perform your own checks, so you have the knowledge to keep your home protected.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-auto mb-5">
-                    <div class="image-block">
-                        <img src="{{ asset('public/assets/site/images/example') }}/What_are_building_regulations_2.png"
-                             alt="What is UDEX Connect?">
-                    </div>
-                </div>
+        <section class="become-tradeperson-three-items row">
+            <div class="col-md-4">
+                <h4>
+                    Access to 100+ projects a month
+                </h4>
+                <p>
+                    Since 2017, we’ve worked on over 3000 UK projects and we’re only getting bigger! By joining Connect,
+                    you’ll have access to hundreds of potential customers every month.
+                </p>
             </div>
-
-            <div class="child-items center">
-                <div class="row gx-5">
-                    <div class="col-4">
-                        <div class="item-inner">
-                            <div class="heading">Avoid the cowboys</div>
-                            <div class="text">Our experts can help you spot any dodgy practices, protecting you form
-                                rogue traders. We’ll match you with professionals we’ve worked with before, offering a
-                                proven track record and thorough vetting
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="item-inner">
-                            <div class="heading">No extra cost</div>
-                            <div class="text">Our Connect introduction service comes at zero cost to you - you only pay
-                                for the service the professional provides. Share your requirements for free and start to
-                                receive trusted quotes right away.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="item-inner">
-                            <div class="heading">Free advice & guidance</div>
-                            <div class="text">We’ll walk you through the quotes professionals and specialists provide.
-                                Rather than sifting through hundreds of quotes, we’ll recommend a selection that is
-                                perfect for you and your project.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <h4>
+                    Support from our team
+                </h4>
+                <p>
+                    Our Connect team is there to support both the customer and you. We’ll help ensure a smooth handover,
+                    so you have everything you need to hit the ground running on-site. </p>
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    Access to third-party services
+                </h4>
+                <p>
+                    We work with an array of trades, so if you need a helping hand, you know exactly where to turn. Our
+                    team is always happy to make introductions to help your own business grow. </p>
             </div>
         </section>
+
+
+        {{-- Quick Register --}}
+        @include('site.pages.other-pages.sections.quick-register-tradeperson')
     </div>
+
 
     {{-- Review Section --}}
     @include('site.pages.other-pages.sections.review')
+@endsection
+
+@section('footer-lib')
+    <script src="{{ asset('public/assets/site/js/custom-select.js') }}"></script>
+
 @endsection

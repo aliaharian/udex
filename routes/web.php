@@ -48,6 +48,7 @@ Route::get('find-an-approved-inspector-for-your-project', 'OtherPages\OtherPages
 Route::get('terms-of-use', 'OtherPages\OtherPagesController@termsOfUse')->name('terms-of-use');
 Route::get('privacy-policy', 'OtherPages\OtherPagesController@privacyPolicy')->name('privacy-policy');
 Route::get('become-udex-tradesperson', 'OtherPages\OtherPagesController@becomeUdexTradesperson')->name('become-udex-tradesperson');
+Route::post('become-udex-tradesperson', 'OtherPages\OtherPagesController@becomeUdexTradespersonStore')->name('becomeUdexTradesperson.Store');
 
 /* Only User Logged In */
 Route::group(['middleware' => ['auth']], function () {
