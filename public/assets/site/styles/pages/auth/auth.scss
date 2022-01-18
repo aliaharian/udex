@@ -1,0 +1,105 @@
+@import "../../_sass/variable";
+
+.auth-page {
+    .auth-form {
+        margin: auto;
+        padding: 60px 0;
+
+        &.login-section {
+            max-width: 485px;
+        }
+
+        &.register-section {
+            max-width: 970px;
+
+            .form-body {
+                padding: 50px 90px 30px;
+            }
+        }
+
+        /* Heading Page */
+        .heading-page {
+            margin-bottom: 30px;
+
+            .branding-logo {
+                margin-bottom: 20px;
+            }
+
+            .page-title {
+                color: #8a8a8a;
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+
+        /* Form */
+        .form-body {
+            padding: 50px 50px 30px;
+            border: 1px solid #cfcfcf;
+            background: #ffffff;
+
+            .form-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+
+                label {
+                    color: #000000;
+                    font-size: 18px;
+                    font-weight: 300;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                &.form-field {
+                    input {
+                        display: inline-block;
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #cfcfcf;
+                        height: 40px;
+                        background: transparent;
+                    }
+                }
+
+                .submit-form {
+                    margin-top: 38px;
+
+                    button {
+                        height: 71px;
+                        background-color: #000000;
+                        color: #ffffff;
+                        font-size: 22px;
+                        font-weight: 500;
+                        border: none;
+                        padding: 0 95px;
+                        margin-bottom: 20px;
+                        transition: .3s;
+
+                        &:hover {
+                            background: $Base_Color;
+                        }
+                    }
+                }
+
+                .links {
+                    a {
+                        color: #000000;
+                        font-size: 18px;
+                        font-weight: 300;
+                        text-decoration: none;
+                        transition: .3s;
+
+                        &:hover {
+                            color: $Base_Color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

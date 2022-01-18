@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38"><script>(
+            function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}
+          )();</script><path d="M37.389 9.556c.032 6.017.096 12.034.193 18.051.016 1.576.04 3.144.064 4.713.024 1.57.048 3.138.065 4.715a.948.948 0 0 1-.966.965H1.03a.948.948 0 0 1-.966-.965A473.018 473.018 0 0 1 0 30.278c.016-3.105.024-6.218.032-9.331.008-3.113.016-6.226.032-9.331.033-3.54.033-7.111.033-10.65C.097.417.515 0 1.062 0l9.46.097C16.12.16 21.719.193 27.318.225c2.059.032 4.15.032 6.242.032h2.123c.457-.003.843-.005 1.255.29a.76.76 0 0 1 .29.257.17.17 0 0 1 .032.049.173.173 0 0 0 .032.048c0 .016.008.024.016.032s.016.016.016.032v.032c.065.161.097.354.065.547a317.07 317.07 0 0 0-.007 5.342c.003.89.007 1.78.007 2.67zm-9.878 14.48-.032-9.718L9.62 14.19l.032 9.717zm7.995-8.045c-.008-.523-.016-1.045-.016-1.576-.29-.032-.547-.032-.804-.032l-4.183-.032H29.41l.032 9.717 6.146.032c0-2.157-.031-4.282-.063-6.438l-.002-.094c0-.53-.008-1.053-.016-1.576zM7.722 23.875l-.032-9.717-5.695-.033-.032 8.334v1.416zm-5.76 1.93a364.2 364.2 0 0 0 .033 10.264h15.702l-.032-10.167zm26.643.161-9.01-.064.033 10.167H35.78c0-.386-.008-.78-.016-1.174a57.523 57.523 0 0 1-.016-1.175 608.658 608.658 0 0 1-.129-7.69zm-9.01-23.875L19.5 12.323l3.024.033 6.757.064 3.443.032c.36 0 .724.01 1.09.02.55.016 1.103.032 1.645.012a552.17 552.17 0 0 1 0-10.296h-2.51zm-1.93 0h-.29c-5.116-.032-10.232-.096-15.348-.16v2.895l-.032 7.369 6.886.064 8.687.064z" fill="#ff6400"/><path d="M37.389 9.556c.032 6.017.096 12.034.193 18.051.016 1.576.04 3.144.064 4.713.024 1.57.048 3.138.065 4.715a.948.948 0 0 1-.966.965H1.03a.948.948 0 0 1-.966-.965A473.018 473.018 0 0 1 0 30.278c.016-3.105.024-6.218.032-9.331.008-3.113.016-6.226.032-9.331.033-3.54.033-7.111.033-10.65C.097.417.515 0 1.062 0l9.46.097C16.12.16 21.719.193 27.318.225c2.059.032 4.15.032 6.242.032h2.123c.457-.003.843-.005 1.255.29a.76.76 0 0 1 .29.257.17.17 0 0 1 .032.049.173.173 0 0 0 .032.048c0 .016.008.024.016.032s.016.016.016.032v.032c.065.161.097.354.065.547a317.07 317.07 0 0 0-.007 5.342c.003.89.007 1.78.007 2.67zm-9.878 14.48-.032-9.718L9.62 14.19l.032 9.717zm7.995-8.045c-.008-.523-.016-1.045-.016-1.576-.29-.032-.547-.032-.804-.032l-4.183-.032H29.41l.032 9.717 6.146.032c0-2.157-.031-4.282-.063-6.438l-.002-.094c0-.53-.008-1.053-.016-1.576zM7.722 23.875l-.032-9.717-5.695-.033-.032 8.334v1.416zm-5.76 1.93a364.2 364.2 0 0 0 .033 10.264h15.702l-.032-10.167zm26.643.161-9.01-.064.033 10.167H35.78c0-.386-.008-.78-.016-1.174a57.523 57.523 0 0 1-.016-1.175 608.658 608.658 0 0 1-.129-7.69zm-9.01-23.875L19.5 12.323l3.024.033 6.757.064 3.443.032c.36 0 .724.01 1.09.02.55.016 1.103.032 1.645.012a552.17 552.17 0 0 1 0-10.296h-2.51zm-1.93 0h-.29c-5.116-.032-10.232-.096-15.348-.16v2.895l-.032 7.369 6.886.064 8.687.064z" fill="#ff6400"/></svg>

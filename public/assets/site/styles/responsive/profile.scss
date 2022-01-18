@@ -1,0 +1,289 @@
+/*
+  * Use => Desktop and Large Screen Tablet
+  * Sizes => 1920, 1440, 1280, 1024
+  * unit => PX
+  */
+@media (max-width: 1920px) {
+
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+    .toggle-sidebar {
+        position: fixed;
+        width: 45px;
+        height: 45px;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        cursor: pointer;
+        transition: .3s;
+        z-index: 19;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    .dashboard-page {
+        .sidebar-col {
+            position: fixed;
+            left: -100%;
+            transition: .3s;
+            width: 100%;
+            z-index: 20;
+
+            &.show-side {
+                left: 0;
+            }
+
+            .sidebar {
+                background: rgba(0, 0, 0, 0.9);
+                backdrop-filter: blur(5px);
+            }
+
+            .close-sidebar {
+                display: inline-block;
+                z-index: 2;
+                color: #fff;
+                z-index: 2;
+                position: absolute;
+                font-size: 20px;
+                right: 10px;
+                top: 10px;
+            }
+
+            .sidebar .dashboard-nav {
+                overflow: auto;
+                height: calc(100vh - 230px);
+            }
+        }
+
+        .content-col {
+            .content-inner {
+                padding: 42px 15px;
+
+                .heading-dashboard {
+                    margin-bottom: 40px;
+                    padding: 0;
+
+                    .content-col-heading {
+                        .h-text {
+                            font-size: 23px;
+                        }
+
+                        .excerpt {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .list-services .item {
+                    padding: 20px;
+
+                    .cta-item {
+                        font-size: 15px;
+                    }
+                }
+
+                .project-page .tab-content .tab-content-body .accordion .accordion-item .tab-heading-item {
+                    .label {
+                        font-size: 16px;
+                    }
+
+                    .desc {
+                        font-size: 15px;
+                    }
+                }
+
+                .page-content-body {
+                    padding: 0;
+                    border: none;
+
+                    .messages-body .message-of-day {
+                        .message-send-form .field-block.submit-field input {
+                            width: 100%;
+                        }
+
+                        .message-items .message-item {
+                            .message-time-responsive {
+                                display: block !important;
+                                font-size: 12px;
+                                color: #777777;
+                            }
+
+                            .message-inner {
+                                width: 100%;
+                                padding: 18px;
+
+                                .message-time {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-tab-mode {
+        .heading-section .item {
+            .item-inner {
+                min-width: 100%;
+            }
+
+            &.active .item-inner {
+                border-bottom-color: #cfcfcf;
+            }
+        }
+
+        .section-content-tab-mode {
+            .section-inner {
+                padding: 30px 0;
+                border: none;
+
+                .section-text {
+                    a {
+                        padding: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                .thumbnail-section {
+                    margin: 20px auto 0;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .accordion-block .accordion-item {
+                    padding-right: 0;
+
+                    .accordion-header .heading-accordion {
+                        font-size: 14px;
+                        padding-right: 50px;
+                    }
+
+                    .accordion-content {
+                        padding-left: 0;
+
+                        .accordion-content-inner {
+                            padding-right: 30px;
+
+                            .orders .order-item {
+                                padding: 25px;
+                            }
+                        }
+                    }
+                }
+
+                .connect-service-block .connect-service-list .connect-item {
+                    .title-item {
+                        font-size: 12px;
+                    }
+
+                    .link-btn {
+                        top: calc(50% - 9px);
+                        font-size: 12px;
+                    }
+                }
+
+                .submit-connect-quote .item-inner {
+                    padding: 20px 10px;
+                    width: 100%;
+
+                    .name {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .file-library-page {
+        .quick-access {
+            display: none;
+        }
+    }
+
+    .table-block {
+        width: 100%;
+        overflow: auto;
+        border: solid 1px #cfcfcf;
+
+        table {
+            min-width: 900px;
+        }
+    }
+}
+
+/*
+  * Use => Tablet Screen
+  * Sizes => 991, 767
+  * unit => PX
+  */
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+    .modal-website .modal-block-box {
+        width: 90%;
+        top: 20px;
+
+        .whats-news-block {
+            .carousel-inner .carousel-item {
+                .icon-item {
+                    margin: 0 0 30px;
+
+                    img {
+                        max-width: 110px;
+                    }
+                }
+
+                .content-item {
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            .carousel-indicators-whats-news {
+                bottom: -30px;
+            }
+        }
+    }
+}
+
+/*
+  * Use => Mobile Screen
+  * Sizes => 540, 414, 375
+  * unit => PX
+  */
+@media (max-width: 540px) {
+}
+
+@media (max-width: 414px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
