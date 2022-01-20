@@ -76,7 +76,7 @@
                                     <i class="arrow">
                                         <img src="{{ asset('public/assets/site/images/base/design/arrow-right.svg') }}" alt="right">
                                     </i> </a>
-                                <a target="_blank" href="https://udex.co.uk/download/Design/Guide%20to%20Building%20Regulations.pdf" class="item">
+                                <a target="_blank" href="{{ asset('public/assets/site/files/') }}/UDEX_Building_Regulations.pdf" class="item">
                                     <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
                                     <span class="title">Guide to Building Regulations</span>
                                     <i class="arrow">

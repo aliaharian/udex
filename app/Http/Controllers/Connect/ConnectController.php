@@ -176,9 +176,11 @@ class ConnectController extends Controller
     }
 
     /* Connect Service */
-    public function connect_service()
+    public function connect_service(Request $request)
     {
-        return view('site.pages.connect.connect-service');
+        $data=$request;
+        return view('site.pages.connect.connect-service', compact('data'));
+
     }
 
     /* Connect Service */
