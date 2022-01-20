@@ -41,21 +41,15 @@ Route::get('building-regulations', 'OtherPages\OtherPagesController@building_reg
 Route::get('new-builds', 'OtherPages\OtherPagesController@new_builds');
 Route::get('find-a-builder-for-your-project', 'OtherPages\OtherPagesController@find_a_builder_for_your_project');
 Route::post('find-a-builder-for-your-project', 'OtherPages\OtherPagesController@QuickQuoteStore')->name('QuickQuote.Store');
-<<<<<<< HEAD
 Route::post('apply-quick-register', 'OtherPages\OtherPagesController@QuickRegisterStore')->name('QuickRegister.Store');
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 Route::get('find-a-structural-engineer-for-your-project', 'OtherPages\OtherPagesController@find_a_structural_engineer_for_your_project');
 Route::get('find-a-cctv-drainage-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_cctv_drainage_surveyor_for_your_project');
 Route::get('find-a-party-wall-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_party_wall_surveyor_for_your_project');
 Route::get('find-an-approved-inspector-for-your-project', 'OtherPages\OtherPagesController@find_an_approved_inspector_for_your_project');
-<<<<<<< HEAD
 Route::get('terms-of-use', 'OtherPages\OtherPagesController@termsOfUse')->name('terms-of-use');
 Route::get('privacy-policy', 'OtherPages\OtherPagesController@privacyPolicy')->name('privacy-policy');
 Route::get('become-udex-tradesperson', 'OtherPages\OtherPagesController@becomeUdexTradesperson')->name('become-udex-tradesperson');
 Route::post('become-udex-tradesperson', 'OtherPages\OtherPagesController@becomeUdexTradespersonStore')->name('becomeUdexTradesperson.Store');
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /* Only User Logged In */
 Route::group(['middleware' => ['auth']], function () {
@@ -81,17 +75,9 @@ Route::group(['middleware' => ['auth']], function () {
         /* Connect */
         Route::get('connect', 'Connect\ConnectController@profile_connect_list');
 
-<<<<<<< HEAD
         /* Connect */
         Route::get('payments', 'Profile\PaymentController@index');
         Route::get('payments/{id}', 'Profile\PaymentController@show')->name('details');
-=======
-        /* Payments */
-        Route::get('payments', 'Profile\PaymentController@index');
-        Route::get('payments/{id}', 'Profile\PaymentController@show')->name('details');
-        Route::get('payments/transfer/{id}', 'Profile\PaymentController@ByTransfer')->name('ByTransfer');
-        Route::post('payments/transfer/{id}', 'Profile\PaymentController@ByTransferSubmit')->name('ByTransfer.submit');
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         Route::get('status', 'Profile\PaymentController@getPaymentStatus')->name('status');
 
         /* File Library */
@@ -122,20 +108,10 @@ Route::group(['middleware' => ['auth']], function () {
 
             /* Design */
             Route::get('design', 'Design\DesignController@index');
-<<<<<<< HEAD
             Route::get('design/edit/{id}', 'Design\DesignController@edit')->name('design.edit');
             Route::post('design/edit/{id}', 'Design\DesignController@edit')->name('design.update');
             Route::get('design-options', 'Design\DesignOptionsController@options')->name('DesignOptions');
             Route::post('design-options', 'Design\DesignOptionsController@options_update')->name('DesignOptions.update');
-=======
-            Route::get('design/create', 'Design\DesignController@create_admin');
-            Route::get('design/edit/{id}', 'Design\DesignController@edit')->name('design.edit');
-            Route::post('design/edit/{id}', 'Design\DesignController@update')->name('design.update');
-            Route::get('design-options', 'Design\DesignOptionsController@options')->name('DesignOptions');
-            Route::post('design-options', 'Design\DesignOptionsController@options_update')->name('DesignOptions.update');
-            Route::get('design/payment-manage/{id}', 'Design\DesignController@PaymentManage')->name('design.payment');
-            Route::post('design/payment-manage/{id}', 'Design\DesignController@PaymentManageUpdate')->name('design.payment.update');
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
             /* Connect */
             Route::get('connect', 'Connect\ConnectController@index')->name('Connect');
@@ -161,14 +137,6 @@ Route::group(['middleware' => ['auth']], function () {
             Route::resource('whats-news', 'Dashboard\WhatsNews\WhatsNewsController');
             Route::post('whats-news/destroy', 'Dashboard\WhatsNews\WhatsNewsController@destroy')->name('WhatsNews.destroy');
 
-<<<<<<< HEAD
-=======
-            /* File Manager */
-            Route::get('file-manager', 'Dashboard\FileManager\FileManagerController@index');
-            Route::get('file-manager/create', 'Dashboard\FileManager\FileManagerController@create')->name('file-manager.create');
-            Route::post('file-manager', 'Dashboard\FileManager\FileManagerController@store')->name('file-manager.store');
-
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             /* CKEditor Image Upload */
             Route::post('ckeditor/upload/{path}', 'Dashboard\CKEditorController@upload')->name('ckeditor.image-upload');
         });
@@ -179,11 +147,7 @@ Auth::routes();
 
 /* Clear Cache */
 Route::get('/clear-cache', function () {
-<<<<<<< HEAD
 //    Artisan::call('migrate');
-=======
-    //    Artisan::call('migrate');
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     Artisan::call('cache:clear');
     Artisan::call('config:cache');
     Artisan::call('view:clear');
