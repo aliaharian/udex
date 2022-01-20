@@ -12,21 +12,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class OtherPagesController extends Controller {
+class OtherPagesController extends Controller
+{
     /* Show All Pages */
-    public function index() {
+    public function index()
+    {
         $Pages = Pages::orderBy('id', 'desc')->paginate(20);
 
         return view('admin.pages.index', compact('Pages'));
     }
 
     /* Create New Pages */
-    public function create() {
+    public function create()
+    {
         return view('admin.pages.create');
     }
 
     /* Submit New Page */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $user = auth()->user();
         $Page = new Pages();
         $Page->uid = $user->id;
@@ -49,14 +53,16 @@ class OtherPagesController extends Controller {
     }
 
     /* Edit Page */
-    public function edit($id) {
+    public function edit($id)
+    {
         $Page = Pages::find($id);
 
         return view('admin.pages.edit', compact('Page'));
     }
 
     /* Update Page */
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         $user = auth()->user();
         $Page = Pages::find($id);
 
@@ -95,7 +101,8 @@ class OtherPagesController extends Controller {
 
 
     /* Show Page */
-    public function show($slug) {
+    public function show($slug)
+    {
         $Page = Pages::where('slug', $slug)->first();
 
         if (isset($Page->template) && $Page->template == 'faq') {
@@ -104,7 +111,8 @@ class OtherPagesController extends Controller {
     }
 
     /* Page Destroy */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         foreach ($request->delete_item as $key => $item) {
             Pages::where('id', $key)->delete();
         }
@@ -121,47 +129,56 @@ class OtherPagesController extends Controller {
     //    }
 
     /* Architectural Design & Planning */
-    public function architectural_design_planning() {
+    public function architectural_design_planning()
+    {
         return view('site.pages.other-pages.architectural-design-planning');
     }
 
     /* Technical design & construction */
-    public function technical_design_construction() {
+    public function technical_design_construction()
+    {
         return view('site.pages.other-pages.technical-design-construction');
     }
 
     /* Measured surveys */
-    public function measured_surveys() {
+    public function measured_surveys()
+    {
         return view('site.pages.other-pages.measured-surveys');
     }
 
     /* Proposed design */
-    public function proposed_design() {
+    public function proposed_design()
+    {
         return view('site.pages.other-pages.proposed-design');
     }
 
     /* Planning */
-    public function planning() {
+    public function planning()
+    {
         return view('site.pages.other-pages.planning');
     }
 
     /* Building regulations */
-    public function building_regulations() {
+    public function building_regulations()
+    {
         return view('site.pages.other-pages.building-regulations');
     }
 
     /* New builds */
-    public function new_builds() {
+    public function new_builds()
+    {
         return view('site.pages.other-pages.new-builds');
     }
 
     /* Find a builder for your project */
-    public function find_a_builder_for_your_project() {
+    public function find_a_builder_for_your_project()
+    {
         return view('site.pages.other-pages.find-a-builder-for-your-project');
     }
 
     /* Register */
-    public function QuickQuoteStore(Request $request) {
+    public function QuickQuoteStore(Request $request)
+    {
         if (!auth()->check()) {
             $request->validate([
                 'first_name' => 'required',
@@ -200,30 +217,36 @@ class OtherPagesController extends Controller {
     }
 
     /* Find a builder for your project */
-    public function find_a_structural_engineer_for_your_project() {
+    public function find_a_structural_engineer_for_your_project()
+    {
         return view('site.pages.other-pages.find-a-structural-engineer-for-your-project');
     }
 
     /* Find a builder for your project */
-    public function find_a_cctv_drainage_surveyor_for_your_project() {
+    public function find_a_cctv_drainage_surveyor_for_your_project()
+    {
         return view('site.pages.other-pages.find-a-cctv-drainage-surveyor-for-your-project');
     }
 
     /* Find a structural engineer for your project */
-    public function find_a_party_wall_surveyor_for_your_project() {
+    public function find_a_party_wall_surveyor_for_your_project()
+    {
         return view('site.pages.other-pages.find-a-party-wall-surveyor-for-your-project');
     }
 
     /* Find a structural engineer for your project */
-    public function find_an_approved_inspector_for_your_project() {
+    public function find_an_approved_inspector_for_your_project()
+    {
         return view('site.pages.other-pages.find-an-approved-inspector-for-your-project');
     }
+
     /* terms of use page*/
     public function termsOfUse()
     {
         return view('site.pages.other-pages.terms-of-use');
 
     }
+
     /* privacy pollicy page*/
     public function privacyPolicy()
     {
@@ -234,9 +257,10 @@ class OtherPagesController extends Controller {
     public function becomeUdexTradesperson()
     {
         $services = Service::all();
-        return view('site.pages.other-pages.become-udex-tradesperson',compact('services'));
+        return view('site.pages.other-pages.become-udex-tradesperson', compact('services'));
 
     }
+
     public function becomeUdexTradespersonStore(Request $request)
     {
         if (!auth()->check()) {
@@ -272,4 +296,14 @@ class OtherPagesController extends Controller {
             return redirect()->back();
         }
     }
+
+    public function QuickRegisterStore(Request $request)
+    {
+//        if(auth()->check()){
+        $data = $request;
+        $service = $request->service || '';
+        return view('site.pages.connect.connect-service', compact('data', 'service'));
+//        }
+    }
 }
+

@@ -38,7 +38,7 @@
                 <div class="inputs">
                     <div class="row">
                         <div class="col-6 field-item checkbox-item big-item">
-                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="approved_inspector" @if(old('service_are_you_looking') == 'approved_inspector'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'approved-inspector') {{ 'checked' }} @endif @endif id="service_are_you_looking_approved_inspector" type="radio" name="service_are_you_looking">
+                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="approved_inspector" @if(old('service_are_you_looking') == 'approved_inspector'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'approved-inspector') {{ 'checked' }} @endif @endif id="service_are_you_looking_approved_inspector" type="checkbox" name="service_are_you_looking[]">
                             <label for="service_are_you_looking_approved_inspector">
                                 <span class="row align-items-center">
                                     <span class="col-auto">
@@ -53,7 +53,7 @@
                                 </span> </label>
                         </div>
                         <div class="col-6 field-item checkbox-item big-item">
-                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="structural_engineer" @if(old('service_are_you_looking') == 'structural_engineer'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'structural-engineer') {{ 'checked' }} @endif @endif id="service_are_you_looking_structural_engineer" type="radio" name="service_are_you_looking">
+                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="structural_engineer" @if(old('service_are_you_looking') == 'structural_engineer'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'structural-engineer') {{ 'checked' }} @endif @endif id="service_are_you_looking_structural_engineer" type="checkbox" name="service_are_you_looking[]">
                             <label for="service_are_you_looking_structural_engineer">
                                 <span class="row align-items-center">
                                     <span class="col-auto">
@@ -68,7 +68,7 @@
                                 </span> </label>
                         </div>
                         <div class="col-6 field-item checkbox-item big-item">
-                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="cctv_survey" @if(old('service_are_you_looking') == 'cctv_survey'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'cctv-survey') {{ 'checked' }} @endif @endif id="service_are_you_looking_cctv_survey" type="radio" name="service_are_you_looking">
+                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="cctv_survey" @if(old('service_are_you_looking') == 'cctv_survey'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'cctv-survey') {{ 'checked' }} @endif @endif id="service_are_you_looking_cctv_survey" type="checkbox" name="service_are_you_looking[]">
                             <label for="service_are_you_looking_cctv_survey">
                                 <span class="row align-items-center">
                                     <span class="col-auto">
@@ -83,7 +83,7 @@
                                 </span> </label>
                         </div>
                         <div class="col-6 field-item checkbox-item big-item">
-                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="party_wall" @if(old('service_are_you_looking') == 'party_wall'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'party-wall') {{ 'checked' }} @endif @endif id="service_are_you_looking_party_wall" type="radio" name="service_are_you_looking">
+                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="party_wall" @if(old('service_are_you_looking') == 'party_wall'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'party-wall') {{ 'checked' }} @endif @endif id="service_are_you_looking_party_wall" type="checkbox" name="service_are_you_looking[]">
                             <label for="service_are_you_looking_party_wall">
                                 <span class="row align-items-center">
                                     <span class="col-auto">
@@ -98,7 +98,7 @@
                                 </span> </label>
                         </div>
                         <div class="col-6 field-item checkbox-item big-item">
-                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="contractor" @if(old('service_are_you_looking') == 'contractor'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'contractor') {{ 'checked' }} @endif @endif id="service_are_you_looking_contractor" type="radio" name="service_are_you_looking">
+                            <input class="required-field" onchange="RequiredCheckbox(this)" required value="contractor" @if(old('service_are_you_looking') == 'contractor'){{ 'checked' }}@else @if(isset($_GET['service']) && $_GET['service'] == 'contractor') {{ 'checked' }} @endif @endif id="service_are_you_looking_contractor" type="checkbox" name="service_are_you_looking[]">
                             <label for="service_are_you_looking_contractor">
                                 <span class="row align-items-center">
                                     <span class="col-auto">
@@ -123,7 +123,7 @@
                     <div class="filed-block-subtitle">This is important for an accurate quotation</div>
                 </div>
 
-                <input type="file" name="upload_your_architectural_drawings">
+                <input type="file" name="upload_your_architectural_drawings[]" multiple>
             </div>
 
 
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="textarea-input">
-                    <textarea name="describe_the_requirements_of_your_project"></textarea>
+                    <textarea name="describe_the_requirements_of_your_project">@if($data->describe_the_requirements_of_your_project){{$data->describe_the_requirements_of_your_project}}@endif</textarea>
                 </div>
             </div>
 
@@ -147,33 +147,33 @@
                         @if(!auth()->check())
                             <div class="col-6 field-item text-field">
                                 <div class="row g-0">
-                                    <input value="{{ old('first_name') }}" id="first-name" class="col-12 order-1 text-uppercase" type="text" name="first_name" required>
+                                    <input value="@if($data->first_name){{$data->first_name}}@else{{ old('first_name') }}@endif" id="first-name" class="col-12 order-1 text-uppercase" type="text" name="first_name" required>
                                     <label for="first-name" class="col-12 order-0">First name</label>
                                 </div>
                             </div>
                             <div class="col-6 field-item text-field">
                                 <div class="row g-0">
-                                    <input value="{{ old('last_name') }}" id="last-name" class="col-12 order-1 text-uppercase" type="text" name="last_name" required>
+                                    <input value="@if($data->last_name){{$data->last_name}}@else{{ old('last_name') }}@endif" id="last-name" class="col-12 order-1 text-uppercase" type="text" name="last_name" required>
                                     <label for="last-name" class="col-12 order-0">Last name</label>
                                 </div>
                             </div>
                         @endif
                         <div class="col-6 field-item text-field">
                             <div class="row g-0">
-                                <input value="{{ old('address') }}" id="address" class="col-12 order-1" type="text" name="address" required>
+                                <input value="@if($data->address){{$data->address}}@else{{ old('address') }}@endif" id="address" class="col-12 order-1" type="text" name="address" required>
                                 <label for="address" class="col-12 order-0">1st line of address</label>
                             </div>
                         </div>
                         <div class="col-6 field-item text-field">
                             <div class="row g-0">
-                                <input value="{{ old('postcode') }}" id="postcode" class="col-12 order-1" type="text" name="postcode" required>
+                                <input value="@if($data->postcode){{$data->postcode}}@else{{ old('postcode') }}@endif" id="postcode" class="col-12 order-1" type="text" name="postcode" required>
                                 <label for="postcode" class="col-12 order-0">Project postcode</label>
                             </div>
                         </div>
                         @if(!auth()->check())
                             <div class="col-6 field-item text-field">
                                 <div class="row g-0">
-                                    <input value="{{ old('email') }}" id="email" class="col-12 order-1" type="email" name="email" required>
+                                    <input value="@if($data->email){{$data->email}}@else{{ old('email') }}@endif" id="email" class="col-12 order-1" type="email" name="email" required>
                                     <label for="email" class="col-12 order-0">Email</label>
                                     @error('email')
                                     <span class="col-12 order-2 error">
@@ -184,7 +184,7 @@
                             </div>
                             <div class="col-6 field-item text-field">
                                 <div class="row g-0">
-                                    <input value="{{ old('phone') }}" id="phone" class="col-12 order-1" type="text" name="phone" required>
+                                    <input value="@if($data->phone){{$data->phone}}@else{{ old('phone') }}@endif" id="phone" class="col-12 order-1" type="text" name="phone" required>
                                     <label for="phone" class="col-12 order-0">Phone</label>
                                     @error('phone')
                                     <span class="col-12 order-2 error">
@@ -216,7 +216,7 @@
             </div>
 
             <div class="submit-form center">
-                <input type="submit" class="submit-btn" value="Reveal Estimate">
+                <input type="submit" class="submit-btn" value="Submit Request">
             </div>
             {!! Form::close() !!}
         </div>

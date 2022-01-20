@@ -219,7 +219,7 @@
             <div class="row align-items-center">
                 <div class="col-auto">
                     <div class="image-block">
-                        <img src="{{ asset('public/assets/site/images/example') }}/head-of-new-builds.png" alt="Meet Mark, Head of New Builds">
+                        <img src="{{ asset('public/assets/site/images/example') }}/head-of-new-buildings.png" width="470px" alt="Meet Mark, Head of New Builds">
                     </div>
                 </div>
                 <div class="col">
