@@ -3,8 +3,6 @@
   * Sizes => 1920, 1440, 1280, 1024
   * unit => PX
   */
-<<<<<<< HEAD
-=======
 @media (max-width: 1024px) {
   .page-header .fn-btn.get-an-instant-quote {
     display: none;
@@ -112,7 +110,6 @@
     font-size: 20px;
   }
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 /*
   * Use => Tablet Screen
   * Sizes => 991, 767

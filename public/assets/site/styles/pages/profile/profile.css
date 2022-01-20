@@ -126,12 +126,9 @@ body {
   width: 290px;
   min-height: 100vh;
 }
-<<<<<<< HEAD
-=======
 .dashboard-page .sidebar-col .close-sidebar {
   display: none;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .dashboard-page .sidebar-col .sidebar {
   display: inline-block;
   width: 100%;
@@ -273,12 +270,6 @@ body {
 .dashboard-page .content-col .content-inner .heading-dashboard img {
   max-width: 100%;
 }
-<<<<<<< HEAD
-.dashboard-page .content-col .content-inner .heading-dashboard .content-col-heading {
-  padding-left: 50px;
-}
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .dashboard-page .content-col .content-inner .heading-dashboard .content-col-heading .h-text {
   font-size: 30px;
   font-weight: 700;
@@ -1033,22 +1024,11 @@ body {
   text-align: center;
 }
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .field-item.image-radio-btn.full-width label {
-<<<<<<< HEAD
-  height: 67px;
-  line-height: 67px;
-  padding: 0 20px;
-=======
   padding: 20px 20px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .field-item.image-radio-btn.full-width label .icon {
   width: auto;
   margin-right: 10px;
-<<<<<<< HEAD
-}
-.dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .field-item.image-radio-btn.full-width label .label {
-  width: auto;
-=======
   margin-bottom: 0;
   display: inline-block;
   vertical-align: middle;
@@ -1059,7 +1039,6 @@ body {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .field-item.image-number-field {
   border: 1px solid #cfcfcf;
@@ -1150,15 +1129,12 @@ body {
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .btn-next .btn-item:hover {
   background: #000000;
 }
-<<<<<<< HEAD
-=======
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .btn-next button {
   padding: 0;
   margin: 0;
   background: transparent;
   border: none;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .dashboard-page .content-col .content-inner .project-page .tab-content .tab-content-body .accordion .accordion-item .accordion-content-inner .drag-drop-files .files .file {
   width: 100%;
   height: 55px;
@@ -1408,8 +1384,6 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .section-text .desc-section {
   font-weight: 300;
 }
-<<<<<<< HEAD
-=======
 .section-tab-mode .section-content-tab-mode .section-inner .section-text a {
   font-weight: 500;
   font-size: 18px;
@@ -1424,7 +1398,6 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .section-text a:hover {
   background: #000000;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .section-tab-mode .section-content-tab-mode .section-inner .section-links .item {
   background: rgba(237, 123, 0, 0.1);
   border: 1px solid #ED3F00;
@@ -1439,11 +1412,7 @@ body {
   transition: 0.3s;
   position: relative;
   margin-bottom: 10px;
-<<<<<<< HEAD
-  padding-right: 70px;
-=======
   padding-right: 40px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .section-tab-mode .section-content-tab-mode .section-inner .section-links .item:last-child {
   margin-bottom: 0;
@@ -1487,10 +1456,7 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .accordion-block .accordion-item {
   border: 1px solid #CFCFCF;
   padding: 30px;
-<<<<<<< HEAD
-=======
   background: transparent;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .section-tab-mode .section-content-tab-mode .section-inner .accordion-block .accordion-item .accordion-header {
   position: relative;
@@ -1629,14 +1595,6 @@ body {
   margin-bottom: 15px;
   font-weight: 500;
 }
-<<<<<<< HEAD
-.section-tab-mode .section-content-tab-mode .section-inner .connect-service-block {
-  background: #f4f4f4;
-  border: solid 1px #e6e6e6;
-  padding: 25px 30px;
-}
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .section-tab-mode .section-content-tab-mode .section-inner .connect-service-block .connect-service-list .connect-item {
   padding: 15px 130px 15px 20px;
   border: solid 1px #e6e6e6;
@@ -1672,10 +1630,6 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item {
   display: inline-block;
   width: 100%;
-<<<<<<< HEAD
-  background: #EEEEEE;
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   padding: 15px;
   border: solid 1px #d7d7d7;
   transition: 0.3s;
@@ -1684,13 +1638,6 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item:last-child {
   margin-bottom: 0;
 }
-<<<<<<< HEAD
-.section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item:hover {
-  background: #e3e3e3;
-}
-.section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item .order-icon img {
-  width: 35px;
-=======
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item .order-icon img {
   width: 64px;
 }
@@ -1702,16 +1649,11 @@ body {
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item .order-title {
   font-size: 16px;
   margin: 7px 0;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item .price {
   padding: 0 50px;
   font-size: 14px;
-<<<<<<< HEAD
-  margin-bottom: 4px;
-=======
   margin: 14px 0;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .section-tab-mode .section-content-tab-mode .section-inner .connect-quote .order-item .price:last-child {
   margin-bottom: 0;
@@ -1720,11 +1662,6 @@ body {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-<<<<<<< HEAD
-  width: 30px;
-  position: relative;
-  top: -1px;
-=======
   width: 35px;
   position: relative;
   top: 0;
@@ -1753,7 +1690,6 @@ body {
   width: 100%;
   font-weight: 500;
   font-size: 18px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .section-tab-mode .payment-col {
   border: 1px solid #CFCFCF;
@@ -1829,8 +1765,6 @@ body {
 .section-tab-mode .payment-col .payment-methods input.colored {
   background: #ED7B00;
 }
-<<<<<<< HEAD
-=======
 .section-tab-mode .payment-col .payment-methods .by-transfer {
   font-weight: 500;
   font-size: 18px;
@@ -1848,7 +1782,6 @@ body {
 .section-tab-mode .payment-col .payment-methods .by-transfer:hover {
   transform: scale(1.02);
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /* Table Block */
 .table-block table td {
@@ -1898,8 +1831,6 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-<<<<<<< HEAD
-=======
 .single-payment.single-payment-by-transfer .item {
   line-height: 65px;
 }
@@ -1911,7 +1842,6 @@ body {
   font-weight: 400;
   font-size: 20px;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 .w3-display-container {
   position: relative;
@@ -1950,16 +1880,11 @@ body {
 /* Payment BTN */
 .pay-btn {
   padding: 20px 0;
-<<<<<<< HEAD
-}
-.pay-btn input[type=submit] {
-=======
   font-size: 0;
 }
 .pay-btn input[type=submit] {
   display: inline-block;
   vertical-align: middle;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
@@ -1979,8 +1904,6 @@ body {
 .pay-btn input[type=submit].colored {
   background: #ED7B00;
 }
-<<<<<<< HEAD
-=======
 .pay-btn .back-to-profile {
   display: inline-block;
   vertical-align: middle;
@@ -2015,7 +1938,6 @@ body {
 .pay-btn .by-transfer:hover {
   transform: scale(1.02);
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /* Pagination */
 .pagination-app .pagination-links ul {
@@ -2090,30 +2012,16 @@ body {
 }
 .modal-website .modal-block-box .close-btn {
   position: absolute;
-<<<<<<< HEAD
-  right: -30px;
-  top: -20px;
-  font-weight: bold;
-  font-size: 26px;
-  color: #776665;
-=======
   right: -15px;
   top: -12px;
   font-weight: bold;
   font-size: 12px;
   color: #ffffff;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: 0.3s;
   z-index: 1;
   opacity: 1;
-<<<<<<< HEAD
-}
-.modal-website .modal-block-box .close-btn:hover {
-  transform: scale(1.1);
-  color: #ec2017;
-=======
   background: #3c3c3c;
   border-radius: 100%;
   width: 21px;
@@ -2124,7 +2032,6 @@ body {
 }
 .modal-website .modal-block-box .close-btn:hover {
   transform: scale(1.1);
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   text-shadow: 0 0 25px rgba(255, 54, 0, 0.48);
 }
 .modal-website .modal-block-box .whats-news-block {
@@ -2374,14 +2281,10 @@ body {
 .file-library-page .nav-items ul li.active-menu a {
   border-color: #000000;
   background: #000000;
-<<<<<<< HEAD
-  font-size: 0;
-=======
   color: #ffffff !important;
 }
 .file-library-page .nav-items ul li.active-menu a * {
   color: #ffffff !important;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .file-library-page .nav-items ul li a {
   border: 1px solid #CFCFCF;
@@ -2456,11 +2359,8 @@ body {
 }
 .file-library-page .show-file .file-list {
   padding: 18px 25px;
-<<<<<<< HEAD
-=======
   overflow: auto;
   max-height: 500px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .file-library-page .show-file .file-list .item {
   border-bottom: 1px solid #CFCFCF;
@@ -2469,8 +2369,6 @@ body {
 .file-library-page .show-file .file-list .item:last-child {
   border-bottom: none;
 }
-<<<<<<< HEAD
-=======
 .file-library-page .show-file .file-list .item .file-name {
   font-weight: 600;
   font-size: 15px;
@@ -2525,6 +2423,5 @@ body {
 .toggle-sidebar {
   display: none;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /*# sourceMappingURL=profile.css.map */

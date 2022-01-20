@@ -13,21 +13,12 @@
     <div class="container">
         <section class="page-info">
             <div class="row align-items-center">
-<<<<<<< HEAD
-                <div class="col-auto">
-                    <div class="page-icon w-auto">
-                        <img src="{{ asset('public/assets/site/images/example') }}/Find_a_structural_engineer_for_your_project.png" alt="Find a structural engineer for your project">
-                    </div>
-                </div>
-                <div class="col-8">
-=======
                 <div class="col-md-auto text-md-start text-center md-md-0 mb-3">
                     <div class="page-icon w-auto d-inline-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/Find_a_structural_engineer_for_your_project.png" alt="Find a structural engineer for your project">
                     </div>
                 </div>
                 <div class="col-md text-md-start text-center">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-title">Find a structural engineer for your project</div>
                     <div class="heading-desc">Keep your project in good hands by using UDEX Connect to find vetted structural engineers.</div>
                 </div>
@@ -37,20 +28,12 @@
         {{-- What does a structural engineer do? --}}
         <section class="section-content pb-5">
             <div class="row align-items-center">
-<<<<<<< HEAD
-                <div class="col-auto">
-=======
                 <div class="col-md-auto col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/What_does_a_structural_engineer_do.png" alt="What does a structural engineer do?">
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div class="col">
-=======
                 <div class="col-md col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">What does a structural engineer do?</div>
                     <div class="text-block">
                         <p>Just as the name suggests, structural engineers are concerned with everything that makes your house stand up. They’re a vital part of the building regulations process and will work with UDEX to produce the technical equations needed to secure building control approval.</p>
@@ -135,31 +118,19 @@
 
             <div class="child-items center">
                 <div class="row gx-5">
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">Avoid the cowboys</div>
                             <div class="text">Our experts can help you spot any dodgy practices, protecting you form rogue traders. We’ll match you with professionals we’ve worked with before, offering a proven track record and thorough vetting</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">No extra cost</div>
                             <div class="text">Our Connect introduction service comes at zero cost to you - you only pay for the service the professional provides. Share your requirements for free and start to receive trusted quotes right away.</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">Free advice & guidance</div>
                             <div class="text">We’ll walk you through the quotes professionals and specialists provide. Rather than sifting through hundreds of quotes, we’ll recommend a selection that is perfect for you and your project.</div>

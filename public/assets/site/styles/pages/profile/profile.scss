@@ -88,13 +88,10 @@ body {
         width: 290px;
         min-height: 100vh;
 
-<<<<<<< HEAD
-=======
         .close-sidebar {
             display: none;
         }
 
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         .sidebar {
             display: inline-block;
             width: 100%;
@@ -276,10 +273,6 @@ body {
                 }
 
                 .content-col-heading {
-<<<<<<< HEAD
-                    padding-left: 50px;
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                     .h-text {
                         font-size: 30px;
@@ -862,10 +855,6 @@ body {
                                 }
                             }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             &.my-message {
                                 text-align: right;
 
@@ -1276,23 +1265,11 @@ body {
 
                                             &.full-width {
                                                 label {
-<<<<<<< HEAD
-                                                    height: 67px;
-                                                    line-height: 67px;
-                                                    padding: 0 20px;
-=======
                                                     padding: 20px 20px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                                                     .icon {
                                                         width: auto;
                                                         margin-right: 10px;
-<<<<<<< HEAD
-                                                    }
-
-                                                    .label {
-                                                        width: auto;
-=======
                                                         margin-bottom: 0;
                                                         @include inline_middle();
                                                         display: initial;
@@ -1302,7 +1279,6 @@ body {
                                                         width: calc(100% - 34px);
                                                         @include inline_middle();
                                                         text-align: left;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                     }
                                                 }
                                             }
@@ -1416,8 +1392,6 @@ body {
                                                 background: #000000;
                                             }
                                         }
-<<<<<<< HEAD
-=======
 
                                         button {
                                             padding: 0;
@@ -1425,7 +1399,6 @@ body {
                                             background: transparent;
                                             border: none;
                                         }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                     }
 
                                     .drag-drop-files {
@@ -1767,8 +1740,6 @@ body {
                 .desc-section {
                     font-weight: 300;
                 }
-<<<<<<< HEAD
-=======
 
                 a {
                     font-weight: 500;
@@ -1785,7 +1756,6 @@ body {
                         background: #000000;
                     }
                 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             }
 
             .section-links {
@@ -1803,11 +1773,7 @@ body {
                     transition: .3s;
                     position: relative;
                     margin-bottom: 10px;
-<<<<<<< HEAD
-                    padding-right: 70px;
-=======
                     padding-right: 40px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                     &:last-child {
                         margin-bottom: 0;
@@ -1861,10 +1827,7 @@ body {
                 .accordion-item {
                     border: 1px solid #CFCFCF;
                     padding: 30px;
-<<<<<<< HEAD
-=======
                     background: transparent;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                     .accordion-header {
                         position: relative;
@@ -2047,15 +2010,9 @@ body {
             }
 
             .connect-service-block {
-<<<<<<< HEAD
-                background: #f4f4f4;
-                border: solid 1px #e6e6e6;
-                padding: 25px 30px;
-=======
                 //background: #f4f4f4;
                 //border: solid 1px #e6e6e6;
                 //padding: 25px 30px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                 .connect-service-list {
                     .connect-item {
@@ -2105,10 +2062,6 @@ body {
                 .order-item {
                     display: inline-block;
                     width: 100%;
-<<<<<<< HEAD
-                    background: #EEEEEE;
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     padding: 15px;
                     border: solid 1px #d7d7d7;
                     transition: .3s;
@@ -2118,30 +2071,13 @@ body {
                         margin-bottom: 0;
                     }
 
-<<<<<<< HEAD
-                    &:hover {
-                        background: #e3e3e3;
-                    }
-
-                    .order-icon {
-                        img {
-                            width: 35px;
-=======
                     .order-icon {
                         img {
                             width: 64px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         }
                     }
 
                     .order-title {
-<<<<<<< HEAD
-
-                    }
-
-                    .order-address {
-
-=======
                         font-weight: 500;
                     }
 
@@ -2150,17 +2086,12 @@ body {
                     .order-title {
                         font-size: 16px;
                         margin: 7px 0;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     }
 
                     .price {
                         padding: 0 50px;
                         font-size: 14px;
-<<<<<<< HEAD
-                        margin-bottom: 4px;
-=======
                         margin: 14px 0;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                         &:last-child {
                             margin-bottom: 0;
@@ -2169,24 +2100,16 @@ body {
                         .icon {
                             @include inline_middle();
                             text-align: center;
-<<<<<<< HEAD
-                            width: 30px;
-                            position: relative;
-                            top: -1px;
-=======
                             width: 35px;
                             position: relative;
                             top: 0;
                             margin-right: 3px;
                             font-weight: 500;
                             font-size: 16px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         }
                     }
                 }
             }
-<<<<<<< HEAD
-=======
 
             .submit-connect-quote {
                 .item-inner {
@@ -2215,7 +2138,6 @@ body {
                     }
                 }
             }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         }
     }
 
@@ -2308,8 +2230,6 @@ body {
                     background: $Base_Color;
                 }
             }
-<<<<<<< HEAD
-=======
 
             .by-transfer {
                 font-weight: 500;
@@ -2329,7 +2249,6 @@ body {
                     transform: scale(1.02);
                 }
             }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         }
     }
 }
@@ -2391,8 +2310,6 @@ body {
             @include inline_middle();
         }
     }
-<<<<<<< HEAD
-=======
 
     &.single-payment-by-transfer {
         .item {
@@ -2409,7 +2326,6 @@ body {
             }
         }
     }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 
 .w3-display-container {
@@ -2455,15 +2371,10 @@ body {
 /* Payment BTN */
 .pay-btn {
     padding: 20px 0;
-<<<<<<< HEAD
-
-    input[type=submit] {
-=======
     font-size: 0;
 
     input[type=submit] {
         @include inline_middle();
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         font-weight: 500;
         font-size: 18px;
         line-height: 26px;
@@ -2485,8 +2396,6 @@ body {
             background: #ED7B00;
         }
     }
-<<<<<<< HEAD
-=======
 
     .back-to-profile {
         @include inline_middle();
@@ -2524,7 +2433,6 @@ body {
             transform: scale(1.02);
         }
     }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 
 /* Pagination */
@@ -2614,22 +2522,6 @@ body {
 
         .close-btn {
             position: absolute;
-<<<<<<< HEAD
-            right: -30px;
-            top: -20px;
-            font-weight: bold;
-            font-size: 26px;
-            color: #776665;
-            text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-            transition: .3s;
-            z-index: 1;
-            opacity: 1;
-
-            &:hover {
-                transform: scale(1.1);
-                color: #ec2017;
-=======
             right: -15px;
             top: -12px;
             font-weight: bold;
@@ -2650,7 +2542,6 @@ body {
 
             &:hover {
                 transform: scale(1.1);
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 text-shadow: 0 0 25px rgba(255, 54, 0, 0.48);
             }
         }
@@ -2975,15 +2866,11 @@ body {
                     a {
                         border-color: #000000;
                         background: #000000;
-<<<<<<< HEAD
-                        font-size: 0;
-=======
                         color: #ffffff !important;
 
                         * {
                             color: #ffffff !important;
                         }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     }
                 }
 
@@ -3082,11 +2969,8 @@ body {
 
         .file-list {
             padding: 18px 25px;
-<<<<<<< HEAD
-=======
             overflow: auto;
             max-height: 500px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
             .item {
                 border-bottom: 1px solid #CFCFCF;
@@ -3095,8 +2979,6 @@ body {
                 &:last-child {
                     border-bottom: none;
                 }
-<<<<<<< HEAD
-=======
 
                 .file-name {
                     font-weight: 600;
@@ -3120,13 +3002,10 @@ body {
                         color: $Base_Color;
                     }
                 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             }
         }
     }
 }
-<<<<<<< HEAD
-=======
 
 .notifications {
     position: fixed;
@@ -3166,4 +3045,3 @@ body {
 .toggle-sidebar {
     display: none;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969

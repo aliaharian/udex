@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>UDEX | @yield('page-title')</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<<<<<<< HEAD
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('resources/views/layouts') }}/favicon-admin.svg">
-=======
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udex-fav.jpeg">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
     {{-- Library --}}
     <script src="{{ asset('public/assets/admin') }}/js/jquery.min.js"></script>

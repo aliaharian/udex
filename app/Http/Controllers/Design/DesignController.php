@@ -22,20 +22,6 @@ class DesignController extends Controller {
         return view('site.pages.design.design');
     }
 
-<<<<<<< HEAD
-    /* Edit Design */
-    public function edit($id) {
-        $Design = Design::find($id);
-        $Invoice = Invoice::where('order_id', $Design->id)->orderBy('payment_step', 'asc')->get()->all();
-        $Data = [
-            'Design',
-            'Invoice'
-        ];
-
-        return view('admin.design.edit', compact($Data));
-    }
-
-=======
     /* Create Page for Admin */
     public function create_admin() {
         $Users = User::get()->all();
@@ -48,7 +34,6 @@ class DesignController extends Controller {
     }
 
     /* Create Design Quote */
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function store(Request $request) {
         if (!auth()->check()) {
             $request->validate([
@@ -84,14 +69,11 @@ class DesignController extends Controller {
         } else {
             $user_id = auth()->user()->id;
         }
-<<<<<<< HEAD
-=======
 
         if (isset($request->for_user)) {
             $user_id = $request->for_user;
         }
 
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $DesignOption = DesignOptions::where('id', '!=', null)->first();
         $Invoice = new Invoice;
         $Design = new Design;
@@ -161,11 +143,6 @@ class DesignController extends Controller {
             //            ]);
 
 
-<<<<<<< HEAD
-            return redirect('profile/design' . '/' . $Design->id)->with('notification', [
-                'class' => 'success',
-                'message' => 'Data successfully recorded.'
-=======
             if (isset($request->for_user)) {
                 return redirect('dashboard/design/edit' . '/' . $Design->id)->with('notification', [
                     'class' => 'success',
@@ -214,18 +191,13 @@ class DesignController extends Controller {
             return redirect()->back()->with('notification', [
                 'class' => 'success',
                 'message' => 'Design Qoute Updated.'
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             ]);
         }
     }
 
     /* Show All Design Request */
     public function profile_design_list() {
-<<<<<<< HEAD
-        $Designs = Design::where('uid', auth()->user()->id)->get();
-=======
         $Designs = Design::orderBy('created_at', 'desc')->where('uid', auth()->user()->id)->get();
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
         return view('site.profile.design.designs', compact('Designs'));
     }
@@ -249,8 +221,6 @@ class DesignController extends Controller {
 
         return view('site.pages.design.show', compact('Design'));
     }
-<<<<<<< HEAD
-=======
 
     /* Manage Payments */
     public function PaymentManage($id) {
@@ -304,5 +274,4 @@ class DesignController extends Controller {
         ]);
 
     }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }

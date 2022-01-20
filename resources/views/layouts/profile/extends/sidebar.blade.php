@@ -1,13 +1,9 @@
 <aside class="sidebar">
     <div class="heading-side">
         <div class="logo center">
-<<<<<<< HEAD
-            <a href="{{ url('profile/project') }}"><img width="140" src="{{ asset('public/assets/site/images/base/logo.png') }}" srcset="{{ asset('public/assets/site/images/base/logo_2.png') }} 2x" alt="UDEX"></a>
-=======
             <a href="{{ url('profile/project') }}">
                 <img width="140" src="{{ asset('public/assets/site/images/base/logo.png') }}" srcset="{{ asset('public/assets/site/images/base/logo_2.png') }} 2x" alt="UDEX">
             </a>
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         </div>
         <div class="user-info">
             <div class="welcome">Welcome</div>
@@ -28,38 +24,12 @@
                     </ul>
                 </nav>
             </div>
-<<<<<<< HEAD
-{{--            <div class="breadcrumb-dashboard">to your dashboard</div>--}}
-=======
             {{--            <div class="breadcrumb-dashboard">to your dashboard</div>--}}
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         </div>
     </div>
 
     <nav class="dashboard-nav">
         <ul>
-<<<<<<< HEAD
-            <li><a href="{{ url('profile/project') }}"> <span class="icon icon-home"></span> <span class="text">Dashboard</span> </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a class="@if (Request::is('profile/project*')) {{ 'active' }}@endif" href="{{ url('profile/project') }}"><span class="icon icon-project_information"></span><span class="text">Project information</span></a>
-                    </li>
-                    <li>
-                        <a class="@if (Request::is('profile/design*')) {{ 'active' }}@endif" href="{{ url('profile/design') }}"><span class="icon icon-design"></span><span class="text">Design</span></a>
-                    </li>
-                    <li><a class="@if (Request::is('profile/connect*')) {{ 'active' }}@endif" href="{{ url('profile/connect') }}"><span class="icon icon-connect"></span><span class="text">Connect</span></a>
-                    </li>
-                    <li><a class="@if (Request::is('profile/messages*')) {{ 'active' }}@endif" href="{{ url('profile/messages') }}"><span class="icon icon-message"></span><span class="text">Messages</span></a>
-                    </li>
-                    <li><a href="#" ><span class="icon icon-folder"></span><span class="text">File library</span></a>
-                    </li>
-                </ul>
-            </li>
-
-            <li><a class="@if (Request::is('profile/architectionary*')) {{ 'active' }}@endif" href="{{ url('profile/architectionary') }}"><span class="icon icon-architectionary"></span><span class="text">Architectionary</span></a></li>
-            <li><a class="@if (Request::is('profile/payments*')) {{ 'active' }}@endif" href="{{ url('profile/payments?status=paid') }}"><span class="icon icon-payment"></span><span class="text">Payments</span></a></li>
-            <li onclick="show_modal('modal-search')"><a href="#"><span class="icon icon-star-o"></span><span class="text">What's new?</span></a></li>
-=======
             <li><a href="{{ url('profile/project') }}">
                     <span class="icon icon-home"></span>
                     <span class="text">Dashboard</span>
@@ -107,7 +77,6 @@
                     <span class="icon icon-star-o"></span>
                     <span class="text">What's new?</span>
                 </a></li>
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         </ul>
     </nav>
 </aside>

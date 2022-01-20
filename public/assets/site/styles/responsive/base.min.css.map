@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"base.min.css"}
-=======
 {"version":3,"sourceRoot":"","sources":["base.scss"],"names":[],"mappings":"AAeA,0BAEQ,0CACI,aAIR,6BACI,eAGJ,WACI,mBAEA,yBACI,gBAIR,YACI,yBACA,kBAEA,yBACI,mBAEA,iEACI,gBAEA,+EACI,WACA,mCACA,QAKZ,qCACI,eACA,YACA,WACA,iBAKJ,kCACI,oBAIR,mEACI,eAGJ,gEACI,gBAGJ,8BACI,WACA,kBACA,mBAGJ,sBACI,2BAGJ,0BACI,cACA,UAEA,6CACI,eAIR,yDACI,4BAEA,gEACI,WAIR,2CACI,aAOA,oDACI,UACA,kBAGJ,iDACI,WAGJ,sDACI,UACA,WACA,kBAIR,yCACI,UAGJ,mEACI,qBAGJ,eACI,UAGJ,qCACI","file":"base.min.css"}
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969

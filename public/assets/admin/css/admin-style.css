@@ -558,19 +558,11 @@ img {
   animation: wave-badge-icon 3s infinite;
 }
 .main-admin .sidebar-col .sidebar .menu-admin .badge-menu {
-<<<<<<< HEAD
-  float: left;
-  height: 17px;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 21px;
-=======
   float: right;
   height: 17px;
   font-weight: 500;
   font-size: 10px;
   line-height: 18px;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   padding: 0 6px;
   position: relative;
   top: 15px;
@@ -1522,17 +1514,10 @@ img {
   background: #ed7b00;
 }
 .submit-form-btn.create-btn {
-<<<<<<< HEAD
-  background: #40dc70;
-}
-.submit-form-btn.create-btn:hover {
-  background: #38cb66;
-=======
   background: #14c74b;
 }
 .submit-form-btn.create-btn:hover {
   background: #11a63e;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 
 a.submit-form-btn {
@@ -1644,11 +1629,7 @@ body .cke_reset_all textarea {
   cursor: pointer;
 }
 .text-field-repeater .add-field:hover {
-<<<<<<< HEAD
-  background: #5d50e3;
-=======
   background: #000000;
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 .text-field-repeater .add-field span {
   margin-left: 6px;
@@ -1798,13 +1779,6 @@ body .cke_reset_all textarea {
   color: #ed7b00;
 }
 
-<<<<<<< HEAD
-.price-items {
-  min-width: 290px;
-  display: inline-block;
-}
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 .price-items .item {
   padding-bottom: 8px;
   margin-bottom: 8px;
@@ -1826,8 +1800,6 @@ body .cke_reset_all textarea {
   line-height: 19px;
   text-align: right;
 }
-<<<<<<< HEAD
-=======
 .price-items .manage-payment {
   text-align: center;
 }
@@ -1886,6 +1858,5 @@ body .cke_reset_all textarea {
   color: #28a745;
   transition: 0.3s;
 }
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /*# sourceMappingURL=admin-style.css.map */

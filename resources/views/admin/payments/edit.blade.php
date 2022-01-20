@@ -11,9 +11,6 @@
         <form action="{{ route('design.update', $Payment->id) }}" method="post" enctype="multipart/form-data">
             <div class="widget-block widget-item widget-style">
                 <div class="heading-widget">
-<<<<<<< HEAD
-                    <div class="widget-title text-capitalize">Payment Number: #{{ $Payment->id }}</div>
-=======
                     <div class="row">
                         <div class="col-10">
                             <div class="widget-title text-capitalize">Payment Number: #{{ $Payment->id }}</div>
@@ -22,7 +19,6 @@
                             <a href="{{ url('dashboard/design/payment-manage/'. $Payment->order_id ) }}" class="submit-form-btn">Manage Invoice</a>
                         </div>
                     </div>
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 </div>
 
                 <div class="widget-content widget-content-padding">

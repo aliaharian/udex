@@ -8,13 +8,8 @@
     <div class="container">
         <section class="page-info">
             <div class="row align-items-center">
-<<<<<<< HEAD
-                <div class="col-auto">
-                    <div class="page-icon">
-=======
                 <div class="col-md-auto text-md-start text-center md-md-0 mb-3">
                     <div class="page-icon d-inline-block">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <svg width="110" height="93" xmlns="http://www.w3.org/2000/svg">
                             <path d="M84.2237 17.9298c-.0314-3.8738-.1663-9.4942-.3952-13.3613l-.2008-1.6706A906.7105 906.7105 0 0 1 65.0939.3309L63.0582 0l-4.8898 6.4838-5.5204 7.3076-1.8192 2.4083a16899.516 16899.516 0 0 1-16.2504 21.4661l-.0345 1.2339c-.047 4.5056-.1694 10.0003-.2039 14.3107l20.6636 2.4976 5.1596-6.8345c8.315-9.7654 16.034-20.08 23.7437-30.3813l.3136-.5624" fill="#dadde1"/>
                             <path d="M29.2735 56.8022c-1.2816-.2527-2.5996.1667-3.5349 1.1247-.7873.8237-1.493 2.3554-.574 3.3445.919.989 2.6222.6417 3.7043.3308 1.4177-.4268 3.0707-1.3232 3.676-2.8218.3482-.87-.8657-1.6309-1.2201-.751-.6022 1.4986-2.5877 2.276-4.0399 2.3686-.8688.0563-1.3487-.3671-.7088-1.2008.5605-.7262 1.4431-1.086 2.321-.9461.8877.139 1.2734-1.2935.3764-1.4357z" fill="#fff"/>
@@ -51,11 +46,7 @@
                         </svg>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div class="col-8">
-=======
                 <div class="col-md text-md-start text-center">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-title">Technical design & construction</div>
                     <div class="heading-desc">We'll prepare your technical drawings, as well as introduce you to the best construction professionals.</div>
                 </div>
@@ -63,26 +54,16 @@
         </section>
 
         {{-- Building regulations --}}
-<<<<<<< HEAD
-        <section class="section-content pt-4">
-            <div class="row">
-                <div class="col-8">
-=======
         <section class="section-content mb-md-4 mb-0 pt-4">
             <div class="row">
                 <div class="col-md-8 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">Building regulations</div>
                     <div class="text-block">
                         <p>These technical drawings cover everything from structure, fire safety, thermal performance, and even sound-proofing. Because of the scope of the work involved, you’ll need several experts in your corner, such as engineers, surveyors, and maybe even an approved inspector. Our Connect service will introduce you to the best companies in your area, while our team consolidate everything into one comprehensive set of drawings.</p>
                     </div>
                     <div class="show-more"><a href="{{ url('building-regulations') }}">Find out more</a></div>
                 </div>
-<<<<<<< HEAD
-                <div class="col-4">
-=======
                 <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/architectural_design_&_planning.png" alt="Building regulations">
                     </div>
@@ -91,24 +72,14 @@
         </section>
 
         {{-- Construction --}}
-<<<<<<< HEAD
-        <section class="section-content" style="margin: 165px 0 100px">
-            <div class="row">
-                <div class="col-4">
-=======
         <section class="section-content construction-section" style="margin: 165px 0 100px">
             <div class="row">
                 <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/technical-design-construction-image-2.png" alt="Construction">
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div class="col-8">
-=======
                 <div class="col-md-8 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">Construction</div>
                     <div class="text-block">
                         <p>When it comes to putting your project out for tender, we leave nothing to chance. We’ll not only help you gather quotes from local contractors, our Connect team will ensure you only consider builders we’ve vetted personally. Plus, with the details gathered during building regulations, we’ll help you sleuth out the best price. We make starting construction both safe and easy.</p>
@@ -128,31 +99,19 @@
             <div class="text-content">While planning drawings focus on the look of your home, the drawings produced for building regulations are far more complex. They factor in everything from structure, fire safety, all the way to air quality.</div>
             <div class="child-items">
                 <div class="row gx-5">
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">Professionals involved</div>
                             <div class="text">Alongside your technicians, you may also need a structural engineer, surveyors, and approved inspector. Depending on your area, we’ll introduce you to vetted companies near you and bring everything together in one package.</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">Tailored service</div>
                             <div class="text">At UDEX, you only pay for the things you need. Our building regulations package provides a number of extras (see below) you can opt for or against. This means you get drawings that are perfectly tailored to you and your needs.</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-4">
-=======
                     <div class="col-md-4 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="heading">Better build</div>
                             <div class="text">Our package starts paying off the minute you start the tendering process. The level of detail we provide enables potential contractors to give more accurate quotes, as well as giving a precise guide for them to follow during construction.</div>
@@ -172,11 +131,7 @@
 
             <div class="process-involved-list">
                 <div class="row justify-content-center gx-5">
-<<<<<<< HEAD
-                    <div class="col-3">
-=======
                     <div class="col-md-3 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="icon-item">
                                 <svg width="88" height="92" xmlns="http://www.w3.org/2000/svg">
@@ -187,11 +142,7 @@
                             <div class="desc-item mb-2">From your lighting to your plug sockets, make sure these vital features go exactly where you want them to.</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-3">
-=======
                     <div class="col-md-3 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="icon-item">
                                 <svg width="74" height="83" xmlns="http://www.w3.org/2000/svg">
@@ -202,11 +153,7 @@
                             <div class="desc-item mb-2">From your lighting to your plug sockets, make sure these vital features go exactly where you want them to.</div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-3">
-=======
                     <div class="col-md-3 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="item-inner">
                             <div class="icon-item">
                                 <svg width="78" height="76" xmlns="http://www.w3.org/2000/svg">
@@ -224,11 +171,7 @@
         {{-- Introducing... New builds --}}
         <section class="section-content">
             <div class="row align-items-center">
-<<<<<<< HEAD
-                <div class="col-7">
-=======
                 <div class="col-md-7 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">What is Connect?</div>
                     <div class="text-block">
                         <p>We want our customers to be in safe hands throughout their project, that’s why we created Connect. Whether you’re looking for the perfect builder, supplier, or building regulations expert, our Connect service introduces you to vetted professionals in your area.</p>
@@ -236,11 +179,7 @@
                     </div>
 {{--                    <div class="show-more"><a class="p-3 pt-0 pb-0" href="#">Find out more about TrustMark</a></div>--}}
                 </div>
-<<<<<<< HEAD
-                <div class="col-5">
-=======
                 <div class="col-md-5 col-12">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/architectural_design_&_planning.png">
                     </div>
@@ -251,11 +190,7 @@
         {{-- Explore our other services --}}
         <section class="explore-services center">
             <div class="row justify-content-center">
-<<<<<<< HEAD
-                <div class="col-5">
-=======
                 <div class="col-md-5">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">Explore our other services</div>
                     <div class="icon-section">
                         <svg width="231" height="144" xmlns="http://www.w3.org/2000/svg">

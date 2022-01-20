@@ -5,61 +5,37 @@
             <div class="excerpt-block center">Provide a few details about your project to receive accurate quotations</div>
             <div class="quote-form-block">
                 <div class="form-block">
-<<<<<<< HEAD
                     {!! Form::open(['url'=>'apply-quick-register?service='.request()->get('service')]) !!}
-=======
-                    {!! Form::open(['url'=>'find-a-builder-for-your-project#quick-register']) !!}
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="field-block mb-0">
                         <div class="inputs">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('first_name') }}" id="first-name" class="col-12 order-1 text-uppercase" type="text" name="first_name" required>
                                                 <label for="first-name" class="col-12 order-0">First name</label>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('last_name') }}" id="last-name" class="col-12 order-1 text-uppercase" type="text" name="last_name" required>
                                                 <label for="last-name" class="col-12 order-0">Last name</label>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('address') }}" id="address" class="col-12 order-1" type="text" name="address" required>
                                                 <label for="address" class="col-12 order-0">1st line of address</label>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('postcode') }}" id="postcode" class="col-12 order-1" type="text" name="postcode" required>
                                                 <label for="postcode" class="col-12 order-0">Project postcode</label>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('email') }}" id="email" class="col-12 order-1" type="email" name="email" required>
                                                 <label for="email" class="col-12 order-0">Email</label>
@@ -70,11 +46,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('phone') }}" id="phone" class="col-12 order-1" type="text" name="phone" required>
                                                 <label for="phone" class="col-12 order-0">Phone</label>
@@ -85,11 +57,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('password') }}" id="password" class="col-12 order-1" type="password" name="password" required>
                                                 <label for="password" class="col-12 order-0">Password</label>
@@ -100,17 +68,12 @@
                                                 @enderror
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="col-6 field-item text-field">
-=======
-                                        <div class="col-md-6 col-12 field-item text-field">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="row g-0">
                                                 <input value="{{ old('password_confirmation') }}" id="password_confirmation" class="col-12 order-1" type="password" name="password_confirmation" required>
                                                 <label for="password_confirmation" class="col-12 order-0">Confirm Password</label>
                                             </div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="field-block">
                                             <div class="filed-block-label">
                                                 Describe the requirements of your project
@@ -123,22 +86,6 @@
                                         </div>
                                     </div>
                                 </div>
-=======
-                                    </div>
-                                </div>
-                                {{--                                    <div class="col-4">--}}
-                                {{--                                        <div class="field-item text-field h-100">--}}
-                                {{--                                            <label for="message" class="bold-label">Describe the requirements of your project</label>--}}
-                                {{--                                            <div class="excerpt">What should we know about your project?</div>--}}
-                                {{--                                            <textarea id="message" name="message" required>{{ old('message') }}</textarea>--}}
-                                {{--                                            @error('message')--}}
-                                {{--                                            <span class="error">--}}
-                                {{--                                                    <strong>{{ $message }}</strong>--}}
-                                {{--                                                </span>--}}
-                                {{--                                            @enderror--}}
-                                {{--                                        </div>--}}
-                                {{--                                    </div>--}}
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-auto">
@@ -171,7 +118,6 @@
             </div>
         </div>
     </section>
-<<<<<<< HEAD
 
 
 @else
@@ -245,6 +191,4 @@
     </section>
 
 
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 @endif

@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "978770d82138b6eb0f8920a3042e6e08",
-=======
-    "content-hash": "b57053299fc107e5e041e82f24144183",
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1375,7 +1371,6 @@
         },
         {
             "name": "intervention/image",
-<<<<<<< HEAD
             "version": "2.7.0",
             "source": {
                 "type": "git",
@@ -1386,18 +1381,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Intervention/image/zipball/9a8cc99d30415ec0b3f7649e1647d03a55698545",
                 "reference": "9a8cc99d30415ec0b3f7649e1647d03a55698545",
-=======
-            "version": "2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Intervention/image.git",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/744ebba495319501b873a4e48787759c72e3fb8c",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c",
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 "shasum": ""
             },
             "require": {
@@ -1456,11 +1439,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-<<<<<<< HEAD
                 "source": "https://github.com/Intervention/image/tree/2.7.0"
-=======
-                "source": "https://github.com/Intervention/image/tree/2.7.1"
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             },
             "funding": [
                 {
@@ -1472,11 +1451,7 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
             "time": "2021-10-03T14:17:12+00:00"
-=======
-            "time": "2021-12-16T16:49:26+00:00"
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         },
         {
             "name": "laravel/framework",
@@ -8223,15 +8198,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-<<<<<<< HEAD
         "php": "^7.2.5|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
-=======
-        "php": "^7.2.5"
-    },
-    "platform-dev": [],
-    "plugin-api-version": "2.1.0"
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }

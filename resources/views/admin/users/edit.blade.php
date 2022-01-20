@@ -25,13 +25,6 @@
                             @csrf
                             {{ method_field('PUT') }}
                             <div class="form-group row no-gutters g-0">
-<<<<<<< HEAD
-                                @if($errors->has('name'))
-                                    <span class="col-12 message-show">{{ $errors->first('name') }}</span>
-                                @endif
-                                {!! Form::text('name',$users->name,[ 'id'=>'name' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Name']) !!}
-                                {!! Form::label('name','Name:',['class'=>'col-12']) !!}
-=======
                                 @if($errors->has('first_name'))
                                     <span class="col-12 message-show">{{ $errors->first('first_name') }}</span>
                                 @endif
@@ -44,7 +37,6 @@
                                 @endif
                                 {!! Form::text('last_name',$users->last_name,[ 'id'=>'last_name' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Last Name']) !!}
                                 {!! Form::label('last_name','Last Name:',['class'=>'col-12']) !!}
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             </div>
                             <div class="form-group row no-gutters g-0">
                                 @if($errors->has('email'))
@@ -61,8 +53,6 @@
                                 {!! Form::label('phone','Phone:',['class'=>'col-12']) !!}
                             </div>
                             <div class="form-group row no-gutters g-0">
-<<<<<<< HEAD
-=======
                                 @if($errors->has('address'))
                                     <span class="col-12 message-show">{{ $errors->first('address') }}</span>
                                 @endif
@@ -77,7 +67,6 @@
                                 {!! Form::label('postcode','Postal Code:',['class'=>'col-12']) !!}
                             </div>
                             <div class="form-group row no-gutters g-0">
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                 @if($errors->has('password'))
                                     <span class="col-12 message-show">{{ $errors->first('password') }}</span>
                                 @endif
