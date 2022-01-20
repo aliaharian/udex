@@ -36,12 +36,9 @@ require __DIR__ . '/vendor/autoload.php';
 */
 
 $app = require_once __DIR__ . '/bootstrap/app.php';
-<<<<<<< HEAD
 $app->bind('path.public', function() {
     return __DIR__;
 });
-=======
->>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
 /*
 |--------------------------------------------------------------------------
