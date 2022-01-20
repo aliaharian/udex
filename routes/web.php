@@ -41,6 +41,7 @@ Route::get('building-regulations', 'OtherPages\OtherPagesController@building_reg
 Route::get('new-builds', 'OtherPages\OtherPagesController@new_builds');
 Route::get('find-a-builder-for-your-project', 'OtherPages\OtherPagesController@find_a_builder_for_your_project');
 Route::post('find-a-builder-for-your-project', 'OtherPages\OtherPagesController@QuickQuoteStore')->name('QuickQuote.Store');
+Route::post('apply-quick-register', 'OtherPages\OtherPagesController@QuickRegisterStore')->name('QuickRegister.Store');
 Route::get('find-a-structural-engineer-for-your-project', 'OtherPages\OtherPagesController@find_a_structural_engineer_for_your_project');
 Route::get('find-a-cctv-drainage-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_cctv_drainage_surveyor_for_your_project');
 Route::get('find-a-party-wall-surveyor-for-your-project', 'OtherPages\OtherPagesController@find_a_party_wall_surveyor_for_your_project');
