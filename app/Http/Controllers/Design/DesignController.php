@@ -22,6 +22,7 @@ class DesignController extends Controller {
         return view('site.pages.design.design');
     }
 
+<<<<<<< HEAD
     /* Edit Design */
     public function edit($id) {
         $Design = Design::find($id);
@@ -34,6 +35,20 @@ class DesignController extends Controller {
         return view('admin.design.edit', compact($Data));
     }
 
+=======
+    /* Create Page for Admin */
+    public function create_admin() {
+        $Users = User::get()->all();
+
+        $Data = [
+            'Users'
+        ];
+
+        return view('admin.design.create', compact($Data));
+    }
+
+    /* Create Design Quote */
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function store(Request $request) {
         if (!auth()->check()) {
             $request->validate([
@@ -69,6 +84,14 @@ class DesignController extends Controller {
         } else {
             $user_id = auth()->user()->id;
         }
+<<<<<<< HEAD
+=======
+
+        if (isset($request->for_user)) {
+            $user_id = $request->for_user;
+        }
+
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $DesignOption = DesignOptions::where('id', '!=', null)->first();
         $Invoice = new Invoice;
         $Design = new Design;
@@ -138,16 +161,71 @@ class DesignController extends Controller {
             //            ]);
 
 
+<<<<<<< HEAD
             return redirect('profile/design' . '/' . $Design->id)->with('notification', [
                 'class' => 'success',
                 'message' => 'Data successfully recorded.'
+=======
+            if (isset($request->for_user)) {
+                return redirect('dashboard/design/edit' . '/' . $Design->id)->with('notification', [
+                    'class' => 'success',
+                    'message' => 'Data successfully recorded.'
+                ]);
+            } else {
+                return redirect('profile/design' . '/' . $Design->id)->with('notification', [
+                    'class' => 'success',
+                    'message' => 'Data successfully recorded.'
+                ]);
+            }
+        }
+    }
+
+    /* Edit Design */
+    public function edit($id) {
+        $Design = Design::find($id);
+        $Invoice = Invoice::where('order_id', $Design->id)->orderBy('payment_step', 'asc')->get()->all();
+        $Data = [
+            'Design',
+            'Invoice'
+        ];
+
+        return view('admin.design.edit', compact($Data));
+    }
+
+    /* Design Update Qoute */
+    public function update(Request $request, $id) {
+        $Design = Design::find($id);
+        $DesignData = $request->all();
+
+        $OldDesignMetaData = json_decode($Design->design_meta, true);
+
+        $OldDesignMetaData['InitialPhoneConsultation'] = $DesignData['InitialPhoneConsultation'];
+        $OldDesignMetaData['OnSiteMeasuredSurvey'] = $DesignData['OnSiteMeasuredSurvey'];
+        $OldDesignMetaData['ExistingDrawings'] = $DesignData['ExistingDrawings'];
+        $OldDesignMetaData['ProposedDesign'] = $DesignData['ProposedDesign'];
+        $OldDesignMetaData['PlanningSupport'] = $DesignData['PlanningSupport'];
+        $OldDesignMetaData['BuildingRegulations'] = $DesignData['BuildingRegulations'];
+        $OldDesignMetaData['PhotoRealistic3Ds'] = $DesignData['PhotoRealistic3Ds'];
+        $OldDesignMetaData['Connect'] = $DesignData['Connect'];
+
+        $Design->design_meta = json_encode($OldDesignMetaData);
+
+        if ($Design->update()) {
+            return redirect()->back()->with('notification', [
+                'class' => 'success',
+                'message' => 'Design Qoute Updated.'
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             ]);
         }
     }
 
     /* Show All Design Request */
     public function profile_design_list() {
+<<<<<<< HEAD
         $Designs = Design::where('uid', auth()->user()->id)->get();
+=======
+        $Designs = Design::orderBy('created_at', 'desc')->where('uid', auth()->user()->id)->get();
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
         return view('site.profile.design.designs', compact('Designs'));
     }
@@ -171,4 +249,60 @@ class DesignController extends Controller {
 
         return view('site.pages.design.show', compact('Design'));
     }
+<<<<<<< HEAD
+=======
+
+    /* Manage Payments */
+    public function PaymentManage($id) {
+        $Design = Design::find($id);
+
+        $Invoice = Invoice::where('order_id', $Design->id)->orderBy('payment_step', 'asc')->get()->all();
+        $TotalAmount = Invoice::where('order_id', $Design->id)->sum('amount');
+        $RemainingAmount = Invoice::where('order_id', $Design->id)->where('status', 'unpaid')->sum('amount');
+
+        $Data = [
+            'Design',
+            'Invoice',
+            'TotalAmount',
+            'RemainingAmount',
+        ];
+
+        return view('admin.design.payment-manage', compact($Data));
+    }
+
+    public function PaymentManageUpdate(Request $request, $id) {
+        $OldInvoice = Invoice::where('order_id', $id)->get()->all();
+        $NewInvoice = $request->all();
+        $Design = Design::find($id);
+
+        foreach ($OldInvoice as $item) {
+            Invoice::find($item->id)->delete();
+        }
+
+        $i = 1;
+        foreach ($NewInvoice['invoice'] as $item) {
+            $Invoice = new Invoice;
+            $Invoice->uid = $Design->uid;
+            $Invoice->title = 'Design Quote';
+            $Invoice->product_type = 'design';
+            $Invoice->order_id = $id;
+            if (isset($item['paid']) && $item['paid'] == 1) {
+                $Invoice->status = 'paid';
+            } else {
+                $Invoice->status = 'unpaid';
+            }
+            $Invoice->payment_step = $i;
+            $Invoice->amount = $item['amount'];
+            $Invoice->save();
+            $i += 1;
+        }
+
+
+        return redirect()->back()->with('notification', [
+            'class' => 'success',
+            'message' => 'Items deleted.'
+        ]);
+
+    }
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }

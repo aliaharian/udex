@@ -31,6 +31,10 @@ class PaymentController extends Controller {
         $this->_api_context->setConfig($paypal_conf['settings']);
     }
 
+<<<<<<< HEAD
+=======
+    /* Show Invoice List */
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function index() {
         $user = auth()->user();
         if (isset($_GET['status'])) {
@@ -38,9 +42,17 @@ class PaymentController extends Controller {
         } else {
             $Payments = Invoice::where('uid', $user->id)->orderBy('created_at', 'desc')->paginate(10);
         }
+<<<<<<< HEAD
         return view('site.profile.payments.index', compact('Payments'));
     }
 
+=======
+
+        return view('site.profile.payments.index', compact('Payments'));
+    }
+
+    /* Show Invoice */
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function show($id) {
         $User = auth()->user();
         $Payment = Invoice::where('id', $id)->where('uid', $User->id)->first();
@@ -52,6 +64,10 @@ class PaymentController extends Controller {
         }
     }
 
+<<<<<<< HEAD
+=======
+    /* Post to PayPal */
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function payWithpaypal(Request $request) {
         if (isset($request->pay_type) && $request->pay_type == 'design') {
             $OrderId = basename(parse_url(URL::previous())['path']);
@@ -142,6 +158,10 @@ class PaymentController extends Controller {
 
     }
 
+<<<<<<< HEAD
+=======
+    /* Paypal Status Callback */
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     public function getPaymentStatus(Request $request) {
 
         /** Get the payment ID before session clear **/
@@ -182,5 +202,27 @@ class PaymentController extends Controller {
         return \redirect('profile/payments' . '/' . $GetOrderDetails->sku);
 
     }
+<<<<<<< HEAD
+=======
+
+    /* By Transfer */
+    public function ByTransfer($id) {
+        $Payment = Invoice::find($id);
+
+        return view('site.profile.payments.by-transfer', compact('Payment'));
+    }
+
+    /* By Transfer */
+    public function ByTransferSubmit($id) {
+        $Payment = Invoice::find($id);
+
+        \Session::put('success', 'Submit Request');
+        $Payment->bt_transfer = 1;
+
+        if ($Payment->update()) {
+            return \redirect()->back();
+        }
+    }
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 

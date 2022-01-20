@@ -20,14 +20,22 @@
         <div class="section-tab-mode">
             <div class="heading-section center">
                 <div class="row g-0">
+<<<<<<< HEAD
                     <div class="col-auto item @if(isset($_GET['status']) && $_GET['status'] == 'paid'){{ 'active' }}@endif">
+=======
+                    <div class="col-md-auto col-6 item @if(isset($_GET['status']) && $_GET['status'] == 'paid'){{ 'active' }}@endif">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <a href="{{ url('profile/payments?status=paid') }}" class="item-inner">
                             <div class="label">
                                 <div class="title fw-bold" style="color: #268d31">Paid</div>
                             </div>
                         </a>
                     </div>
+<<<<<<< HEAD
                     <div class="col-auto item @if(isset($_GET['status']) && $_GET['status'] == 'unpaid'){{ 'active' }}@endif">
+=======
+                    <div class="col-md-auto col-6 item @if(isset($_GET['status']) && $_GET['status'] == 'unpaid'){{ 'active' }}@endif">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <a href="{{ url('profile/payments?status=unpaid') }}" class="item-inner">
                             <div class="label">
                                 <div class="title fw-bold" style="color: #ff3333;">Unpaid</div>
@@ -54,14 +62,23 @@
                                 <tbody>
                                 @forelse($Payments as $item)
                                     <tr>
+<<<<<<< HEAD
                                         <td style="font-weight: 500">{{ $item->id }} @if($item->payment_step == 1) <span style="font-size:10px; font-weight: 500; color: #888888;">(Deposit)</span> @endif</td>
+=======
+                                        <td style="font-weight: 500">{{ $item->id }} @if($item->payment_step == 1)
+                                                <span style="font-size:10px; font-weight: 500; color: #888888;">(Deposit)</span> @endif</td>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                         <td>{{ number_format($item->amount, 2) }} £</td>
                                         <td>{{ $item->created_at }}</td>
                                         <td class="text-capitalize" style="@if($item->status == 'paid'){{ 'color: #268d31;' }}@else{{ 'color: #ff3333;' }}@endif">{{ $item->status }}</td>
                                         <td>
                                             <a href="{{ url('profile/payments' .'/'. $item->id) }}">
                                                 <span class="icon-edit icon-eye"></span>
+<<<<<<< HEAD
                                                 Show... </a>
+=======
+                                                Show</a>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                         </td>
                                     </tr>
                                 @empty
@@ -71,10 +88,17 @@
                                 <tr class="pagination-app">
                                     <td style="vertical-align: middle; border-top: solid 1px #cfcfcf" colspan="8">
                                         <div class="row align-items-center">
+<<<<<<< HEAD
                                             <div class="col-4">
                                                 Show items {{ $Payments->firstItem() }} to {{ $Payments->lastItem() }} from {{ $Payments->total() }} item (pages {{ $Payments->currentPage() }} from {{ $Payments->lastPage() }})
                                             </div>
                                             <div class="col-8 right">
+=======
+                                            <div class="col-md-4 col-6">
+                                                Show items {{ $Payments->firstItem() }} to {{ $Payments->lastItem() }} from {{ $Payments->total() }} item (pages {{ $Payments->currentPage() }} from {{ $Payments->lastPage() }})
+                                            </div>
+                                            <div class="col-md-8 col-6 right">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                 <div class="pagination-links">
                                                     {{$Payments->links('vendor.pagination.default')}}
                                                 </div>

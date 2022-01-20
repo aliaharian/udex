@@ -38,7 +38,11 @@
                                     </thead>
                                     <tbody>
                                     @foreach ($Payments as $item)
+<<<<<<< HEAD
                                         <tr>
+=======
+                                        <tr style="@if($item->bt_transfer == 1 && $item->status != 'paid') background-color: #fff4e9; font-weight: bold; @endif">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             @can('isAdmin')
                                                 <td class="delete-col">
                                                     <input class="delete-checkbox" type="checkbox" name="delete_item[{{ $item->id }}]" value="1">
@@ -50,7 +54,15 @@
                                             <td class="text-capitalize">{{ $item->user_tbl->first_name .' '. $item->user_tbl->last_name }}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td class="text-capitalize">
+<<<<<<< HEAD
                                                 <span style="@if($item->status == 'paid'){{ 'color: #268d31;' }}@else{{ 'color: #ff3333;' }}@endif">{{ $item->status }}</span>
+=======
+                                                @if($item->bt_transfer != 1 && $item->status != 'paid')
+                                                    <span style="@if($item->status == 'paid'){{ 'color: #268d31;' }}@else{{ 'color: #ff3333;' }}@endif">{{ $item->status }}</span>
+                                                @else
+                                                    <span style="color: #ff7617;">Pay By Transfer</span>
+                                                @endif
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             </td>
                                             <td class="center">
                                                 <a href="{{ route('payments.edit', $item->id) }}" class="table-btn table-btn-icon table-btn-icon-edit"><i class="zmdi zmdi-edit"></i></a>

@@ -45,7 +45,11 @@
         });
     });
 
+<<<<<<< HEAD
     function delete_team($id) {
+=======
+    function delete_faq($id) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $('#field-faq-' + $id).remove();
     }
 </script>

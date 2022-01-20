@@ -19,8 +19,13 @@
                                     <span class="widget-title">All Architectionary</span>
                                 </div>
                                 <div class="col-2 left">
+<<<<<<< HEAD
                                     <a href="{{ url('dashboard/architectionary/create') }}" class="submit-form-btn">Create Architectionary</a>
                                 </div>
+=======
+`                                    <a href="{{ url('dashboard/architectionary/create') }}" class="submit-form-btn">Create Architectionary</a>
+`                                </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             </div>
                         </div>
 

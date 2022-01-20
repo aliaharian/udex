@@ -16,7 +16,13 @@
                     </svg>
                 </div>
                 <div class="col content-col-heading">
+<<<<<<< HEAD
                     <div class="h-text">Explore <span>our services</span></div>
+=======
+                    <div class="h-text">Explore
+                        <span>our services</span>
+                    </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="excerpt">Start a design project, find suppliers or compare finance options</div>
                 </div>
             </div>
@@ -25,7 +31,11 @@
         <div class="section-tab-mode">
             <div class="heading-section">
                 <div class="row g-0">
+<<<<<<< HEAD
                     <div class="col-auto item active">
+=======
+                    <div class="col-md-auto col-6 item active">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <a href="{{ url('profile/design') }}" class="item-inner">
                             <div class="icon">
                                 <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +48,11 @@
                             </div>
                         </a>
                     </div>
+<<<<<<< HEAD
                     <div class="col-auto item">
+=======
+                    <div class="col-md-auto col-6 item">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <a href="{{ url('profile/connect') }}" class="item-inner">
                             <div class="icon">
                                 <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,12 +70,17 @@
             <div class="section-content-tab-mode">
                 <div class="section-inner">
                     <div class="row align-items-center">
+<<<<<<< HEAD
                         <div class="col">
+=======
+                        <div class="col-md">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             <div class="section-text">
                                 <div class="title-section">Architectural design & planning</div>
                                 <div class="desc-section">Get to grips with the often-complicated design and planning process with our free guides to help you understand the journey.</div>
                             </div>
                             <div class="section-links">
+<<<<<<< HEAD
                                 <a href="#" class="item">
                                     <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
                                     <span class="title">Guide to Design & Planning</span>
@@ -74,6 +93,35 @@
                             </div>
                         </div>
                         <div class="col-auto">
+=======
+                                <a target="_blank" href="https://udex.co.uk/download/Design/Guide%20to%20Measured%20Surveys.pdf" class="item">
+                                    <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
+                                    <span class="title">Guide to Measured Surveys</span>
+                                    <i class="arrow">
+                                        <img src="{{ asset('public/assets/site/images/base/design/arrow-right.svg') }}" alt="right">
+                                    </i> </a>
+                                <a target="_blank" href="https://udex.co.uk/download/Design/Guide%20to%20New%20Builds.pdf" class="item">
+                                    <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
+                                    <span class="title">Guide to New Builds</span>
+                                    <i class="arrow">
+                                        <img src="{{ asset('public/assets/site/images/base/design/arrow-right.svg') }}" alt="right">
+                                    </i> </a>
+                                <a target="_blank" href="https://udex.co.uk/download/Design/Guide%20to%20Building%20Regulations.pdf" class="item">
+                                    <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
+                                    <span class="title">Guide to Building Regulations</span>
+                                    <i class="arrow">
+                                        <img src="{{ asset('public/assets/site/images/base/design/arrow-right.svg') }}" alt="right">
+                                    </i> </a>
+                                <a target="_blank" href="https://udex.co.uk/download/Design/Guide%20to%20Design%20and%20Planning.pdf" class="item">
+                                    <span class="icon"><img src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}" alt="PDF"></span>
+                                    <span class="title">Guide to Design and Planning</span>
+                                    <i class="arrow">
+                                        <img src="{{ asset('public/assets/site/images/base/design/arrow-right.svg') }}" alt="right">
+                                    </i> </a>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             <div class="thumbnail-section">
                                 <img src="{{ asset('public/assets/site/images/base/design/design-thumbnail.png') }}" alt="Designs">
                             </div>
@@ -81,6 +129,7 @@
                     </div>
 
                     <div class="accordion-block">
+<<<<<<< HEAD
                         <div class="title-block">Explore a Design project</div>
 
                         <div class="accordion" id="accordionPanelsStayOpenDesign">
@@ -88,6 +137,15 @@
                                 <div class="accordion-header" id="panelsStayOpen-heading-1" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-1" aria-expanded="true" aria-controls="panelsStayOpen-collapse-1">
                                     <div class="row">
                                         <div class="col-auto">
+=======
+                        <div class="title-block text-md-start text-center">Explore a Design project</div>
+
+                        <div class="accordion" id="accordionPanelsStayOpenDesign">
+                            <div class="accordion-item mb-4">
+                                <div class="accordion-header" id="panelsStayOpen-heading-1" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-1" aria-expanded="true" aria-controls="panelsStayOpen-collapse-1">
+                                    <div class="row">
+                                        <div class="col-auto d-md-block d-none">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             <div class="check-box-shape"></div>
                                         </div>
                                         <div class="col">
@@ -108,6 +166,7 @@
                                         <div class="orders">
                                             @forelse($Designs as $item)
                                                 @php
+<<<<<<< HEAD
                                                 $TotalPrice = json_decode($item->design_meta, true)['ProposedDesign'] + json_decode($item->design_meta, true)['PlanningSupport'] + json_decode($item->design_meta, true)['ExistingDrawings'] + json_decode($item->design_meta, true)['OnSiteMeasuredSurvey'];
                                                 if (json_decode($item->design_meta, true)['Would_you_like_to_add_Building_Regulation_drawings'] != 'planning_only'){
                                                     $TotalPrice += json_decode($item->design_meta, true)['BuildingRegulations'];
@@ -134,11 +193,107 @@
                                                 </div>
                                             </a>
                                             @empty
+=======
+                                                    $TotalPrice = json_decode($item->design_meta, true)['ProposedDesign'] + json_decode($item->design_meta, true)['PlanningSupport'] + json_decode($item->design_meta, true)['ExistingDrawings'] + json_decode($item->design_meta, true)['OnSiteMeasuredSurvey'];
+                                                    if (isset(json_decode($item->design_meta, true)['Connect'])){
+                                                        $TotalPrice += json_decode($item->design_meta, true)['Connect'];
+                                                    }
+                                                    if (isset(json_decode($item->design_meta, true)['PhotoRealistic3Ds'])){
+                                                        $TotalPrice += json_decode($item->design_meta, true)['PhotoRealistic3Ds'];
+                                                    }
+                                                    if (isset(json_decode($item->design_meta, true)['InitialPhoneConsultation'])){
+                                                        $TotalPrice += json_decode($item->design_meta, true)['InitialPhoneConsultation'];
+                                                    }
+                                                    if (json_decode($item->design_meta, true)['Would_you_like_to_add_Building_Regulation_drawings'] != 'planning_only'){
+                                                        $TotalPrice += json_decode($item->design_meta, true)['BuildingRegulations'];
+                                                    }
+                                                @endphp
+                                                <a href="{{ url('profile/design' .'/'. $item->id) }}" class="order-item">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-auto col-12 text-md-start text-center mb-md-0 mb-4">
+                                                            <div class="order-icon">
+                                                                <img src="{{ asset('public/assets/site/images/base/design/designs-icons') . "/" . json_decode($item->design_meta, true)['which_specific_parts_of_the_property'] . '.svg' }}" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md col-12 text-md-start text-center mb-md-0 mb-4">
+                                                            <div class="order-title">{{ str_replace('_',' ', json_decode($item->design_meta, true)['which_specific_parts_of_the_property']) }}</div>
+                                                            <div class="order-address">Published on {{ date('d M Y', strtotime($item->created_at)) }}</div>
+                                                            <div class="order-address">Postcode: {{ json_decode($item->design_meta, true)['postcode'] }}</div>
+                                                        </div>
+                                                        <div class="col-md-auto col-12">
+                                                            <div class="price text-md-start text-center">
+                                                                £ {{ number_format($TotalPrice)  }}
+                                                            </div>
+                                                            <div class="option text-md-start text-center">incl. VAT</div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            @empty
+                                                <div class="section-text">
+                                                    <a href="{{ url('design-quote') }}">Get an instant quote</a>
+                                                </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                             @endforelse
                                         </div>
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+=======
+                            <div class="accordion-item mb-4">
+                                <div class="accordion-header" id="panelsStayOpen-heading-2" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-2" aria-expanded="true" aria-controls="panelsStayOpen-collapse-2">
+                                    <div class="row">
+                                        <div class="col-auto d-md-block d-none">
+                                            <div class="check-box-shape"></div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="heading-accordion">
+                                                <div class="title">Create a project brief</div>
+                                                <div class="desc">Creating a project brief will help us understand your project and give you the best possible advice when we have our consultation call.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="arrow">
+                                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1l4 4 4-4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div id="panelsStayOpen-collapse-2" class="accordion-content collapse show" aria-labelledby="panelsStayOpen-heading-2">
+                                    <div class="accordion-content-inner">
+                                        <div class="orders">
+                                            <div class="connect-service-block">
+                                                <div class="section-text mb-0">
+                                                    <a href="{{ url('profile/project/create') }}">Complete Project Brief</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-4">
+                                <div class="accordion-header" id="panelsStayOpen-heading-3" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-3" aria-expanded="true" aria-controls="panelsStayOpen-collapse-3">
+                                    <div class="row">
+                                        <div class="col-auto d-md-block d-none">
+                                            <div class="check-box-shape"></div>
+                                        </div>
+
+                                        <div class="col">
+                                            <div class="heading-accordion">
+                                                <div class="title">Receive a finalised quote</div>
+                                                <div class="desc">Once you have booked a consultation call above and we have had a chance to understand your project, we’ll issue a finalised quote for the services you require and can begin work with a deposit payment.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="arrow">
+                                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1l4 4 4-4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                            </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         </div>
 
 

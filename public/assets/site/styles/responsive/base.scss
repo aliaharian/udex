@@ -14,7 +14,134 @@
 }
 
 @media (max-width: 1024px) {
+<<<<<<< HEAD
 
+=======
+    .page-header {
+        .fn-btn.get-an-instant-quote {
+            display: none;
+        }
+    }
+
+    .container.container-padding {
+        padding: 0 20px;
+    }
+
+    .page-info {
+        margin-bottom: 49px;
+
+        .heading-desc {
+            padding-right: 0;
+        }
+    }
+
+    .form-block {
+        border: 1px solid #cfcfcf;
+        padding: 35px 35px;
+
+        .field-block {
+            margin-bottom: 40px;
+
+            .inputs .field-item.field-hast-children {
+                position: static;
+
+                .child-option {
+                    width: 100%;
+                    transform: translateX(0) !important;
+                    right: 0;
+                }
+            }
+        }
+
+        .submit-form .submit-btn {
+            font-size: 16px;
+            height: 61px;
+            width: 100%;
+            line-height: 61px;
+        }
+    }
+
+    .page-footer {
+        .footer-main-content {
+            padding-bottom: 20px;
+        }
+    }
+
+    .section-content .block-bordered .block-info .heading-block .title {
+        font-size: 13px;
+    }
+
+    .process-involved .process-involved-list .item-inner .desc-item {
+        margin-bottom: 0;
+    }
+
+    .section-content .show-more a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .construction-section {
+        margin-top: 50px !important;
+    }
+
+    .why-building-regulations {
+        margin: 50px 0;
+        padding: 0;
+
+        .image-section img {
+            max-width: 100%;
+        }
+    }
+
+    .faq-section .faq-list .accordion-item .accordion-header {
+        padding: 20px 40px 20px 20px;
+
+        &:before {
+            right: 20px;
+        }
+    }
+
+    .service-list-horizontal .list-items .item {
+        padding: 20px;
+
+        .icon {
+            svg {
+            }
+        }
+
+        .excerpt {
+            padding: 0;
+            text-align: center;
+        }
+
+        .name {
+            width: 100%;
+        }
+
+        .read-more {
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .you-choose-how-much-support-you-require {
+        padding: 0;
+    }
+
+    .the-connect-process .process-involved-list .item-inner .read-more {
+        opacity: 1 !important;
+    }
+
+    .excerpt-block {
+        padding: 0;
+    }
+
+    .download-box-section .download-text {
+        font-size: 20px;
+    }
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 }
 
 /*

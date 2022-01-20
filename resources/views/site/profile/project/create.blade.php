@@ -1,5 +1,6 @@
 @extends('layouts.profile.master')
 
+<<<<<<< HEAD
 @section('page-title', 'Architectionary')
 
 @section('content')
@@ -13,6 +14,26 @@
                     </div>
                     <div class="page-title">About your property</div>
                     <div class="page-desc">We need to confirm a few details about the property you’re looking for us to work on, to help us build a full picture of the make-up of your existing space.</div>
+=======
+@section('page-title', 'Create Projects')
+
+@section('heading-lib')
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+@endsection
+
+@section('content')
+    <article class="content-inner">
+        {!! Form::open(['id'=>'ajaxform', 'enctype' => 'multipart/form-data']) !!}
+        <div class="row project-page">
+            <div class="col-md-3 col-12">
+                <div class="sidebar-form">
+                    <div class="page-image text-center text-md-start">
+                        <img src="{{ asset('public/assets/site/images/base/dashboard/projects-image.svg') }}" alt="About your property">
+                    </div>
+                    <div class="page-title text-center text-md-start">About your property</div>
+                    <div class="page-desc text-center text-md-start">We need to confirm a few details about the property you’re looking for us to work on, to help us build a full picture of the make-up of your existing space.</div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                     <div class="tab-nav">
                         <ul class="nav" id="ProjectTab" role="tablist">
@@ -56,6 +77,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="col-9">
                 <div class="tab-content" id="ProjectTabContent">
                     <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
@@ -1348,14 +1370,82 @@
                             </div>
                         </div>
                     </div>
+=======
+            <div class="col-md-9 col-12">
+                <div class="tab-content" id="ProjectTabContent">
+                    @include('site.profile.project.sections.tab-1')
+                    @include('site.profile.project.sections.tab-2')
+                    @include('site.profile.project.sections.tab-3')
+                    @include('site.profile.project.sections.tab-4')
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 </div>
             </div>
         </div>
         {!! Form::close() !!}
     </article>
 
+<<<<<<< HEAD
     {{-- Check Section --}}
 
+=======
+    {{-- Show Notification --}}
+    <div class="notifications">
+        <div class="show-message"></div>
+        <div class="other-message"></div>
+    </div>
+
+    <script>
+        $(document).ready(function (e) {
+            let Notifications = $('.notifications');
+            let Message = $('.notifications .show-message');
+
+            function showNotification() {
+                Notifications.addClass('show');
+                setTimeout(function () {
+                    Notifications.removeClass('show');
+                }, 2000);
+            }
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('#ajaxform').submit(function (e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                let inputs = $(this).find("input, select, button, textarea");
+
+                inputs.prop("disabled", true);
+                $.ajax({
+                    type: 'POST',
+                    url: "{{ url('profile/project/store') }}",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        showNotification();
+                        Message.addClass(response.status);
+                        Message.text(response.message);
+                        inputs.prop("disabled", false);
+                        // if (response.file) {
+                        //     Notifications.find('.other-message').html('<div class="show-message success">' + response.file + '</div>');
+                        // }
+                    },
+                    error: function (response) {
+                        showNotification();
+                        Message.addClass('danger');
+                        Message.text('A problem has occurred.');
+                        inputs.prop("disabled", false);
+                    }
+                });
+            });
+        });
+    </script>
+
+    {{-- Check Section --}}
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     <script>
         function CheckTab() {
             for (let $TabID = 1; $TabID <= 4; $TabID++) {
@@ -1468,6 +1558,7 @@
         })
     </script>
 
+<<<<<<< HEAD
     {{-- Drag and Drop files --}}
     <script>
         function readfiles(files) {
@@ -1508,6 +1599,8 @@
         }
     </script>
 
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     {{-- Select Input --}}
     <script>
         var x, i, j, l, ll, selElmnt, a, b, c;

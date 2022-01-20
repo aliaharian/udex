@@ -6522,7 +6522,10 @@ body {
   font-size: 16px;
   font-weight: 500;
   padding: 0;
+<<<<<<< HEAD
   pointer-events: none;
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   -webkit-appearance: none;
   margin: 0;
 }
@@ -6857,6 +6860,7 @@ body {
   border-color: #000000;
 }
 
+<<<<<<< HEAD
 .footerLinks {
   margin-top: 10px;
 }
@@ -6903,4 +6907,6 @@ body {
   padding: 17px !important;
 }
 
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 /*# sourceMappingURL=style.css.map */

@@ -13,8 +13,13 @@
     <div class="container">
         <section class="page-info">
             <div class="row align-items-center">
+<<<<<<< HEAD
                 <div class="col-auto">
                     <div class="page-icon w-auto">
+=======
+                <div class="col-md-auto text-md-start text-center md-md-0 mb-3">
+                    <div class="page-icon w-auto d-inline-block">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <svg width="272" height="177" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <defs>
                                 <clipPath id="a">
@@ -28,7 +33,11 @@
                         </svg>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col-8">
+=======
+                <div class="col-md text-md-start text-center">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-title">Find a builder for your project</div>
                     <div class="heading-desc">Our architectural experts can help you find vetted construction professionals near you.</div>
                 </div>
@@ -38,12 +47,20 @@
         {{-- Architectural design & planning --}}
         <section class="section-content">
             <div class="row align-items-center">
+<<<<<<< HEAD
                 <div class="col-auto">
+=======
+                <div class="col-md-auto col-12">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/What_is_UDEX_Connect.png" alt="What is UDEX Connect?">
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col">
+=======
+                <div class="col-md col-12">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="heading-block">What is UDEX Connect?</div>
                     <div class="text-block">
                         <p>As the leading residential architect in the UK, we’ve helped thousands of people extend up and down the country. And because we want nothing but the best for our homeowners, we make sure they’re in safe hands throughout their journey.</p>

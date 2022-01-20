@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+@charset "UTF-8";
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 /* FAQ */
 .faq-section .faq-list .accordion-item {
   border: 1px solid #cfcfcf;
@@ -15,7 +19,11 @@
   position: relative;
 }
 .faq-section .faq-list .accordion-item .accordion-header:before {
+<<<<<<< HEAD
   content: "\e820";
+=======
+  content: "";
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   font-family: "fontello";
   position: absolute;
   right: 70px;
@@ -206,7 +214,11 @@
   display: none;
 }
 .service-list-horizontal .list-items .item:after {
+<<<<<<< HEAD
   content: "\e80e";
+=======
+  content: "";
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   position: absolute;
   font-size: 24px;
   font-family: "fontello";
@@ -354,7 +366,11 @@
   border: none;
 }
 .quote-form .quote-form-block .form-block .bold-label {
+<<<<<<< HEAD
   font-size: 18px;
+=======
+  font-size: 18px !important;
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
   font-weight: 500 !important;
 }
 .quote-form .quote-form-block .form-block .excerpt {
@@ -424,6 +440,7 @@
   font-weight: 300;
 }
 
+<<<<<<< HEAD
 .terms-body {
   margin-top: 0;
 }
@@ -639,4 +656,6 @@
   margin: 32px auto 0;
 }
 
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 /*# sourceMappingURL=pages.css.map */

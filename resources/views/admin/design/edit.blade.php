@@ -9,8 +9,14 @@
 @section('content')
     <section class="form-section">
         <form action="{{ route('design.update', $Design->id) }}" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
             <div class="row">
                 <div class="col">
+=======
+            @csrf
+            <div class="row">
+                <div class="col-8">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     <div class="widget-block widget-item widget-style">
                         <div class="heading-widget">
                             <div class="row align-items-center">
@@ -24,7 +30,10 @@
                                     <div class="order-date">{{ date('d M Y', strtotime($Design->created_at)) }}</div>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         </div>
 
                         <div class="widget-content widget-content-padding">
@@ -44,7 +53,15 @@
                                                         <div class="desc">An introductory call to better understand your project</div>
                                                     </div>
                                                     <div class="col-auto">
+<<<<<<< HEAD
                                                         <div class="value">Free</div>
+=======
+                                                        <div class="value">
+                                                            @if(isset(json_decode($Design->design_meta, true)['InitialPhoneConsultation']) && json_decode($Design->design_meta, true)['InitialPhoneConsultation'] > 0)
+                                                                <div class="colored">£ {{ json_decode($Design->design_meta, true)['InitialPhoneConsultation'] }}</div>@else{{ 'Free' }}
+                                                            @endif
+                                                        </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,8 +77,15 @@
                                                         <div class="desc">Visiting your property to gather all the key details needed during the design process</div>
                                                     </div>
                                                     <div class="col-auto">
+<<<<<<< HEAD
                                                         <div class="value">@if(json_decode($Design->design_meta, true)['ProposedDesign'] > 0)
                                                                 <div class="colored">£ {{ number_format(json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey']) }}</div>@endif
+=======
+                                                        <div class="value">
+                                                            @if(json_decode($Design->design_meta, true)['ProposedDesign'] > 0)
+                                                                <div class="colored">£ {{ number_format(json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey']) }}</div>
+                                                            @endif
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                         </div>
                                                     </div>
                                                 </div>
@@ -150,7 +174,14 @@
                                                         <div class="desc">Using the latest rendering software, we allow you to take a virtual tour of your future home</div>
                                                     </div>
                                                     <div class="col-auto">
+<<<<<<< HEAD
                                                         <div class="value">Not included</div>
+=======
+                                                        <div class="value">@if(isset(json_decode($Design->design_meta, true)['PhotoRealistic3Ds']) && json_decode($Design->design_meta, true)['PhotoRealistic3Ds'] > 0)
+                                                                <div class="colored">£ {{ json_decode($Design->design_meta, true)['PhotoRealistic3Ds'] }}</div>
+                                                            @else{{ 'Not included' }}@endif
+                                                        </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                     </div>
                                                 </div>
                                             </div>
@@ -166,7 +197,14 @@
                                                         <div class="desc">We introduce you to the trusted professionals needed to complete your build</div>
                                                     </div>
                                                     <div class="col-auto">
+<<<<<<< HEAD
                                                         <div class="value">Free</div>
+=======
+                                                        <div class="value">@if(isset(json_decode($Design->design_meta, true)['Connect']) && json_decode($Design->design_meta, true)['Connect'] > 0)
+                                                                <div class="colored">£ {{ json_decode($Design->design_meta, true)['Connect'] }}</div>
+                                                            @else{{ 'Free' }}@endif
+                                                        </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,6 +223,18 @@
                                                             <div class="colored">£
                                                                 @php
                                                                     $TotalPrice = json_decode($Design->design_meta, true)['ProposedDesign'] + json_decode($Design->design_meta, true)['PlanningSupport'] + json_decode($Design->design_meta, true)['ExistingDrawings'] + json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey'];
+<<<<<<< HEAD
+=======
+                                                                    if (isset(json_decode($Design->design_meta, true)['Connect'])){
+                                                                        $TotalPrice += json_decode($Design->design_meta, true)['Connect'];
+                                                                    }
+                                                                    if (isset(json_decode($Design->design_meta, true)['PhotoRealistic3Ds'])){
+                                                                        $TotalPrice += json_decode($Design->design_meta, true)['PhotoRealistic3Ds'];
+                                                                    }
+                                                                    if (isset(json_decode($Design->design_meta, true)['InitialPhoneConsultation'])){
+                                                                        $TotalPrice += json_decode($Design->design_meta, true)['InitialPhoneConsultation'];
+                                                                    }
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                                     if (json_decode($Design->design_meta, true)['Would_you_like_to_add_Building_Regulation_drawings'] != 'planning_only'){
                                                                         $TotalPrice += json_decode($Design->design_meta, true)['BuildingRegulations'];
                                                                     }
@@ -203,8 +253,79 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 @if(isset($Invoice))
                     <div class="col-auto">
+=======
+                <div class="col-4">
+                    <div class="widget-block widget-item widget-style">
+                        <div class="heading-widget">
+                            <span class="widget-title">Design Update</span>
+                        </div>
+                        <div class="widget-content widget-content-padding">
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('InitialPhoneConsultation'))
+                                    <span class="col-12 message-show">{{ $errors->first('InitialPhoneConsultation') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['InitialPhoneConsultation']) && json_decode($Design->design_meta, true)['InitialPhoneConsultation'] > 0){{ json_decode($Design->design_meta, true)['InitialPhoneConsultation'] }}@endif" type="text" name="InitialPhoneConsultation" class="col-12 field-style input-text" id="InitialPhoneConsultation" placeholder="Amount...">
+                                <label class="col-12" for="InitialPhoneConsultation">Initial Phone Consultation:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('OnSiteMeasuredSurvey'))
+                                    <span class="col-12 message-show">{{ $errors->first('OnSiteMeasuredSurvey') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey']) && json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey'] > 0){{ json_decode($Design->design_meta, true)['OnSiteMeasuredSurvey'] }}@endif" type="text" name="OnSiteMeasuredSurvey" class="col-12 field-style input-text" id="OnSiteMeasuredSurvey" placeholder="Amount...">
+                                <label class="col-12" for="OnSiteMeasuredSurvey">On Site Measured Survey:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('ExistingDrawings'))
+                                    <span class="col-12 message-show">{{ $errors->first('ExistingDrawings') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['ExistingDrawings']) && json_decode($Design->design_meta, true)['ExistingDrawings'] > 0){{ json_decode($Design->design_meta, true)['ExistingDrawings'] }}@endif" id="ExistingDrawings" name="ExistingDrawings" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="ExistingDrawings">Existing Drawings:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('ProposedDesign'))
+                                    <span class="col-12 message-show">{{ $errors->first('ProposedDesign') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['ProposedDesign']) && json_decode($Design->design_meta, true)['ProposedDesign'] > 0){{ json_decode($Design->design_meta, true)['ProposedDesign'] }}@endif" id="ProposedDesign" name="ProposedDesign" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="ExistingDrawings">Proposed Design:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('PlanningSupport'))
+                                    <span class="col-12 message-show">{{ $errors->first('PlanningSupport') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['PlanningSupport']) && json_decode($Design->design_meta, true)['PlanningSupport'] > 0){{ json_decode($Design->design_meta, true)['PlanningSupport'] }}@endif" id="PlanningSupport" name="PlanningSupport" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="ExistingDrawings">Planning Support:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('BuildingRegulations'))
+                                    <span class="col-12 message-show">{{ $errors->first('BuildingRegulations') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['BuildingRegulations']) && json_decode($Design->design_meta, true)['BuildingRegulations'] > 0){{ json_decode($Design->design_meta, true)['BuildingRegulations'] }}@endif" id="BuildingRegulations" name="BuildingRegulations" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="ExistingDrawings">Building Regulations:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('PhotoRealistic3Ds'))
+                                    <span class="col-12 message-show">{{ $errors->first('PhotoRealistic3Ds') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['PhotoRealistic3Ds']) && json_decode($Design->design_meta, true)['PhotoRealistic3Ds'] > 0){{ json_decode($Design->design_meta, true)['PhotoRealistic3Ds'] }}@endif" id="PhotoRealistic3Ds" name="PhotoRealistic3Ds" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="PhotoRealistic3Ds">Photo-realistic 3Ds:</label>
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('Connect'))
+                                    <span class="col-12 message-show">{{ $errors->first('Connect') }}</span>
+                                @endif
+                                <input value="@if(isset(json_decode($Design->design_meta, true)['Connect']) && json_decode($Design->design_meta, true)['Connect'] > 0){{ json_decode($Design->design_meta, true)['Connect'] }}@endif" id="Connect" name="Connect" placeholder="Amount..." type="text" class="col-12 field-style input-text">
+                                <label class="col-12" for="Connect">Connect:</label>
+                            </div>
+
+                            <button type="submit" class="submit-form-btn">Update</button>
+                        </div>
+                    </div>
+
+                    @if(isset($Invoice))
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         <div class="widget-block widget-item widget-style">
                             <div class="heading-widget">
                                 <span class="widget-title">Design Payments</span>
@@ -216,22 +337,44 @@
                                             <div class="item">
                                                 <div class="row align-items-center">
                                                     <div class="col-8">
+<<<<<<< HEAD
                                                         <div class="title">£{{ number_format($item->amount, 2) }} @if($item->payment_step == 1) <span style="font-size:10px; font-weight: 500; color: #888888;">(Deposit)</span> @endif</div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="value text-capitalize"><span style="@if($item->status == 'paid'){{ 'color: #268d31;' }}@else{{ 'color: #ff3333;' }}@endif">{{ $item->status }}</span></div>
+=======
+                                                        <div class="title">£{{ number_format($item->amount, 2) }} @if($item->payment_step == 1)
+                                                                <span style="font-size:10px; font-weight: 500; color: #888888;">(Deposit)</span> @endif</div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="value text-capitalize">
+                                                            <span style="@if($item->status == 'paid'){{ 'color: #268d31;' }}@else{{ 'color: #ff3333;' }}@endif">{{ $item->status }}</span>
+                                                        </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                                     </div>
                                                 </div>
                                             </div>
                                         @empty
                                             <div class="No Item"></div>
                                         @endforelse
+<<<<<<< HEAD
+=======
+
+                                        <div class="manage-payment">
+                                            <a href="{{ url('dashboard/design/payment-manage/' . $Design->id) }}">Manage Payments</a>
+                                        </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                     </div>
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div>
                 @endif
+=======
+                    @endif
+                </div>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
             </div>
         </form>
     </section>

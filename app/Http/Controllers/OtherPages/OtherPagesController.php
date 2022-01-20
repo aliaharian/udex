@@ -4,6 +4,7 @@ namespace App\Http\Controllers\OtherPages;
 
 use App\Http\Controllers\Controller;
 use App\Model\Pages;
+<<<<<<< HEAD
 use App\Service;
 use App\Tradeperson;
 use App\User;
@@ -17,20 +18,38 @@ class OtherPagesController extends Controller
     /* Show All Pages */
     public function index()
     {
+=======
+use App\User;
+use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class OtherPagesController extends Controller {
+    /* Show All Pages */
+    public function index() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $Pages = Pages::orderBy('id', 'desc')->paginate(20);
 
         return view('admin.pages.index', compact('Pages'));
     }
 
     /* Create New Pages */
+<<<<<<< HEAD
     public function create()
     {
+=======
+    public function create() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('admin.pages.create');
     }
 
     /* Submit New Page */
+<<<<<<< HEAD
     public function store(Request $request)
     {
+=======
+    public function store(Request $request) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $user = auth()->user();
         $Page = new Pages();
         $Page->uid = $user->id;
@@ -53,16 +72,24 @@ class OtherPagesController extends Controller
     }
 
     /* Edit Page */
+<<<<<<< HEAD
     public function edit($id)
     {
+=======
+    public function edit($id) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $Page = Pages::find($id);
 
         return view('admin.pages.edit', compact('Page'));
     }
 
     /* Update Page */
+<<<<<<< HEAD
     public function update(Request $request, $id)
     {
+=======
+    public function update(Request $request, $id) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $user = auth()->user();
         $Page = Pages::find($id);
 
@@ -99,10 +126,15 @@ class OtherPagesController extends Controller
         }
     }
 
+<<<<<<< HEAD
 
     /* Show Page */
     public function show($slug)
     {
+=======
+    /* Show Page */
+    public function show($slug) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         $Page = Pages::where('slug', $slug)->first();
 
         if (isset($Page->template) && $Page->template == 'faq') {
@@ -111,8 +143,12 @@ class OtherPagesController extends Controller
     }
 
     /* Page Destroy */
+<<<<<<< HEAD
     public function destroy(Request $request)
     {
+=======
+    public function destroy(Request $request) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         foreach ($request->delete_item as $key => $item) {
             Pages::where('id', $key)->delete();
         }
@@ -129,56 +165,92 @@ class OtherPagesController extends Controller
     //    }
 
     /* Architectural Design & Planning */
+<<<<<<< HEAD
     public function architectural_design_planning()
     {
+=======
+    public function architectural_design_planning() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.architectural-design-planning');
     }
 
     /* Technical design & construction */
+<<<<<<< HEAD
     public function technical_design_construction()
     {
+=======
+    public function technical_design_construction() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.technical-design-construction');
     }
 
     /* Measured surveys */
+<<<<<<< HEAD
     public function measured_surveys()
     {
+=======
+    public function measured_surveys() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.measured-surveys');
     }
 
     /* Proposed design */
+<<<<<<< HEAD
     public function proposed_design()
     {
+=======
+    public function proposed_design() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.proposed-design');
     }
 
     /* Planning */
+<<<<<<< HEAD
     public function planning()
     {
+=======
+    public function planning() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.planning');
     }
 
     /* Building regulations */
+<<<<<<< HEAD
     public function building_regulations()
     {
+=======
+    public function building_regulations() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.building-regulations');
     }
 
     /* New builds */
+<<<<<<< HEAD
     public function new_builds()
     {
+=======
+    public function new_builds() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.new-builds');
     }
 
     /* Find a builder for your project */
+<<<<<<< HEAD
     public function find_a_builder_for_your_project()
     {
+=======
+    public function find_a_builder_for_your_project() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.find-a-builder-for-your-project');
     }
 
     /* Register */
+<<<<<<< HEAD
     public function QuickQuoteStore(Request $request)
     {
+=======
+    public function QuickQuoteStore(Request $request) {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         if (!auth()->check()) {
             $request->validate([
                 'first_name' => 'required',
@@ -217,24 +289,37 @@ class OtherPagesController extends Controller
     }
 
     /* Find a builder for your project */
+<<<<<<< HEAD
     public function find_a_structural_engineer_for_your_project()
     {
+=======
+    public function find_a_structural_engineer_for_your_project() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.find-a-structural-engineer-for-your-project');
     }
 
     /* Find a builder for your project */
+<<<<<<< HEAD
     public function find_a_cctv_drainage_surveyor_for_your_project()
     {
+=======
+    public function find_a_cctv_drainage_surveyor_for_your_project() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.find-a-cctv-drainage-surveyor-for-your-project');
     }
 
     /* Find a structural engineer for your project */
+<<<<<<< HEAD
     public function find_a_party_wall_surveyor_for_your_project()
     {
+=======
+    public function find_a_party_wall_surveyor_for_your_project() {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('site.pages.other-pages.find-a-party-wall-surveyor-for-your-project');
     }
 
     /* Find a structural engineer for your project */
+<<<<<<< HEAD
     public function find_an_approved_inspector_for_your_project()
     {
         return view('site.pages.other-pages.find-an-approved-inspector-for-your-project');
@@ -307,3 +392,9 @@ class OtherPagesController extends Controller
     }
 }
 
+=======
+    public function find_an_approved_inspector_for_your_project() {
+        return view('site.pages.other-pages.find-an-approved-inspector-for-your-project');
+    }
+}
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969

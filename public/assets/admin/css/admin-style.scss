@@ -418,11 +418,19 @@ img {
                 }
 
                 .badge-menu {
+<<<<<<< HEAD
                     float: left;
                     height: 17px;
                     font-weight: 500;
                     font-size: 10px;
                     line-height: 21px;
+=======
+                    float: right;
+                    height: 17px;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 18px;
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     padding: 0 6px;
                     position: relative;
                     top: 15px;
@@ -1653,10 +1661,17 @@ img {
     }
 
     &.create-btn {
+<<<<<<< HEAD
         background: #40dc70;
 
         &:hover {
             background: #38cb66;
+=======
+        background: #14c74b;
+
+        &:hover {
+            background: #11a63e;
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         }
     }
 }
@@ -1793,7 +1808,11 @@ body {
         cursor: pointer;
 
         &:hover {
+<<<<<<< HEAD
             background: #5d50e3;
+=======
+            background: #000000;
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         }
 
         span {
@@ -1977,10 +1996,15 @@ body {
         }
     }
 }
+<<<<<<< HEAD
 .price-items {
     min-width: 290px;
     display: inline-block;
 
+=======
+
+.price-items {
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     .item {
         padding-bottom: 8px;
         margin-bottom: 8px;
@@ -2005,5 +2029,84 @@ body {
             text-align: right;
         }
     }
+<<<<<<< HEAD
 }
 
+=======
+
+    .manage-payment {
+        text-align: center;
+
+        a {
+            background: $Base_color;
+            color: #ffffff;
+            margin-top: 20px;
+            display: inline-block;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 5px;
+            transition: .3s;
+
+            &:hover {
+                background: #000000;
+            }
+        }
+    }
+}
+
+/* Payment Management */
+.payment-management {
+    &.text-field-repeater .field-list .text-field .delete-row {
+        position: relative;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: #e04e5f;
+        top: -1px;
+        right: 0;
+        opacity: 1;
+
+        &:hover {
+
+        }
+    }
+
+    .check-box-field {
+        font-size: 0;
+
+        input {
+            display: none;
+
+            &:checked {
+                & + label {
+                    border: solid 4px rgba(40, 167, 69, 0.2);
+
+                    i {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        label {
+            width: 38px;
+            height: 38px;
+            line-height: 30px;
+            border: solid 4px #f3f3f3;
+            cursor: pointer;
+            font-size: 30px;
+            text-align: center;
+            transition: .3s;
+
+            i {
+                opacity: 0;
+                transform: scale(0);
+                color: #28a745;
+                transition: .3s;
+            }
+        }
+    }
+}
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969

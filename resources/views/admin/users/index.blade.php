@@ -53,7 +53,11 @@
                                             </td>
                                         @endcan
                                         <td class="num-fa">{{ $user->id }}</td>
+<<<<<<< HEAD
                                         <td>c</td>
+=======
+                                        <td class="text-capitalize">{{ $user->first_name . $user->last_name }}</td>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                         <td>{{ $user->email }}</td>
                                         <td>@if($user->role == 'admin' || $user->role == 'super_admin'){{ 'Super Admin' }}@elseif($user->role == 'user'){{ 'User' }}@elseif($user->role == 'author'){{ 'Author' }}@endif</td>
                                         <td class="num-fa">{{ $user->created_at }}</td>

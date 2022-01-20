@@ -26,11 +26,26 @@
                         <div class="widget-content widget-content-padding">
                             @csrf
                             <div class="form-group row no-gutters g-0">
+<<<<<<< HEAD
                                 @if($errors->has('name'))
                                     <span class="col-12 message-show">{{ $errors->first('name') }}</span>
                                 @endif
                                 {!! Form::text('name',null,[ 'id'=>'name' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Name']) !!}
                                 {!! Form::label('name','Name:',['class'=>'col-12']) !!}
+=======
+                                @if($errors->has('first_name'))
+                                    <span class="col-12 message-show">{{ $errors->first('first_name') }}</span>
+                                @endif
+                                {!! Form::text('first_name',null,[ 'id'=>'first_name' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your First Name']) !!}
+                                {!! Form::label('first_name','First Name:',['class'=>'col-12']) !!}
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('last_name'))
+                                    <span class="col-12 message-show">{{ $errors->first('last_name') }}</span>
+                                @endif
+                                {!! Form::text('last_name',null,[ 'id'=>'last_name' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Last Name']) !!}
+                                {!! Form::label('last_name','Last Name:',['class'=>'col-12']) !!}
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                             </div>
                             <div class="form-group row no-gutters g-0">
                                 @if($errors->has('email'))
@@ -47,6 +62,23 @@
                                 {!! Form::label('phone','Phone:',['class'=>'col-12']) !!}
                             </div>
                             <div class="form-group row no-gutters g-0">
+<<<<<<< HEAD
+=======
+                                @if($errors->has('address'))
+                                    <span class="col-12 message-show">{{ $errors->first('address') }}</span>
+                                @endif
+                                {!! Form::text('address',null,[ 'id'=>'address' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Address']) !!}
+                                {!! Form::label('address','Address:',['class'=>'col-12']) !!}
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+                                @if($errors->has('postcode'))
+                                    <span class="col-12 message-show">{{ $errors->first('postcode') }}</span>
+                                @endif
+                                {!! Form::text('postcode',null,[ 'id'=>'postcode' , 'class'=>'col-12 field-style input-text', 'placeholder'=>'Enter your Postal Code']) !!}
+                                {!! Form::label('postcode','Postal Code:',['class'=>'col-12']) !!}
+                            </div>
+                            <div class="form-group row no-gutters g-0">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                                 @if($errors->has('password'))
                                     <span class="col-12 message-show">{{ $errors->first('password') }}</span>
                                 @endif

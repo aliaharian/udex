@@ -59,11 +59,19 @@
         @if($Payment->status == 'unpaid')
             <div class="pay-btn">
                 <div class="center">
+<<<<<<< HEAD
                     <form action="{{ route('pay') }}" method="POST">
+=======
+                    <form class="d-inline-block" action="{{ route('pay') }}" method="POST">
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                         {{ csrf_field() }}
                         <input type="hidden" name="pay_type" value="payment">
                         <input type="submit" class="colored" value="Pay Now">
                     </form>
+<<<<<<< HEAD
+=======
+                    <a href="{{ route('ByTransfer', $Payment->id ) }}" class="by-transfer mx-3 me-0">By Transfer</a>
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 </div>
             </div>
         @endif

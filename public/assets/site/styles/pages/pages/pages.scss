@@ -454,7 +454,11 @@ $Base_Color: #ED7B00;
             border: none;
 
             .bold-label {
+<<<<<<< HEAD
                 font-size: 18px ;
+=======
+                font-size: 18px !important;
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                 font-weight: 500 !important;
             }
 
@@ -540,6 +544,7 @@ $Base_Color: #ED7B00;
         }
     }
 }
+<<<<<<< HEAD
 
 
 // terms page
@@ -777,3 +782,5 @@ $Base_Color: #ED7B00;
         margin: 32px auto 0;
     }
 }
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969

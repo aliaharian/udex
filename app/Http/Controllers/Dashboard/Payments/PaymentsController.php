@@ -23,7 +23,12 @@ use PayPal\Rest\ApiContext;
 
 class PaymentsController extends Controller {
     public function index() {
+<<<<<<< HEAD
         $Payments = Invoice::orderBy('created_at', 'asc')->paginate(20);
+=======
+        $Payments = Invoice::orderBy('bt_transfer', 'desc')->paginate(20);
+
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         return view('admin.payments.index', compact('Payments'));
     }
 

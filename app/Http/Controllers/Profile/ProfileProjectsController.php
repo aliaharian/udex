@@ -42,6 +42,15 @@ class ProfileProjectsController extends Controller {
         $data = end($request->request);
         array_shift($data);
 
+<<<<<<< HEAD
+=======
+
+        $response = [
+            'status' => 'success',
+            'message' => 'Data successfully recorded.',
+        ];
+
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         /* Upload File */
         if ($project_file_path = $request->file('inspiration')) {
             $attachments_id = array();
@@ -51,18 +60,29 @@ class ProfileProjectsController extends Controller {
                 $Attachments->orgname = $project_file_path->getClientOriginalName();
                 $Attachments->path = pathinfo($path)['filename'] . '.' . pathinfo($path)['extension'];
                 $Attachments->type = $project_file_path->extension();
+<<<<<<< HEAD
                 $Attachments->directory = 'projects/file';
+=======
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
 
                 if ($Attachments->save()) {
                     array_push($attachments_id, $Attachments->id);
                 } else {
                     return redirect()->back()->with('notification', [
                         'status' => 'danger',
+<<<<<<< HEAD
                         'message' => 'Attachments could not be uploaded!',
+=======
+                        'message' => 'Files is Uploaded!',
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
                     ]);
                 }
             }
             (array)$data['inspiration'] = end($attachments_id);
+<<<<<<< HEAD
+=======
+            $response['file'] = 'File is Uploaded.';
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
         } else {
             if ($UserHasProject > 0) {
                 $CurrentProject = json_decode($Project->project_meta, true);
@@ -74,6 +94,7 @@ class ProfileProjectsController extends Controller {
 
 
         if ($UserHasProject == 0) {
+<<<<<<< HEAD
             if ($Project->save()) {
                 return redirect('profile/project')->with('notification', [
                     'class' => 'success',
@@ -88,5 +109,13 @@ class ProfileProjectsController extends Controller {
                 ]);
             }
         }
+=======
+            $Project->save();
+        } else {
+            $Project->update();
+        }
+
+        return response()->json($response);
+>>>>>>> 1a20381fee2db03e17e96f9c9c1c5097750b9969
     }
 }
