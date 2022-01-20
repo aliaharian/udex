@@ -3,6 +3,7 @@
   * Sizes => 1920, 1440, 1280, 1024
   * unit => PX
   */
+  
 @media (max-width: 1024px) {
   .toggle-sidebar {
     position: fixed;
