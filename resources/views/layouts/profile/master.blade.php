@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('page-title') | UDEX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udai.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udex-fav.jpeg">
 
     <link rel="stylesheet" href="{{ asset('public/assets/site/styles/pages/profile/profile.css') }}">
 
@@ -12,7 +12,7 @@
     {{--    <link href="{{ asset('public/assets/site/styles/pages') }}/@yield('page-style')" type="text/css" rel="stylesheet">--}}
 
     {{-- Page Responsive Style --}}
-    <link rel="stylesheet" href="{{ asset('public/assets/site/styles/responsive/base.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/site/styles/responsive/profile.min.css') }}">
     {{--    <link href="{{ asset('public/assets/site/styles/pages') }}/@yield('page-style-responsive')" type="text/css" rel="stylesheet">--}}
 
     <script src="{{ asset('public/assets/site/js/theme-libs.js') }}"></script>
@@ -20,10 +20,15 @@
 </head>
 <body class="dashboard-page @yield('body-class')">
 
+<div class="toggle-sidebar"><svg height="512" viewBox="0 -53 384 384" width="512" xmlns="http://www.w3.org/2000/svg"><path d="M368 154.668H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zM368 32H16C7.168 32 0 24.832 0 16S7.168 0 16 0h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zM368 277.332H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 0"/></svg></div>
+
 <div class="row dashboard-row g-0">
+    @if(!Request::is('profile/payments/transfer*'))
     <div class="col-auto sidebar-col light-mode">
+        <span class="icon-close close-sidebar"></span>
         @include('layouts.profile.extends.sidebar')
     </div>
+    @endif
 
     <div class="col content-col">
         @yield('content')
@@ -31,7 +36,7 @@
 
 @yield('footer-lib')
 
-<!-- Search Modal -->
+<!-- Update Modal -->
     <div class="modal-website modal-search">
         <div class="modal-block-box search-modal-body">
             <div class="close-btn icon-close"></div>
@@ -71,6 +76,15 @@
     </div>
 
     <script>
+        $('.toggle-sidebar').click(function (){
+            $('.sidebar-col').addClass('show-side');
+            $('.toggle-sidebar').fadeOut(300);
+        });
+        $('.close-sidebar').click(function (){
+            $('.sidebar-col').removeClass('show-side');
+            $('.toggle-sidebar').fadeIn(300);
+        });
+
         $(document).ready(function () {
             $('#carouselWhatsNews').carousel({
                 interval: false,

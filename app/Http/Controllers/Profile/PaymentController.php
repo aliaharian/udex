@@ -31,6 +31,7 @@ class PaymentController extends Controller {
         $this->_api_context->setConfig($paypal_conf['settings']);
     }
 
+    /* Show Invoice List */
     public function index() {
         $user = auth()->user();
         if (isset($_GET['status'])) {
@@ -38,9 +39,11 @@ class PaymentController extends Controller {
         } else {
             $Payments = Invoice::where('uid', $user->id)->orderBy('created_at', 'desc')->paginate(10);
         }
+
         return view('site.profile.payments.index', compact('Payments'));
     }
 
+    /* Show Invoice */
     public function show($id) {
         $User = auth()->user();
         $Payment = Invoice::where('id', $id)->where('uid', $User->id)->first();
@@ -52,6 +55,7 @@ class PaymentController extends Controller {
         }
     }
 
+    /* Post to PayPal */
     public function payWithpaypal(Request $request) {
         if (isset($request->pay_type) && $request->pay_type == 'design') {
             $OrderId = basename(parse_url(URL::previous())['path']);
@@ -142,6 +146,7 @@ class PaymentController extends Controller {
 
     }
 
+    /* Paypal Status Callback */
     public function getPaymentStatus(Request $request) {
 
         /** Get the payment ID before session clear **/
@@ -181,6 +186,25 @@ class PaymentController extends Controller {
         \Session::put('error', 'Payment failed');
         return \redirect('profile/payments' . '/' . $GetOrderDetails->sku);
 
+    }
+
+    /* By Transfer */
+    public function ByTransfer($id) {
+        $Payment = Invoice::find($id);
+
+        return view('site.profile.payments.by-transfer', compact('Payment'));
+    }
+
+    /* By Transfer */
+    public function ByTransferSubmit($id) {
+        $Payment = Invoice::find($id);
+
+        \Session::put('success', 'Submit Request');
+        $Payment->bt_transfer = 1;
+
+        if ($Payment->update()) {
+            return \redirect()->back();
+        }
     }
 }
 

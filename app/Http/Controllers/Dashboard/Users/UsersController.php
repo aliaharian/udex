@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Dashboard\Users;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Users\UsersRequest;
+use App\Model\Attachments;
 use App\Model\Connect;
 use App\Model\Design;
+use App\Model\Invoice;
 use App\Model\Messages;
 use App\Model\Projects;
 use App\User;
@@ -33,8 +35,8 @@ class UsersController extends Controller {
         $userRequest->validate([
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email|unique',
-            'phone' => 'required|unique',
+            'email' => 'required|email|unique:users',
+            'phone' => 'required|unique:users',
             'address' => 'required',
             'postcode' => 'required',
             'password' => 'required',
@@ -52,7 +54,10 @@ class UsersController extends Controller {
         }
 
         $users = new User;
-        $users->name = $userRequest->name;
+        $users->first_name = $userRequest->first_name;
+        $users->last_name = $userRequest->last_name;
+        $users->address = $userRequest->address;
+        $users->postcode = $userRequest->postcode;
         $users->email = $userRequest->email;
         $users->phone = $userRequest->phone;
         $users->password = bcrypt($userRequest->password);
@@ -103,10 +108,12 @@ class UsersController extends Controller {
             ]);
 
 
-            $users->name = $request->name;
+            $users->first_name = $request->first_name;
+            $users->last_name = $request->last_name;
+            $users->address = $request->address;
+            $users->postcode = $request->postcode;
             $users->email = $request->email;
             $users->phone = $request->phone;
-            $users->role = $request->role;
             if ($request->role == 'super_admin') {
                 $users->role = 'user';
             } else {
@@ -135,6 +142,8 @@ class UsersController extends Controller {
                 Connect::where('uid', $key)->delete();
                 Design::where('uid', $key)->delete();
                 Projects::where('uid', $key)->delete();
+                Invoice::where('uid', $key)->delete();
+                Attachments::where('uid', $key)->delete();
             }
 
             return redirect('/dashboard/users')->with('notification', [

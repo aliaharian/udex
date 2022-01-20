@@ -4,11 +4,11 @@ namespace App\Model;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Invoice extends Model
 {
-    use SoftDeletes;
+//    use SoftDeletes;
 
     /* Relationship to User */
     public function user_tbl() {
@@ -25,8 +25,8 @@ class Invoice extends Model
         return $this->belongsTo(Projects::class, 'order_id', 'id');
     }
 
-    use SoftDeletes;
+//    use SoftDeletes;
     protected $table = 'invoice';
-    protected $fillable = ['uid', 'title', 'product_type', 'order_id', 'payment_step', 'amount', 'status', 'payer_id'];
+    protected $fillable = ['uid', 'title', 'product_type', 'order_id', 'payment_step', 'amount', 'status', 'payer_id', 'bt_transfer'];
     public $timestamps = true;
 }

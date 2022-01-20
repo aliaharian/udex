@@ -88,6 +88,10 @@ body {
         width: 290px;
         min-height: 100vh;
 
+        .close-sidebar {
+            display: none;
+        }
+
         .sidebar {
             display: inline-block;
             width: 100%;
@@ -269,7 +273,6 @@ body {
                 }
 
                 .content-col-heading {
-                    padding-left: 50px;
 
                     .h-text {
                         font-size: 30px;
@@ -852,7 +855,6 @@ body {
                                 }
                             }
 
-
                             &.my-message {
                                 text-align: right;
 
@@ -1263,17 +1265,20 @@ body {
 
                                             &.full-width {
                                                 label {
-                                                    height: 67px;
-                                                    line-height: 67px;
-                                                    padding: 0 20px;
+                                                    padding: 20px 20px;
 
                                                     .icon {
                                                         width: auto;
                                                         margin-right: 10px;
+                                                        margin-bottom: 0;
+                                                        @include inline_middle();
+                                                        display: initial;
                                                     }
 
                                                     .label {
-                                                        width: auto;
+                                                        width: calc(100% - 34px);
+                                                        @include inline_middle();
+                                                        text-align: left;
                                                     }
                                                 }
                                             }
@@ -1386,6 +1391,13 @@ body {
                                             &:hover {
                                                 background: #000000;
                                             }
+                                        }
+
+                                        button {
+                                            padding: 0;
+                                            margin: 0;
+                                            background: transparent;
+                                            border: none;
                                         }
                                     }
 
@@ -1728,6 +1740,22 @@ body {
                 .desc-section {
                     font-weight: 300;
                 }
+
+                a {
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    display: inline-block;
+                    background: #ED7B00;
+                    height: 49px;
+                    line-height: 49px;
+                    padding: 0 50px;
+                    transition: .3s;
+
+                    &:hover {
+                        background: #000000;
+                    }
+                }
             }
 
             .section-links {
@@ -1745,7 +1773,7 @@ body {
                     transition: .3s;
                     position: relative;
                     margin-bottom: 10px;
-                    padding-right: 70px;
+                    padding-right: 40px;
 
                     &:last-child {
                         margin-bottom: 0;
@@ -1799,6 +1827,7 @@ body {
                 .accordion-item {
                     border: 1px solid #CFCFCF;
                     padding: 30px;
+                    background: transparent;
 
                     .accordion-header {
                         position: relative;
@@ -1981,9 +2010,9 @@ body {
             }
 
             .connect-service-block {
-                background: #f4f4f4;
-                border: solid 1px #e6e6e6;
-                padding: 25px 30px;
+                //background: #f4f4f4;
+                //border: solid 1px #e6e6e6;
+                //padding: 25px 30px;
 
                 .connect-service-list {
                     .connect-item {
@@ -2033,7 +2062,6 @@ body {
                 .order-item {
                     display: inline-block;
                     width: 100%;
-                    background: #EEEEEE;
                     padding: 15px;
                     border: solid 1px #d7d7d7;
                     transition: .3s;
@@ -2043,28 +2071,27 @@ body {
                         margin-bottom: 0;
                     }
 
-                    &:hover {
-                        background: #e3e3e3;
-                    }
-
                     .order-icon {
                         img {
-                            width: 35px;
+                            width: 64px;
                         }
                     }
 
                     .order-title {
-
+                        font-weight: 500;
                     }
 
-                    .order-address {
-
+                    .size,
+                    .address,
+                    .order-title {
+                        font-size: 16px;
+                        margin: 7px 0;
                     }
 
                     .price {
                         padding: 0 50px;
                         font-size: 14px;
-                        margin-bottom: 4px;
+                        margin: 14px 0;
 
                         &:last-child {
                             margin-bottom: 0;
@@ -2073,10 +2100,41 @@ body {
                         .icon {
                             @include inline_middle();
                             text-align: center;
-                            width: 30px;
+                            width: 35px;
                             position: relative;
-                            top: -1px;
+                            top: 0;
+                            margin-right: 3px;
+                            font-weight: 500;
+                            font-size: 16px;
                         }
+                    }
+                }
+            }
+
+            .submit-connect-quote {
+                .item-inner {
+                    text-align: center;
+                    padding: 20px 80px;
+                    border: 1px solid #CFCFCF;
+                    transition: .3s;
+                    display: inline-block;
+
+                    &:hover {
+                        border-color: $Base_Color;
+                    }
+
+                    .icon {
+                        display: inline-block;
+                        width: 100%;
+                        height: 45px;
+                        margin-bottom: 16px;
+                    }
+
+                    .name {
+                        display: inline-block;
+                        width: 100%;
+                        font-weight: 500;
+                        font-size: 18px;
                     }
                 }
             }
@@ -2172,6 +2230,25 @@ body {
                     background: $Base_Color;
                 }
             }
+
+            .by-transfer {
+                font-weight: 500;
+                font-size: 18px;
+                text-align: center;
+                color: #FFFFFF;
+                background: #000000;
+                width: 100%;
+                height: 49px;
+                line-height: 49px;
+                border: none;
+                margin-bottom: 10px;
+                transition: .3s;
+                display: inline-block;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
         }
     }
 }
@@ -2233,6 +2310,22 @@ body {
             @include inline_middle();
         }
     }
+
+    &.single-payment-by-transfer {
+        .item {
+            line-height: 65px;
+
+            .label {
+                font-weight: 400;
+                font-size: 20px;
+            }
+
+            .value {
+                font-weight: 400;
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 .w3-display-container {
@@ -2278,8 +2371,10 @@ body {
 /* Payment BTN */
 .pay-btn {
     padding: 20px 0;
+    font-size: 0;
 
     input[type=submit] {
+        @include inline_middle();
         font-weight: 500;
         font-size: 18px;
         line-height: 26px;
@@ -2299,6 +2394,43 @@ body {
 
         &.colored {
             background: #ED7B00;
+        }
+    }
+
+    .back-to-profile {
+        @include inline_middle();
+        font-weight: 500;
+        font-size: 18px;
+        color: #ED7B00 !important;
+        border: 2px solid #ED7B00;
+        display: inline-block;
+        height: 49px;
+        line-height: 49px;
+        padding: 0 24px;
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    .by-transfer {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF !important;
+        padding: 0 34px;
+        background: #000000;
+        height: 49px;
+        line-height: 49px;
+        border: none;
+        margin-bottom: 10px;
+        transition: .3s;
+        display: inline-block;
+
+        &:hover {
+            transform: scale(1.02);
         }
     }
 }
@@ -2390,20 +2522,26 @@ body {
 
         .close-btn {
             position: absolute;
-            right: -30px;
-            top: -20px;
+            right: -15px;
+            top: -12px;
             font-weight: bold;
-            font-size: 26px;
-            color: #776665;
-            text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            font-size: 12px;
+            color: #ffffff;
+            text-shadow: 0 0 25px rgb(0 0 0 / 40%);
             cursor: pointer;
-            transition: .3s;
+            transition: 0.3s;
             z-index: 1;
             opacity: 1;
+            background: #3c3c3c;
+            border-radius: 100%;
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            line-height: 21px;
+            border: solid 1px #fff;
 
             &:hover {
                 transform: scale(1.1);
-                color: #ec2017;
                 text-shadow: 0 0 25px rgba(255, 54, 0, 0.48);
             }
         }
@@ -2728,7 +2866,11 @@ body {
                     a {
                         border-color: #000000;
                         background: #000000;
-                        font-size: 0;
+                        color: #ffffff !important;
+
+                        * {
+                            color: #ffffff !important;
+                        }
                     }
                 }
 
@@ -2827,6 +2969,8 @@ body {
 
         .file-list {
             padding: 18px 25px;
+            overflow: auto;
+            max-height: 500px;
 
             .item {
                 border-bottom: 1px solid #CFCFCF;
@@ -2835,7 +2979,69 @@ body {
                 &:last-child {
                     border-bottom: none;
                 }
+
+                .file-name {
+                    font-weight: 600;
+                    font-size: 15px;
+                    color: #000000;
+                    overflow: hidden;
+                    word-break: break-all;
+                }
+
+                .file-date {
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: #000000;
+                }
+
+                .view-file {
+                    font-size: 15px;
+                    transition: .3s;
+
+                    &:hover {
+                        color: $Base_Color;
+                    }
+                }
             }
         }
     }
+}
+
+.notifications {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    text-align: center;
+    top: -70px;
+    right: 0;
+    opacity: 0;
+    filter: blur(10px);
+    transition: .5s;
+
+    &.show {
+        top: 10px;
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    .show-message {
+        padding: 11px 20px;
+        color: #ffffff;
+        display: inline-block;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        &.success {
+            background-color: rgba(23, 155, 54, 0.9);
+        }
+
+        &.danger {
+            background-color: rgba(213, 7, 0, 0.9);
+        }
+    }
+}
+
+/* Toggle Sidebar */
+.toggle-sidebar {
+    display: none;
 }

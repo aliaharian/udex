@@ -8,8 +8,8 @@
     <article class="container">
         <section class="page-info">
             <div class="row align-items-center">
-                <div class="col-auto">
-                    <div class="page-icon">
+                <div class="col-md-auto text-md-start text-center md-md-0 mb-3">
+                    <div class="page-icon d-inline-block">
                         <svg width="167" height="105" xmlns="http://www.w3.org/2000/svg">
                             <path d="m39.922 4.64 116.161 9.13-6.74 85.418L34.69 89.781z" fill="#fff"/>
                             <path d="m83.4106 23.39 59.1597 5.156c1.755.15 1.746-2.585 0-2.735l-59.1597-5.155c-1.755-.15-1.74 2.584 0 2.735z" fill="#dadde1"/>
@@ -35,7 +35,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-md text-md-start text-center">
                     <div class="heading-title">Architectural design & planning</div>
                     <div class="heading-desc">We cover everything from surveys, design, to securing that all-important planning approval.</div>
                 </div>
@@ -45,14 +45,14 @@
         {{-- Architectural design & planning --}}
         <section class="section-content">
             <div class="row">
-                <div class="col-8">
+                <div class="col-md-8 col-12">
                     <div class="heading-block">What to expect</div>
                     <div class="text-block">
                         <p>Only at UDEX can you enjoy the most comprehensive architectural service in the UK. From the start, our goal has been to bring together the best industry experts with innovative tech solutions, giving you everything you need to transform your home. So from measuring up, designing your dream space, to securing that all-important planning approval, our team are always on hand via your Dashboard to provide flawless expertise. And thanks to our unique system, getting started is as simple as clicking here for a quote.</p>
                         <p>Our approach has helped thousands of homeowners nationwide get ready for Technical Design & Construction...</p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/architectural_design_&_planning.png">
                     </div>
@@ -66,7 +66,7 @@
 
             <div class="process-involved-list">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="item-inner">
                             <span class="step-num">Step.1</span>
                             <div class="icon-item">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="item-inner">
                             <span class="step-num">Step.2</span>
                             <div class="icon-item">
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="item-inner">
                             <span class="step-num">Step.3</span>
                             <div class="icon-item">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="item-inner">
                             <span class="step-num">Step.4</span>
                             <div class="icon-item">
@@ -141,11 +141,11 @@
         {{-- Introducing... New builds --}}
         <section class="section-content">
             <div class="row align-items-center">
-                <div class="col-5">
+                <div class="col-md-5 col-12">
                     <div class="image-block">
                         <img src="{{ asset('public/assets/site/images/example') }}/Introducing_New_builds.png"></div>
                 </div>
-                <div class="col-7">
+                <div class="col-md-7 col-12">
                     <div class="heading-block">Introducing... New builds</div>
                     <div class="text-block">
                         <p>Whether you’re a seasoned developer or a first-timer, our New Builds team are here to help you build a happy home. We’re pioneers in wellness-focused design, and use both the latest technology and the best in-house experts to dream up new spaces. But this isn’t about us, it’s about you! That’s why our flexible packages allow you to choose how much or little support you need from us. We offer everything from architectural design and planning to finance and building regulations - providing you with all the services you’ll need, from start to finish, for your new build journey.</p>
@@ -158,7 +158,7 @@
         {{-- Explore our other services --}}
         <section class="explore-services center">
             <div class="row justify-content-center">
-                <div class="col-5">
+                <div class="col-md-5 col-12">
                     <div class="heading-block">Explore our other services</div>
                     <div class="icon-section">
                         <svg width="159" height="135" xmlns="http://www.w3.org/2000/svg">

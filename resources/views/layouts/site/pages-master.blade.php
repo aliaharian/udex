@@ -7,7 +7,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udai.png">
 
     <link rel="stylesheet" href="{{ asset('public/assets/site/styles/pages/other/base/style.min.css') }}">
-        <link href="{{ asset('public/assets/site/styles/pages') }}/@yield('page-style')" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/site/styles/pages') }}/@yield('page-style')" type="text/css" rel="stylesheet">
 
     {{-- Page Responsive Style --}}
     <link rel="stylesheet" href="{{ asset('public/assets/site/styles/responsive/base.min.css') }}">

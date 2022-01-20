@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>@yield('page-title') | UDEX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udai.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/site/images/base/') }}/udex-fav.jpeg">
 
     <link rel="stylesheet" href="{{ asset('public/assets/site/styles/pages/profile/profile.css') }}">
 

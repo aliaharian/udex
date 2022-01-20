@@ -3,7 +3,7 @@
 
     <div class="process-involved-list">
         <div class="row gy-4">
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="item-inner">
                     <div class="icon-item">
                         <svg width="80" height="75" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@
                     <div class="read-more"><a href="#quick-register">Im interested</a></div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="item-inner">
                     <div class="icon-item">
                         <svg width="78" height="75" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
                     <div class="read-more"><a href="#quick-register">Im interested</a></div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="item-inner">
                     <div class="icon-item">
                         <svg width="77" height="75" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
                     <div class="read-more"><a href="#quick-register">Im interested</a></div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="item-inner">
                     <div class="icon-item">
                         <svg width="65" height="87" xmlns="http://www.w3.org/2000/svg">

@@ -1,0 +1,286 @@
+@charset "UTF-8";
+.field-block {
+  margin-bottom: 60px;
+}
+.field-block .filed-block-label {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.field-block .filed-block-label .filed-block-subtitle {
+  display: block;
+  font-weight: 300;
+}
+.field-block .inputs .field-item {
+  margin-bottom: 24px;
+}
+.field-block .inputs .field-item.checkbox-item input[type=checkbox],
+.field-block .inputs .field-item.checkbox-item input[type=radio] {
+  display: none;
+}
+.field-block .inputs .field-item.checkbox-item input[type=checkbox]:checked + label,
+.field-block .inputs .field-item.checkbox-item input[type=radio]:checked + label {
+  border-color: #ed7b00 !important;
+  color: #ed7b00;
+  box-shadow: 0 0 0 1px #ed7b00 !important;
+}
+.field-block .inputs .field-item.checkbox-item.selected-option .parent-option {
+  border-color: #ed7b00;
+  color: #ed7b00;
+  box-shadow: 0 0 0 1px #ed7b00;
+}
+.field-block .inputs .field-item.checkbox-item .parent-option,
+.field-block .inputs .field-item.checkbox-item label {
+  border: 1px solid #cfcfcf;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.field-block .inputs .field-item.checkbox-item .parent-option:hover,
+.field-block .inputs .field-item.checkbox-item label:hover {
+  border-color: #ed7b00;
+  color: #ed7b00;
+}
+.field-block .inputs .field-item.checkbox-item .parent-option .icon,
+.field-block .inputs .field-item.checkbox-item label .icon {
+  display: block;
+  margin-bottom: 10px;
+  height: 50px;
+  line-height: 50px;
+}
+.field-block .inputs .field-item.checkbox-item .parent-option .icon svg,
+.field-block .inputs .field-item.checkbox-item label .icon svg {
+  width: 50px;
+  height: auto;
+}
+.field-block .inputs .field-item.checkbox-item .parent-option .label,
+.field-block .inputs .field-item.checkbox-item label .label {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+.field-block .inputs .field-item.checkbox-item.big-item input:checked + label {
+  background: #ed7b00;
+  color: #ffffff;
+}
+.field-block .inputs .field-item.checkbox-item.big-item input:checked + label svg path {
+  fill: #ffffff;
+}
+.field-block .inputs .field-item.checkbox-item.big-item svg {
+  width: 32px !important;
+}
+.field-block .inputs .field-item.checkbox-item.big-item svg path {
+  transition: 0.3s;
+}
+.field-block .inputs .field-item.checkbox-item.big-item label {
+  padding: 15px 20px 15px 25px !important;
+}
+.field-block .inputs .field-item.checkbox-item.big-item .icon {
+  margin: 0;
+}
+.field-block .inputs .field-item.checkbox-item.big-item .label {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.field-block .inputs .field-item.checkbox-item.big-item .desc {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+.field-block .inputs .field-item.text-field input {
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #cfcfcf;
+  font-weight: 500;
+}
+.field-block .inputs .field-item.text-field label {
+  font-size: 18px;
+  font-weight: 300;
+}
+.field-block .inputs .field-item.field-hast-children {
+  position: relative;
+}
+.field-block .inputs .field-item.field-hast-children .child-option {
+  position: absolute;
+  width: 440px;
+  padding: 15px;
+  background: rgba(218, 218, 218, 0.4);
+  backdrop-filter: blur(10px);
+  margin-top: 10px;
+  border: 1px solid rgba(207, 207, 207, 0.22);
+  border-top-color: rgba(207, 207, 207, 0.1);
+  border-left-color: rgba(207, 207, 207, 0.1);
+  box-shadow: 8px 6px 16px -21px #000;
+  transition: 0.3s;
+  transform: translateX(-150px);
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(10px);
+}
+.field-block .inputs .field-item.field-hast-children .child-option:hover {
+  background: rgba(218, 218, 218, 0.6);
+}
+.field-block .inputs .field-item.field-hast-children .child-option.show-children {
+  transform: translateX(-130px);
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0);
+  z-index: 10;
+}
+.field-block .inputs .field-item.field-hast-children .child-option .child-item {
+  height: 100%;
+}
+.field-block .inputs .field-item.field-hast-children .child-option .child-item label {
+  border: 1px solid rgba(207, 207, 207, 0.31);
+  background: rgba(255, 255, 255, 0.6);
+}
+.field-block .inputs .field-item.field-hast-children .child-option .child-item label:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.field-block .inputs .field-item.field-hast-children .child-option .child-item label .label {
+  font-size: 13px;
+}
+.field-block .inputs .field-item .error {
+  color: red;
+  font-size: 12px;
+  font-weight: 300;
+}
+.field-block .inputs .field-item.custom-numeric-input .item-inner {
+  border: 1px solid #cfcfcf;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.field-block .inputs .field-item.custom-numeric-input .item-inner .label {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+.field-block .inputs .field-item .number-input {
+  position: relative;
+}
+.field-block .inputs .field-item .number-input input {
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.field-block .inputs .field-item .number-input input::-webkit-outer-spin-button,
+.field-block .inputs .field-item .number-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.field-block .inputs .field-item .number-input .arrows {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+.field-block .inputs .field-item .number-input .arrows .arrow-btn {
+  padding: 0 10px;
+  height: 15px;
+  line-height: 15px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.field-block .inputs .field-item .number-input .arrows .arrow-btn img {
+  width: 10px;
+}
+.field-block .inputs .field-item .number-input .arrows .arrow-btn:first-child {
+  margin-bottom: 1px;
+}
+.field-block .inputs.sizes-item .field-item.checkbox-item input:checked + label svg path {
+  fill: #ed7b00;
+}
+.field-block .inputs.sizes-item .field-item.checkbox-item label {
+  padding: 10px;
+}
+.field-block .inputs.sizes-item .field-item.checkbox-item label .value {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+.field-block .inputs.sizes-item .field-item.checkbox-item label svg path {
+  transition: 0.3s;
+}
+.field-block .inputs.sizes-item .field-item.checkbox-item label:hover svg path {
+  fill: #ed7b00;
+}
+.field-block .under-block-link {
+  font-size: 14px;
+  font-weight: 300;
+}
+.field-block .under-block-link a {
+  font-weight: 500;
+  transition: 0.3s;
+}
+.field-block .under-block-link a:hover {
+  color: #ed7b00;
+}
+.field-block .textarea-input textarea {
+  width: 100%;
+  height: 194px;
+  border: 1px solid #cfcfcf;
+  background: transparent;
+  resize: none;
+  padding: 10px;
+}
+.field-block.check-box-field input {
+  display: none;
+}
+.field-block.check-box-field input:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+.field-block.check-box-field label {
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  cursor: pointer;
+}
+.field-block.check-box-field label:before {
+  content: "";
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cfcfcf;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  top: -2px;
+}
+.field-block.check-box-field label:after {
+  content: "졖";
+  position: absolute;
+  font-family: "fontello";
+  color: #ed7b00;
+  left: 2px;
+  font-size: 14px;
+  top: 3px;
+  transform: scale(0);
+  filter: blur(4px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=form-block.css.map */

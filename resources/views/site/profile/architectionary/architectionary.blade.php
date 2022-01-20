@@ -6,11 +6,11 @@
     <article class="content-inner">
         <div class="heading-page-block">
             <div class="row align-items-center">
-                <div class="col-7">
+                <div class="col-md-7 col-12">
                     <div class="heading-text">UDEX <span>Architectionary</span></div>
                     <div class="excerpt-page">Architectural terms, understandable for everybody.</div>
                 </div>
-                <div class="col-5">
+                <div class="col-md-5 col-12">
                     <div class="search-form">
                         <form>
                             <input type="text" placeholder="Search for a term....">
@@ -42,7 +42,7 @@
                             }
                         @endphp
                         @foreach($Architectionary as $item)
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="item">
                                     <div class="item-inner">
                                         <a href="#"> <span class="heading-item">{{ $item->title }}</span>

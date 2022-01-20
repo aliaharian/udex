@@ -45,7 +45,7 @@
         });
     });
 
-    function delete_team($id) {
+    function delete_faq($id) {
         $('#field-faq-' + $id).remove();
     }
 </script>

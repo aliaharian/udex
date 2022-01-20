@@ -23,6 +23,7 @@
                                         </div>
                                         <div class="message-content">{{ $item['message'] }}</div>
                                     </div>
+                                    <div class="right message-time-responsive d-none">{{ date("D, d M Y - h:i A", $item['date']) }}</div>
                                 </div>
                             @endforeach
                         @endif
@@ -37,13 +38,13 @@
                                 </div>
                             </div>
 
-                            <div class="col-9">
+                            <div class="col-md-9 col-5">
                                 <div class="field-block file-field">
                                     <input name="attach" id="attach-file" type="file">
                                     <label for="attach-file"><span class="icon-attachment"></span>Attach</label>
                                 </div>
                             </div>
-                            <div class="col-3 right">
+                            <div class="col-md-3 col-7 right">
                                 <div class="field-block submit-field">
                                     <input type="submit" value="Send">
                                 </div>

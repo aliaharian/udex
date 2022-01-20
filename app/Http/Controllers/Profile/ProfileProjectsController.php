@@ -42,6 +42,12 @@ class ProfileProjectsController extends Controller {
         $data = end($request->request);
         array_shift($data);
 
+
+        $response = [
+            'status' => 'success',
+            'message' => 'Data successfully recorded.',
+        ];
+
         /* Upload File */
         if ($project_file_path = $request->file('inspiration')) {
             $attachments_id = array();
@@ -51,18 +57,18 @@ class ProfileProjectsController extends Controller {
                 $Attachments->orgname = $project_file_path->getClientOriginalName();
                 $Attachments->path = pathinfo($path)['filename'] . '.' . pathinfo($path)['extension'];
                 $Attachments->type = $project_file_path->extension();
-                $Attachments->directory = 'projects/file';
 
                 if ($Attachments->save()) {
                     array_push($attachments_id, $Attachments->id);
                 } else {
                     return redirect()->back()->with('notification', [
                         'status' => 'danger',
-                        'message' => 'Attachments could not be uploaded!',
+                        'message' => 'Files is Uploaded!',
                     ]);
                 }
             }
             (array)$data['inspiration'] = end($attachments_id);
+            $response['file'] = 'File is Uploaded.';
         } else {
             if ($UserHasProject > 0) {
                 $CurrentProject = json_decode($Project->project_meta, true);
@@ -74,19 +80,11 @@ class ProfileProjectsController extends Controller {
 
 
         if ($UserHasProject == 0) {
-            if ($Project->save()) {
-                return redirect('profile/project')->with('notification', [
-                    'class' => 'success',
-                    'message' => 'Your Project is Created'
-                ]);
-            }
+            $Project->save();
         } else {
-            if ($Project->update()) {
-                return back()->with('notification', [
-                    'class' => 'success',
-                    'message' => 'Data successfully recorded.'
-                ]);
-            }
+            $Project->update();
         }
+
+        return response()->json($response);
     }
 }
