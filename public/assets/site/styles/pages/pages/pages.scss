@@ -540,3 +540,152 @@ $Base_Color: #ED7B00;
         }
     }
 }
+
+// become udex tradeperson
+
+.page-info {
+    .show-more {
+        margin-top: 36px;
+
+        a {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            height: 55px;
+            line-height: 55px;
+            background-color: $Base_Color;
+            display: inline-block;
+            padding: 0 70px;
+            transition: .4s;
+
+            &:hover {
+                background: #cd6b00;
+            }
+        }
+    }
+
+    .callUsContainer {
+        margin-top: 36px;
+        width: 438px;
+        height: 102px;
+        border: 1px solid #CFCFCF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & > p {
+            font-weight: 500;
+            font-size: 16px;
+
+            & > b {
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+
+        & > span {
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+}
+
+.join-growing-community {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    & > .heading-title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 35px;
+        max-width: 560px;
+        text-align: center;
+        margin-bottom: 51px;
+    }
+}
+
+.m-b-70{
+    margin-bottom: 70px !important;
+}
+
+.benefit-of-working-container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 50px;
+    margin-bottom: 80px;
+    & > .heading-title {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 35px;
+        max-width: 560px;
+        text-align: center;
+        margin-bottom: 51px;
+    }
+    &>img{
+        max-width:818px;
+    }
+    & > .heading-title-2 {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 35px;
+        max-width: 560px;
+        text-align: center;
+        margin-bottom: 2px;
+        margin-top: 60px;
+        line-height: 44px;
+    }
+    &>.benefits-text{
+        max-width: 650px;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+.become-tradeperson-three-items{
+    margin-bottom: 114px;
+    &>div{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        &>h4{
+            max-width:180px;
+            text-align: center;
+        }
+        &>p{
+            text-align: center;
+            max-width: 260px;
+        }
+    }
+}
+
+
+
+.tradeperson-form-p{
+    &>p{
+        max-width: 781px;
+        margin: 32px auto 0;
+    }
+}
+.select2-container--default .select2-search--inline .select2-search__field {
+    background: transparent !important;
+    border: none !important;
+    outline: 0 !important;
+    box-shadow: none;
+    -webkit-appearance: textfield;
+    height:18px !important;
+    padding:0 !important;
+}
+.custom-select{
+    margin-top:20px;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: $Base_Color !important;
+    color: white;
+}

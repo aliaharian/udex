@@ -43,20 +43,20 @@
                             them) sets out the basis on which any personal data we collect from you, or that you provide
                             to us, will be processed by us. Please read the following carefully to understand our views
                             and practices regarding your personal data and how we will treat it. By visiting our website
-                            located at resi.co.uk (our site), you are accepting and consenting to the practices
+                            located at udex.co.uk (our site), you are accepting and consenting to the practices
                             described in this policy.
                         </p>
                         <p>
-                            For the purpose of the Data Protection Act 1998 (the Act), the data controller is Resi
-                            Design Ltd. (we, us or Resi). We are a limited company registered in England and Wales with
+                            For the purpose of the Data Protection Act 1998 (the Act), the data controller is udex
+                            Design Ltd. (we, us or udex). We are a limited company registered in England and Wales with
                             company registration number 10471125. Our registered office address is 72 Sternhold Avenue,
                             London, SW2 4PW and our main trading address is Unit LH3, Keeton’s & Collett (3Space),
                             Keeton’s Road, London, SE16 4DB.
                         </p>
                         <p>
                             We may use non-identifiable information about you to create remarketing ads. This helps us
-                            give you the best Resi experience, by showing you the best messaging related to your
-                            searches and activity on the Resi site.
+                            give you the best udex experience, by showing you the best messaging related to your
+                            searches and activity on the udex site.
                         </p>
                         <p>
                             We may display these ads using various mediums including but not limited to Google,
@@ -171,7 +171,7 @@
                                     To provide you, or permit selected third parties to provide you, with information
                                     about products and/or services which we feel may interest you. If you do not want us
                                     to use your data in this way, or to pass your details on to third parties for
-                                    marketing purposes, please contact us at hello@resi.co.uk.
+                                    marketing purposes, please contact us at info@udex.co.uk.
                                 </li>
                                 <li>
                                     To notify you about changes to our service.
@@ -257,13 +257,13 @@
                             We may disclose your personal information to third parties:
                         </p>
                         <ul>
-                            <li>If Resi or substantially all of its assets are acquired by a third party, in which case
+                            <li>If udex or substantially all of its assets are acquired by a third party, in which case
                                 personal data held by it about its customers will be one of the transferred assets.
                             </li>
                             <li>If we are under a duty to disclose or share your personal data in order to comply with
                                 any legal obligation or request, or in order to enforce or apply our Website Terms of
                                 Use or our Terms and Conditions or any other agreements; or to protect the rights,
-                                property, or safety of Resi, our customers or others. This includes exchanging
+                                property, or safety of udex, our customers or others. This includes exchanging
                                 information with other companies and organisations for the purposes of fraud protection
                                 and credit risk reduction and with law enforcement agencies.
                             </li>
@@ -321,7 +321,7 @@
                             will usually inform you (before collecting your data) if we intend to use your data for such
                             purposes or if we intend to disclose your information to any third party for such purposes.
                             You can exercise your right to prevent such processing at any time by contacting us at
-                            hello@resi.co.uk or by clicking on the ‘unsubscribe’ link (if any) in any marketing email or
+                            info@udex.co.uk or by clicking on the ‘unsubscribe’ link (if any) in any marketing email or
                             newsletter you receive from us.
                         </p>
                         <p>
@@ -361,7 +361,7 @@
                         </p>
                         <p>
                             You may exercise any of your rights in relation to your personal data by contacting us at
-                            hello@resi.co.uk.
+                            info@udex.co.uk.
                         </p>
                     </div>
                 </div>
@@ -391,7 +391,7 @@
                     <div class="heading-block">Contact</div>
                     <div class="text-block">
                         <p>
-                            Questions, comments and requests regarding this privacy policy are welcomed and should be addressed to hello@resi.co.uk.
+                            Questions, comments and requests regarding this privacy policy are welcomed and should be addressed to info@udex.co.uk.
                         </p>
                         <p>
                             This privacy policy was most recently updated on 26 April 2021.

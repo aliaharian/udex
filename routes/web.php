@@ -29,6 +29,8 @@ Route::get('project-cost-estimates', 'Connect\ConnectController@create');
 Route::post('project-cost-estimates', 'Connect\ConnectController@store')->name('connect.store');
 Route::get('project-cost-estimates/{slug}', 'Connect\ConnectController@show_guest');
 Route::get('connect-service', 'Connect\ConnectController@connect_service');
+Route::get('apply-quick-register', 'Connect\ConnectController@doRedirect');
+
 Route::post('connect-service', 'Connect\ConnectController@connect_service_store')->name('connect_service.store');
 
 /* Other Pages */
@@ -78,6 +80,13 @@ Route::group(['middleware' => ['auth']], function () {
         /* Connect */
         Route::get('payments', 'Profile\PaymentController@index');
         Route::get('payments/{id}', 'Profile\PaymentController@show')->name('details');
+        Route::get('status', 'Profile\PaymentController@getPaymentStatus')->name('status');
+
+        /* Payments */
+        Route::get('payments', 'Profile\PaymentController@index');
+        Route::get('payments/{id}', 'Profile\PaymentController@show')->name('details');
+        Route::get('payments/transfer/{id}', 'Profile\PaymentController@ByTransfer')->name('ByTransfer');
+        Route::post('payments/transfer/{id}', 'Profile\PaymentController@ByTransferSubmit')->name('ByTransfer.submit');
         Route::get('status', 'Profile\PaymentController@getPaymentStatus')->name('status');
 
         /* File Library */

@@ -91,7 +91,7 @@
                                         <div class="col-auto">
                                             <div class="field-block check-box-field">
                                                 <input type="checkbox" id="conditions" name="conditions">
-                                                <label for="conditions">I accept the terms and conditions</label>
+                                                <label for="conditions">I accept the <a style="text-decoration: underline" href="{{url('terms-of-use')}}">terms and conditions</a></label>
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -162,7 +162,7 @@
                                         <div class="col-auto">
                                             <div class="field-block check-box-field">
                                                 <input type="checkbox" id="conditions" name="conditions">
-                                                <label for="conditions">I accept the terms and conditions</label>
+                                                <label for="conditions">I accept the <a style="text-decoration: underline" href="{{url('terms-of-use')}}">terms and conditions</a></label>
                                             </div>
                                         </div>
                                         <div class="col-auto">

@@ -37,7 +37,7 @@
                     <div class="text-block">
                         <p>
                             These terms of use (together with any other documents referred to in them) tell you the
-                            rules for using our website located at www.resi.co.uk (our site), whether as a guest or a
+                            rules for using our website located at www.udex.co.uk (our site), whether as a guest or a
                             registered user. Use of our site includes accessing, browsing or registering to use our
                             site.
                         </p>
@@ -47,13 +47,13 @@
                     <div class="heading-block">Who we are and how to contact us</div>
                     <div class="text-block">
                         <p>
-                            resi.co.uk is a site operated by BuildPathOne Limited (trading as “Resi”). We are a limited
+                            udex.co.uk is a site operated by BuildPathOne Limited (trading as “Resi”). We are a limited
                             company registered in England and Wales with company registration number 10471125. Our
                             registered office and main trading address is International House 4th Floor, International
                             House, Canterbury Crescent, London, SW9 7QD.
                         </p>
                         <p>
-                            To contact us, please email us at hello@resi.co.uk or telephone us on +44203 868 9453.
+                            To contact us, please email us at info@udex.co.uk or telephone us on +44203 868 9453.
                         </p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                             You may not authorise others to access our site using your username and password (if
                             applicable) and you may not assign or otherwise transfer your account to any other person or
                             entity. If you know or suspect that anyone other than you knows or has obtained your
-                            username or password (if applicable), you must immediately notify us at hello@resi.co.uk and
+                            username or password (if applicable), you must immediately notify us at info@udex.co.uk and
                             change your password.
                         </p>
                         <p>
@@ -465,7 +465,7 @@
                         <p>
                             We reserve the right to withdraw linking permission without notice. If you wish to link to
                             our site or make any use of any content on our site other than as set out above, please
-                            contact us at hello@resi.co.uk.
+                            contact us at info@udex.co.uk.
                         </p>
                     </div>
                 </div>
@@ -553,8 +553,8 @@
                     <div class="heading-block">Our trade mark</div>
                     <div class="text-block">
                         <p>
-                            “Resi” is the trade mark of BuildPathOne Limited. We reserve all rights in this trade mark,
-                            the resi.co.uk domain name and all related domains and sub-domains and any other logos,
+                            “udex” is the trade mark of BuildPathOne Limited. We reserve all rights in this trade mark,
+                            the udex.co.uk domain name and all related domains and sub-domains and any other logos,
                             service marks, brand names, trading names and/or trade marks appearing anywhere on our site.
                         </p>
                         <p>

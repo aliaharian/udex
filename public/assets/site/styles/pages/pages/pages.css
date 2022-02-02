@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* FAQ */
 .faq-section .faq-list .accordion-item {
   border: 1px solid #cfcfcf;
@@ -16,7 +15,7 @@
   position: relative;
 }
 .faq-section .faq-list .accordion-item .accordion-header:before {
-  content: "";
+  content: "\e820";
   font-family: "fontello";
   position: absolute;
   right: 70px;
@@ -207,7 +206,7 @@
   display: none;
 }
 .service-list-horizontal .list-items .item:after {
-  content: "";
+  content: "\e80e";
   position: absolute;
   font-size: 24px;
   font-family: "fontello";
@@ -423,6 +422,144 @@
 .review-section .swiper-slide .item-inner .text-content {
   font-size: 18px;
   font-weight: 300;
+}
+
+.page-info .show-more {
+  margin-top: 36px;
+}
+.page-info .show-more a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  height: 55px;
+  line-height: 55px;
+  background-color: #ED7B00;
+  display: inline-block;
+  padding: 0 70px;
+  transition: 0.4s;
+}
+.page-info .show-more a:hover {
+  background: #cd6b00;
+}
+.page-info .callUsContainer {
+  margin-top: 36px;
+  width: 438px;
+  height: 102px;
+  border: 1px solid #CFCFCF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-info .callUsContainer > p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.page-info .callUsContainer > p > b {
+  font-weight: 700;
+  font-size: 20px;
+}
+.page-info .callUsContainer > span {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.join-growing-community {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.join-growing-community > .heading-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+
+.m-b-70 {
+  margin-bottom: 70px !important;
+}
+
+.benefit-of-working-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+.benefit-of-working-container > .heading-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+.benefit-of-working-container > img {
+  max-width: 818px;
+}
+.benefit-of-working-container > .heading-title-2 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 35px;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 60px;
+  line-height: 44px;
+}
+.benefit-of-working-container > .benefits-text {
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.become-tradeperson-three-items {
+  margin-bottom: 114px;
+}
+.become-tradeperson-three-items > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.become-tradeperson-three-items > div > h4 {
+  max-width: 180px;
+  text-align: center;
+}
+.become-tradeperson-three-items > div > p {
+  text-align: center;
+  max-width: 260px;
+}
+
+.tradeperson-form-p > p {
+  max-width: 781px;
+  margin: 32px auto 0;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  background: transparent !important;
+  border: none !important;
+  outline: 0 !important;
+  box-shadow: none;
+  -webkit-appearance: textfield;
+  height: 18px !important;
+  padding: 0 !important;
+}
+
+.custom-select {
+  margin-top: 20px;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #ED7B00 !important;
+  color: white;
 }
 
 /*# sourceMappingURL=pages.css.map */

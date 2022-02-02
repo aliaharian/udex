@@ -279,6 +279,7 @@ class OtherPagesController extends Controller
                 'email' => 'Email',
                 'company_website' => 'company website',
             ]);
+            $ser=implode(',',$request->service);
             $tradePerson = new Tradeperson;
             $tradePerson->name = $request->first_name;
             $tradePerson->last_name = $request->last_name;
@@ -286,7 +287,8 @@ class OtherPagesController extends Controller
             $tradePerson->phone = $request->phone;
             $tradePerson->company_name = $request->company_name;
             $tradePerson->company_website = $request->company_website;
-            $tradePerson->service_id = $request->service;
+            $tradePerson->service_id = $request->service[0];
+            $tradePerson->meta = $ser;
             $tradePerson->save();
 //            $user_id = $tradePerson->id;
 //

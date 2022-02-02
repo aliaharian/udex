@@ -219,16 +219,20 @@
             <div class="row align-items-center">
                 <div class="col-auto">
                     <div class="image-block">
-                        <img src="{{ asset('public/assets/site/images/example') }}/head-of-new-builds.png" alt="Meet Mark, Head of New Builds">
+                        <img src="{{ asset('public/assets/site/images/example') }}/head-of-new-buildings.png" style="width:470px" alt="Meet Mark, Head of New Builds">
                     </div>
                 </div>
                 <div class="col">
-                    <div class="heading-block">Meet Mark, Head of New Builds…</div>
+                    <div class="heading-block">Meet Javier, Head of Design and Strategy for New Builds</div>
                     <div class="text-block">
-                        <p>“As Head of our New Builds team, it should come as no surprise that I’m passionate about the work we do at UDEX. My team and I have had the privilege of working on some seriously impressive projects, and we can’t wait to see what bold idea comes through the door next. If you have any questions about our service or you just fancy a chat, make sure you take advantage of our free consultation calls.” </p>
+                        <p>
+                            “As Head of our Design and Strategy for New Builds team, it should come as no surprise that I’m passionate about the work we do at UDEX. My team and I have had the privilege of working on some seriously impressive projects, and we can’t wait to see what bold idea comes through the door next. If you have any questions about our service or you just fancy a chat, make sure you take advantage of our free consultation calls.”                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        {{-- Quick Register --}}
+        @include('site.pages.other-pages.sections.quick-register')
+
     </article>
 @endsection

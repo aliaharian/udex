@@ -72,7 +72,7 @@
                                 <div class="col-12 field-style custom-select-field">
                                     <select class="form-control" name="template" id="template">
                                         <option value="">Select a item...</option>
-                                        <option @if(old('template') == 'faq') selected @else @if($Page->template == 'faq') selected @endif @endif value="published">FAQ</option>
+                                        <option @if(old('template') == 'faq') selected @else @if($Page->template == 'faq') selected @endif @endif value="faq">FAQ</option>
                                     </select>
                                 </div>
 

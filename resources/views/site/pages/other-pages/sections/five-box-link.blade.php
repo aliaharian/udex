@@ -2,7 +2,7 @@
     <div class="heading-block">How it works</div>
 
     <div class="process-involved-list">
-        <div class="row-cols-5 gy-4">
+        <div class="row-cols-5 row gy-4">
             <div>
                 <div class="item-inner p-17">
                     <div class="icon-item">

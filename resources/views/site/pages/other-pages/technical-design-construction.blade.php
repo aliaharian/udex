@@ -263,7 +263,7 @@
                         <div class="heading base-color text-color">Architectural design & planning</div>
                         With our team of architects, designers, planning agents and surveyors in-house, we offer the most comprehensive architectural service for those vital first stages.
                     </div>
-                    <div class="read-more"><a href="#">Find out more</a></div>
+                    <div class="read-more"><a href="{{url('architectural-design-planning')}}">Find out more</a></div>
                 </div>
             </div>
         </section>

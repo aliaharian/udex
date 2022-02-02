@@ -38,7 +38,7 @@ class ConnectController extends Controller
     public function store(Request $request)
     {
         if (!auth()->check()) {
-            $request->validate([
+            $validator = $request->validate([
                 'first_name' => 'required',
                 'last_name' => 'required',
                 'email' => 'required|email|unique:users',
@@ -55,6 +55,9 @@ class ConnectController extends Controller
                 'email' => 'Email',
                 'password' => 'Password',
             ]);
+            if($validator->fails()){
+                return view('site.pages.connect.connect-service');
+            }
             $users = new User;
             $users->first_name = $request->first_name;
             $users->last_name = $request->last_name;
@@ -331,5 +334,10 @@ class ConnectController extends Controller
             'class' => 'success',
             'message' => 'Data successfully imported.'
         ]);
+    }
+
+    public function doRedirect()
+    {
+        return redirect('/connect-service');
     }
 }

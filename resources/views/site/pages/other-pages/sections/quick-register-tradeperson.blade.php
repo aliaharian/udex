@@ -79,13 +79,18 @@
                                             <label for="service" class="bold-label">
                                                 The service my company provides
                                             </label>
-                                            <div id="custom-select" class="custom-select" style="width:100%;">
-                                                <select name="service" id="service">
-                                                    <option value="0">Select service</option>
+                                            <div class="custom-select" style="width:100%;">
+                                                <select class="custom-select-inner" style="width:100%" name="service[]" multiple id="service">
                                                     @foreach($services as $service)
                                                         <option value="{{$service->id}}">{{$service->name}}</option>
                                                     @endforeach
                                                 </select>
+{{--                                                <script>--}}
+{{--                                                    @foreach($services as $service)--}}
+{{--                                                    var newOption = new Option('{{$service->name}}', {{$service->id}}, false, false);--}}
+{{--                                                    $('.custom-select').append(newOption).trigger('change');--}}
+{{--                                                    @endforeach--}}
+{{--                                                </script>--}}
                                             </div>
                                             @error('service')
                                             <span class="error">
@@ -105,8 +110,10 @@
                             </div>
                             <div class="tradeperson-form-p">
                                 <p>
-                                    By submitting this form, you consent to representatives of UDEX Ltd contacting you. To update your
-                                    details, retract your interest or request for us to delete your details, please email info@udex.co.uk
+                                    By submitting this form, you consent to representatives of UDEX Ltd contacting you.
+                                    To update your
+                                    details, retract your interest or request for us to delete your details, please
+                                    email info@udex.co.uk
                                 </p>
                             </div>
                         </div>
