@@ -289,6 +289,7 @@ class OtherPagesController extends Controller
             $tradePerson->company_website = $request->company_website;
             $tradePerson->service_id = $request->service[0];
             $tradePerson->meta = $ser;
+            $tradePerson->note = $request->describe;
             $tradePerson->save();
 //            $user_id = $tradePerson->id;
 //

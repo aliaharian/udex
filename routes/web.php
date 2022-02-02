@@ -108,6 +108,10 @@ Route::group(['middleware' => ['auth']], function () {
             Route::resource('users', 'Dashboard\Users\UsersController');
             Route::post('users/destroy', 'Dashboard\Users\UsersController@destroy')->name('users.destroy');
 
+            /* Tradeperson Controller */
+            Route::resource('trade-person', 'Dashboard\TradePersonController');
+
+
             /* Architectionary */
             Route::resource('architectionary', 'Dashboard\Architectionary\ArchitectionaryController');
             Route::post('architectionary/destroy', 'Dashboard\Architectionary\ArchitectionaryController@destroy')->name('architectionary.destroy');
