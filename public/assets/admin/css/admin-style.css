@@ -1090,6 +1090,9 @@ img {
   transition: 0.3s;
   color: #000000;
 }
+.main-admin .content-page .content-page .form-section .form-group p {
+  order: 2;
+}
 .main-admin .content-page .content-page .form-section .form-group .required {
   font-size: 10px;
   color: #999999;

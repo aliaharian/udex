@@ -3,7 +3,14 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Model\Attachments;
+use App\Model\Connect;
+use App\Model\Design;
+use App\Model\Invoice;
+use App\Model\Messages;
+use App\Model\Projects;
 use App\Tradeperson;
+use App\User;
 use Illuminate\Http\Request;
 
 class TradePersonController extends Controller
@@ -40,15 +47,11 @@ class TradePersonController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        //
+        $tradePerson = Tradeperson::findOrFail($id);
+        return view('admin.tradePerson.show', compact('tradePerson'));
     }
 
     /**
@@ -74,14 +77,14 @@ class TradePersonController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function destroy(Request $request) {
+        foreach ($request->delete_item as $key => $item) {
+            Tradeperson::where('id', $key)->delete();
+        }
+
+        return redirect('/dashboard/trade-person')->with('notification', [
+            'class' => 'success',
+            'message' => 'Items deleted.'
+        ]);
     }
 }

@@ -48,6 +48,7 @@ class DesignOptionsController extends Controller {
     }
 
     /* Design Excel Upload */
+
     public function DesignExcelUpdate(Request $request) {
         $file = $_FILES["tmp_name"]["tmp_name"];
         $file_open = fopen($file, "r");

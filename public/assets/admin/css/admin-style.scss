@@ -1118,6 +1118,9 @@ img {
                         transition: .3s;
                         color: #000000;
                     }
+                    p {
+                        order: 2;
+                    }
 
                     .required {
                         font-size: 10px;

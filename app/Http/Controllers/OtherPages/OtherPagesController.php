@@ -263,7 +263,7 @@ class OtherPagesController extends Controller
 
     public function becomeUdexTradespersonStore(Request $request)
     {
-        if (!auth()->check()) {
+//        if (!auth()->check()) {
             $request->validate([
                 'first_name' => 'required',
                 'last_name' => 'required',
@@ -295,9 +295,9 @@ class OtherPagesController extends Controller
 //
 //            Auth::loginUsingId($user_id);
             return redirect('become-udex-tradesperson');
-        } else {
-            return redirect()->back();
-        }
+//        } else {
+//            return redirect()->back();
+//        }
     }
 
     public function QuickRegisterStore(Request $request)

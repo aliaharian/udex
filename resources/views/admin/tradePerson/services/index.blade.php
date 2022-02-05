@@ -1,10 +1,10 @@
 @extends('layouts.admin.dashboard.master')
 
-@section('page-title', 'Trade Person Request')
+@section('page-title', 'Trade Person Services')
 
 @section('title-page')
     <span class="icon"><img src="{{ asset('public/assets/admin/img/base/icons') }}/user.svg"></span>
-    <span class="text">Trade Person Request</span>
+    <span class="text">Trade Person Services</span>
 @endsection
 
 @section('content')
@@ -15,15 +15,16 @@
                     <div class="heading-widget">
                         <div class="row align-items-center">
                             <div class="col-10">
-                                <span class="widget-title">Trade Person Request</span>
+                                <span class="widget-title">Trade Person Services</span>
                             </div>
                             <div class="col-2 left">
+                                <a href="{{ url('dashboard/trade-person/services/create') }}" class="submit-form-btn">Create Service</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="widget-content">
-                        <form action="{{ url('dashboard/trade-person/destroy') }}" method="post" onsubmit="return confirm('<?php echo "Are you sure you want to delete the selected items?";?>');">
+                        <form action="{{ url('dashboard/trade-person/services/destroy') }}" method="post" onsubmit="return confirm('<?php echo "Are you sure you want to delete the selected items?";?>');">
                             @csrf
                             @method('delete')
                             <table class="table align-items-center">
@@ -36,30 +37,26 @@
                                     @endcan
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Company Name</th>
+
                                     @can('isAdmin')
                                         <th width="80px" class="center">Actions</th>
                                     @endcan
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($tradePerson as $user)
+                                @foreach ($services as $service)
                                     <tr>
                                         @can('isAdmin')
                                             <td class="delete-col">
-                                                <input class="delete-checkbox" type="checkbox" name="delete_item[{{ $user->id }}]" value="1">
+                                                <input class="delete-checkbox" type="checkbox" name="delete_item[{{ $service->id }}]" value="1">
                                             </td>
                                         @endcan
-                                        <td class="num-fa">{{ $user->id }}</td>
-                                        <td class="text-capitalize">{{ $user->name . $user->last_name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{$user->phone}}</td>
-                                        <td class="num-fa">{{ $user->company_name }}</td>
+                                        <td class="num-fa">{{ $service->id }}</td>
+                                        <td class="text-capitalize">{{ $service->name }}</td>
+
                                         @can('isAdmin')
                                             <td class="center">
-                                                <a href="{{ route('trade-person.show', $user->id) }}" class="table-btn table-btn-icon table-btn-icon-edit"><i class="zmdi zmdi-eye"></i></a>
+                                                <a href="{{ url('dashboard/trade-person/services/'.$service->id.'/edit') }}" class="table-btn table-btn-icon table-btn-icon-edit"><i class="zmdi zmdi-edit"></i></a>
                                             </td>
                                         @endcan
                                     </tr>
@@ -77,9 +74,7 @@
                                     @endcan
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Company Name</th>
+
                                     @can('isAdmin')
                                         <th width="80px" class="center">Actions</th>
                                     @endcan
@@ -88,11 +83,11 @@
                                     <td style="vertical-align: middle;" colspan="8">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                Show items {{ $tradePerson->firstItem() }} to {{ $tradePerson->lastItem() }} from {{ $tradePerson->total() }} item (pages {{ $tradePerson->currentPage() }} from {{ $tradePerson->lastPage() }})
+                                                Show items {{ $services->firstItem() }} to {{ $services->lastItem() }} from {{ $services->total() }} item (pages {{ $services->currentPage() }} from {{ $services->lastPage() }})
                                             </div>
                                             <div class="col-8 left">
                                                 <div class="pagination-table">
-                                                    {{$tradePerson->links('vendor.pagination.default')}}
+                                                    {{$services->links('vendor.pagination.default')}}
                                                 </div>
                                             </div>
                                         </div>

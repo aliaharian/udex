@@ -109,6 +109,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('users/destroy', 'Dashboard\Users\UsersController@destroy')->name('users.destroy');
 
             /* Tradeperson Controller */
+            Route::resource('trade-person/services', 'Dashboard\TradePersonServicesController');
             Route::resource('trade-person', 'Dashboard\TradePersonController');
 
 

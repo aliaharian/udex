@@ -6160,6 +6160,10 @@ a:hover {
   outline: none !important;
 }
 
+a:hover {
+  color: #f17d00 !important;
+}
+
 input,
 textarea,
 button,
