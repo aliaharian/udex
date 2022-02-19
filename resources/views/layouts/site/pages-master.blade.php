@@ -75,7 +75,7 @@
                         <div class="heading-widget">Office Address</div>
                         <div class="widget-content">
                             <div class="blank-text">
-                                UDEX<br> International House<br> 64 Nile Street<br> London, N1 7SR<br> Info@udex.uk<br> (+44)7807059059
+                                UDEX<br> 33 Cavendish Square<br> London, W1G 0PW<br> Info@udex.uk<br> (+44)2034889822
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             <div class="footerLinks">
                                 <ul>
                                     <li><a href="https://udex.co.uk/aboutus/">About</a></li>
-                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="{{url('faq')}}">FAQs</a></li>
                                     <li><a href="{{url('become-udex-tradesperson')}}">Trade</a></li>
                                     <li><a href="https://udex.co.uk/project/">Projects</a></li>
                                     <li><a href="https://udex.co.uk/contactus/">Contact</a></li>

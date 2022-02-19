@@ -39,7 +39,7 @@
                             We are committed to protecting and respecting your privacy.
                         </p>
                         <p>
-                            This privacy policy (together with our terms of use and any other documents referred to in
+                            This privacy policy (together with our <a href="url('terms-of-use')">terms of use</a> and any other documents referred to in
                             them) sets out the basis on which any personal data we collect from you, or that you provide
                             to us, will be processed by us. Please read the following carefully to understand our views
                             and practices regarding your personal data and how we will treat it. By visiting our website
@@ -47,16 +47,16 @@
                             described in this policy.
                         </p>
                         <p>
-                            For the purpose of the Data Protection Act 1998 (the Act), the data controller is udex
-                            Design Ltd. (we, us or udex). We are a limited company registered in England and Wales with
-                            company registration number 10471125. Our registered office address is 72 Sternhold Avenue,
-                            London, SW2 4PW and our main trading address is Unit LH3, Keeton’s & Collett (3Space),
-                            Keeton’s Road, London, SE16 4DB.
+                            For the purpose of the Data Protection Act 1998 (the Act), the data controller is UDEX Ltd.
+                            (we, us or UDEX). We are a limited company registered in England and Wales with company
+                            registration number 13733362. Our registered office address International House, 185 Tower
+                            Bridge Road, London, SE1 2UF and our main trading address is 33 Cavendish Square, London W1G
+                            0PW.
                         </p>
                         <p>
                             We may use non-identifiable information about you to create remarketing ads. This helps us
-                            give you the best udex experience, by showing you the best messaging related to your
-                            searches and activity on the udex site.
+                            give you the best Udex experience, by showing you the best messaging related to your
+                            searches and activity on the Udex site.
                         </p>
                         <p>
                             We may display these ads using various mediums including but not limited to Google,
@@ -391,7 +391,8 @@
                     <div class="heading-block">Contact</div>
                     <div class="text-block">
                         <p>
-                            Questions, comments and requests regarding this privacy policy are welcomed and should be addressed to info@udex.co.uk.
+                            Questions, comments and requests regarding this privacy policy are welcomed and should be
+                            addressed to info@udex.co.uk.
                         </p>
                         <p>
                             This privacy policy was most recently updated on 26 April 2021.

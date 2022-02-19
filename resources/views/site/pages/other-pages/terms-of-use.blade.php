@@ -47,13 +47,12 @@
                     <div class="heading-block">Who we are and how to contact us</div>
                     <div class="text-block">
                         <p>
-                            udex.co.uk is a site operated by BuildPathOne Limited (trading as “Resi”). We are a limited
-                            company registered in England and Wales with company registration number 10471125. Our
-                            registered office and main trading address is International House 4th Floor, International
-                            House, Canterbury Crescent, London, SW9 7QD.
+                            udex.co.uk or UDEX Ltd. is a limited company registered in England and Wales with company
+                            registration number 13733362. Our registered office is International House, 185 Tower Bridge
+                            Road, London, SE1 2UF
                         </p>
                         <p>
-                            To contact us, please email us at info@udex.co.uk or telephone us on +44203 868 9453.
+                            To contact us, please email us at info@udex.co.uk or telephone us on (+44)203 488 9822
                         </p>
                     </div>
                 </div>
@@ -80,7 +79,7 @@
                         </p>
                         <ul>
                             <li>
-                                Our Privacy Policy, which sets out the terms on which we process any personal data we
+                                Our <a href="url('privacy-policy')">Privacy Policy</a>, which sets out the terms on which we process any personal data we
                                 collect from you or that you provide to us. By using our site, you consent to such
                                 processing and you warrant that all data provided by you is accurate.
                             </li>
@@ -186,7 +185,7 @@
                         <p>
                             You are responsible for the acts and omissions of any third parties who use your username or
                             password (if applicable) to access our site, whether fraudulently or not, and you agree to
-                            reimburse us on demand for any loss we may suffer as a result of such use.
+                            reimburse us on demand for any loss we may suffer as a result of such use
                         </p>
 
                     </div>
