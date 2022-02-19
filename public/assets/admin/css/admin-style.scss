@@ -851,6 +851,17 @@ img {
                 }
 
                 .widget-content {
+                    .download-attachments {
+                            height:50px;
+                        width:120px;
+                        border:1px solid #ED7B00FF;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right:10px;
+
+                    }
+
                     .table {
                         margin-bottom: 0;
 
@@ -1118,6 +1129,7 @@ img {
                         transition: .3s;
                         color: #000000;
                     }
+
                     p {
                         order: 2;
                     }

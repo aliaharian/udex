@@ -23,14 +23,25 @@
 
 {{-- Page Header --}}
 <header class="page-header">
-    <div class="container">
+    <div class="container-fluid m-w-1425px">
         <div class="row">
-            <div class="col-4">
+            <div class="col-xl-2 col-lg-4 col-sm-4 col-4">
                 <div class="branding-logo">
                     <a href="https://udex.co.uk/"><img width="128" src="{{ asset('public/assets/site/images/base/udai-black.png') }}" alt="UDEX"></a>
                 </div>
             </div>
-            <div class="col-8 right">
+            <div class="col-xl-6 col-lg-1 col-md-1 col-sm-1 col-1">
+                <ul class="navBar-menu">
+                    <li><a href="https://udex.co.uk/">home</a></li>
+                    <li><a href="https://udex.co.uk/contactus/">contact</a></li>
+                    <li><a href="https://udex.co.uk/project/">projects</a></li>
+                    <li><a href="https://udex.co.uk/services/">services</a></li>
+                    <li><a href="https://udex.co.uk/development/">development</a></li>
+                    <li><a href="https://udex.co.uk/blog/">blog</a></li>
+                    <li><a href="https://udex.co.uk/aboutus/">about us</a></li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-7 col-sm-7 col-7 right">
                 <div class="fn-btn get-an-instant-quote">
                     <a href="{{ url('design-quote') }}">Get an instant quote</a>
                 </div>
@@ -41,7 +52,11 @@
                         <a href="{{ url('login') }}">Login</a>
                     @endif
                 </div>
+                <div class="menu-toggle" onclick="handleToggleMenu">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
+
         </div>
     </div>
 </header>
@@ -131,6 +146,10 @@
 @yield('footer-lib')
 
 <script src="{{ asset('public/assets/site/js/footer.js') }}"></script>
-
+<script>
+    function handleToggleMenu(){
+        $('.navBar-menu').toggleClass('navBar-menu-open');
+    }
+</script>
 </body>
 </html>

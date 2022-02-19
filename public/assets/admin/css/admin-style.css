@@ -901,6 +901,15 @@ img {
 .main-admin .content-page .content-page .widget-block .heading-widget .add-new-col {
   width: 160px;
 }
+.main-admin .content-page .content-page .widget-block .widget-content .download-attachments {
+  height: 50px;
+  width: 120px;
+  border: 1px solid #ED7B00FF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
 .main-admin .content-page .content-page .widget-block .widget-content .table {
   margin-bottom: 0;
 }

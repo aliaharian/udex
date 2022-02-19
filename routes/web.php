@@ -151,6 +151,11 @@ Route::group(['middleware' => ['auth']], function () {
             Route::resource('whats-news', 'Dashboard\WhatsNews\WhatsNewsController');
             Route::post('whats-news/destroy', 'Dashboard\WhatsNews\WhatsNewsController@destroy')->name('WhatsNews.destroy');
 
+            /* File Manager */
+            Route::get('file-manager', 'Dashboard\FileManager\FileManagerController@index');
+            Route::get('file-manager/create', 'Dashboard\FileManager\FileManagerController@create')->name('file-manager.create');
+            Route::post('file-manager', 'Dashboard\FileManager\FileManagerController@store')->name('file-manager.store');
+
             /* CKEditor Image Upload */
             Route::post('ckeditor/upload/{path}', 'Dashboard\CKEditorController@upload')->name('ckeditor.image-upload');
         });

@@ -13,6 +13,12 @@ class Connect extends Model
         return $this->belongsTo(User::class, 'uid', 'id');
     }
 
+    public function files()
+    {
+        $at_ids = $this->connect_meta;
+        return ($at_ids);
+    }
+
 
     use SoftDeletes;
     protected $table = 'connect';

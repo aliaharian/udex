@@ -83,6 +83,18 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="widget-block widget-item widget-style">
+                        <div class="heading-widget">
+                            <span class="widget-title">Attachments Details</span>
+                        </div>
+
+                        <div class="widget-content widget-content-padding">
+                           @foreach($filesData as $data)
+                               <a class="download-attachments" href="{{$data}}" target="_blank">download file</a>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
                 @if($Connect->type == 'connect-service')
                     <div class="col-3">

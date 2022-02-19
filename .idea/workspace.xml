@@ -2,24 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b47cdaa8-2156-4ab5-942d-1e179ab127ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tradePerson/services/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tradePerson/services/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tradePerson/services/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TradePersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/TradePersonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Design/DesignOptionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Design/DesignOptionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OtherPages/OtherPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OtherPages/OtherPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Connect/ConnectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Connect/ConnectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Connect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin-style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin-style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin-style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin-style.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/site/styles/bootstrap.min.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/site/styles/normalize.min.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.min.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/pages/other/base/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tradePerson/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tradePerson/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tradePerson/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tradePerson/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/dashboard/section/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/dashboard/section/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/site/styles/responsive/base.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/responsive/base.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/site/styles/responsive/base.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/site/styles/responsive/base.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/connect/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/file-manager/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/file-manager/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/site/pages-master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site/pages-master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -215,6 +215,7 @@
       <recent name="$PROJECT_DIR$/resources/views/site/pages/other-pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public" />
       <recent name="$PROJECT_DIR$/resources/views/admin/tradePerson" />
     </key>
   </component>
@@ -250,6 +251,8 @@
       <workItem from="1643260612956" duration="4761000" />
       <workItem from="1643785138683" duration="2844000" />
       <workItem from="1644035626565" duration="3647000" />
+      <workItem from="1644072888204" duration="630000" />
+      <workItem from="1645012764734" duration="5100000" />
     </task>
     <servers />
   </component>

@@ -26,8 +26,16 @@ class ConnectController extends Controller
     public function edit($id)
     {
         $Connect = Connect::find($id);
+        @$files = json_decode($Connect->files(),true)['files'];
 
-        return view('admin.connect.edit', compact('Connect'));
+        $filesData = array();
+       if($files) {
+           foreach ($files as $file) {
+               $tmp = Attachments::find($file);
+               array_push($filesData, '/storage/' . $tmp->directory . '/' . $tmp->path);
+           }
+       }
+        return view('admin.connect.edit', compact('Connect','filesData'));
     }
 
     public function create()
@@ -233,7 +241,7 @@ class ConnectController extends Controller
 //        dd($files);
         if ($request->hasFile('upload_your_architectural_drawings')) {
             foreach ($files as $file) {
-                if ($path = $file->store('connect-service/file')) {
+                if ($path = $file->store('public/connect-service/file')) {
                     $Attachments = new Attachments();
                     $Attachments->uid = $user_id;
                     $Attachments->orgname = $file->getClientOriginalName();
@@ -277,8 +285,9 @@ class ConnectController extends Controller
                 'describe_the_requirements_of_your_project' => $request->describe_the_requirements_of_your_project,
                 'address' => $request->address,
                 'postcode' => $request->postcode,
+                'files'=>$attachments_id
             ];
-            array_push($ConnectMeta , $attachments_id);
+//            array_push($ConnectMeta , $attachments_id);
             $Connect->connect_meta = json_encode($ConnectMeta);
             $Connect->slug = createRandomCode();
             $Connect->type = 'connect-service';

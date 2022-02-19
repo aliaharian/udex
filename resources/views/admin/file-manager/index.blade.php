@@ -56,7 +56,7 @@
                                             <td class="num-fa">{{ $item->created_at }}</td>
                                             <td class="center">
                                                 @if(isset($item->directory))
-                                                    <a target="" href="{{ url('storage/app' .'/'. $item->directory .'/'. $item->path ) }}" class="table-btn table-btn-icon table-btn-icon-edit"><i class="zmdi zmdi-eye"></i></a>
+                                                    <a target="_blank" href="{{ url('storage' .'/'. $item->directory .'/'. $item->path ) }}" class="table-btn table-btn-icon table-btn-icon-edit"><i class="zmdi zmdi-eye"></i></a>
                                                 @endif
                                             </td>
                                         </tr>
