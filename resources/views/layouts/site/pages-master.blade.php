@@ -70,7 +70,7 @@
     <div class="container">
         <div class="footer-main-content">
             <div class="row">
-                <div class="col-3">
+                <div class="col-2">
                     <div class="widget-inner">
                         <div class="heading-widget">Office Address</div>
                         <div class="widget-content">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <div class="widget-inner">
                         <div class="heading-widget">Shortcuts</div>
                         <div class="widget-content">
@@ -129,6 +129,17 @@
 
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="widget-inner">
+                        <div class="heading-widget">Philosophy</div>
+                        <div class="widget-content">
+                            <div class="blank-text">
+                                “We have reached a new era in Architecture.<br> Here at UDEX, designs get evolved through our unique algorithmic process; resulting in generating solutions that are adaptable to their environment and needs.”
+                            </div>
+
                         </div>
                     </div>
                 </div>

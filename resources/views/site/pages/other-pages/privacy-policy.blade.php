@@ -39,7 +39,7 @@
                             We are committed to protecting and respecting your privacy.
                         </p>
                         <p>
-                            This privacy policy (together with our <a href="url('terms-of-use')">terms of use</a> and any other documents referred to in
+                            This privacy policy (together with our <a href="{{url('terms-of-use')}}">terms of use</a> and any other documents referred to in
                             them) sets out the basis on which any personal data we collect from you, or that you provide
                             to us, will be processed by us. Please read the following carefully to understand our views
                             and practices regarding your personal data and how we will treat it. By visiting our website

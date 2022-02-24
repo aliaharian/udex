@@ -131,13 +131,16 @@
   margin-bottom: 35px;
   min-height: 130px;
 }
+.process-involved .process-involved-list .item-inner .read-more:hover a {
+  letter-spacing: 1px !important;
+}
 .process-involved .process-involved-list .item-inner .read-more a {
   font-weight: 500;
   color: #ED7B00;
   transition: 0.5s;
 }
 .process-involved .process-involved-list .item-inner .read-more a:hover {
-  letter-spacing: 1px;
+  letter-spacing: 1px !important;
 }
 
 /* Explore our other services */
@@ -233,18 +236,23 @@
   font-weight: 300;
 }
 .service-list-horizontal .list-items .item .read-more {
-  padding-left: 20px;
   margin-top: 25px;
+  width: 254px;
+  height: 55px;
+  background-color: #ED7B00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .service-list-horizontal .list-items .item .read-more a {
   font-size: 18px;
   font-weight: 500;
   line-height: 55px;
-  height: 55px;
-  background-color: #ED7B00;
-  padding: 0 70px;
   color: #ffffff;
   display: inline-block;
+}
+.service-list-horizontal .list-items .item .read-more a:hover {
+  letter-spacing: 1px;
 }
 
 /* You choose how much support you require */

@@ -79,7 +79,7 @@
                         </p>
                         <ul>
                             <li>
-                                Our <a href="url('privacy-policy')">Privacy Policy</a>, which sets out the terms on which we process any personal data we
+                                Our <a href="{{url('privacy-policy')}}">Privacy Policy</a>, which sets out the terms on which we process any personal data we
                                 collect from you or that you provide to us. By using our site, you consent to such
                                 processing and you warrant that all data provided by you is accurate.
                             </li>

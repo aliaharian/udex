@@ -172,13 +172,18 @@ $Base_Color: #ED7B00;
             }
 
             .read-more {
+                &:hover{
+                    a{
+                        letter-spacing: 1px !important;
+
+                    }
+                }
                 a {
                     font-weight: 500;
                     color: $Base_Color;
                     transition: .5s;
-
                     &:hover {
-                        letter-spacing: 1px;
+                        letter-spacing: 1px !important;
                     }
                 }
             }
@@ -298,18 +303,24 @@ $Base_Color: #ED7B00;
             }
 
             .read-more {
-                padding-left: 20px;
                 margin-top: 25px;
-
+                width:254px;
+                height: 55px;
+                background-color: $Base_Color;
+                //padding: 0 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 a {
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 55px;
-                    height: 55px;
-                    background-color: $Base_Color;
-                    padding: 0 70px;
+
                     color: #ffffff;
                     display: inline-block;
+                    &:hover{
+                        letter-spacing: 1px;
+                    }
                 }
             }
         }
