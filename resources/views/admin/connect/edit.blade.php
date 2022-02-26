@@ -91,7 +91,7 @@
 
                         <div class="widget-content widget-content-padding">
                            @foreach($filesData as $data)
-                               <a class="download-attachments" href="{{$data}}" target="_blank">download file</a>
+                               <a class="download-attachments" href="/app/public/{{$data}}" target="_blank">download file</a>
                             @endforeach
                         </div>
                     </div>

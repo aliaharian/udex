@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Attachments;
 use App\Model\Connect;
 use App\Model\ConnectOptions;
+use App\Service;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -348,5 +349,17 @@ class ConnectController extends Controller
     public function doRedirect()
     {
         return redirect('/connect-service');
+    }
+
+    public function destroy(Request $request)
+    {
+        foreach ($request->delete_item as $key => $item) {
+            Connect::where('id', $key)->delete();
+        }
+
+        return redirect('/dashboard/connect')->with('notification', [
+            'class' => 'success',
+            'message' => 'Items deleted.'
+        ]);
     }
 }
