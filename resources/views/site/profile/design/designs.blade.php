@@ -86,7 +86,7 @@
                                              alt="right">
                                     </i> </a>
                                 <a target="_blank"
-                                   href="https://udex.co.uk/download/Design/Guide%20to%20New%20Builds.pdf" class="item">
+                                   href="https://udex.co.uk/download/Design/UDEX_New_Builds.pdf" class="item">
                                     <span class="icon"><img
                                             src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}"
                                             alt="PDF"></span>
@@ -96,7 +96,7 @@
                                              alt="right">
                                     </i> </a>
                                 <a target="_blank"
-                                   href="{{ asset('public/assets/site/files/') }}/UDEX_Building_Regulations.pdf"
+                                   href="https://udex.co.uk/download/Design/UDEX_Building_Regulations.pdf"
                                    class="item">
                                     <span class="icon"><img
                                             src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}"
@@ -107,7 +107,7 @@
                                              alt="right">
                                     </i> </a>
                                 <a target="_blank"
-                                   href="https://udex.co.uk/download/Design/Guide%20to%20Design%20and%20Planning.pdf"
+                                   href="https://udex.co.uk/download/Design/UDEX_Proposed_Design.pdf"
                                    class="item">
                                     <span class="icon"><img
                                             src="{{ asset('public/assets/site/images/base/design/pdf.svg') }}"
