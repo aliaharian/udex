@@ -6260,6 +6260,8 @@ body {
   background-color: #ffffff;
   padding: 12px 0;
   margin-bottom: 70px;
+  position: sticky;
+  top: 0;
 }
 @media (max-width: 1200px) {
   .page-header {
@@ -6306,7 +6308,8 @@ body {
 }
 .page-header li > a {
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 .page-header li:last-child > a {
   margin-right: 0;
